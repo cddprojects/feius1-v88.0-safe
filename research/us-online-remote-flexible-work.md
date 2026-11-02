@@ -390,6 +390,67 @@ Taken from the figures above, a U.S. offer that matches how people already searc
 9. **A second-income offer should look like a second income.** The median current side hustle is $200 a month. Promising a replacement salary for a few hours of phone work is the sentence the FTC tells people is almost certainly a scam.
 10. **Match the channel to the work.** Professional remote roles are found on LinkedIn, Indeed, and the company site, and they are crowded. Hourly flexible roles are found on Indeed, local groups, and staffing firms, and the decision turns on the shift and the rate. One ad written for both will be trusted by neither.
 
+## Work that matches this market
+
+These are the roles that show up when the search is actually for online, remote, or flexible work. Pay below is the May 2025 national median for the occupation in every setting, from the Bureau of Labor Statistics, unless a figure is marked as a live ad. A live ad is one posting. It is not a promise that the same rate is open nationwide, and these ads expire.
+
+### Remote jobs a high school diploma can reach
+
+This is where the volume is. FlexJobs’ count of its own listings from 1 January to 1 May 2026 put customer service, administrative work, and sales at the top of entry-level remote hiring. Each of those three grew more than 30% in entry-level remote postings versus the year before. The titles posted most often were sales development representative, customer service representative, and business development representative, followed by account executive, financial analyst, staff accountant, administrative assistant, software engineer, registered nurse, and project coordinator.
+
+The employers with the most entry-level remote postings in that database were Mass General Brigham, Thermo Fisher Scientific, HCA, the State of North Carolina, T-Mobile, IQVIA, Stride, Raymond James, Centene, and Toast.
+
+Customer service is the occupation underneath most of those ads. BLS, May 2025: median $21.53 an hour ($44,770 a year). The lowest 10% earned under $15.27 and the highest 10% earned over $30.57. Typical entry is a high school diploma and short training. About 2.7 million people hold the job. Employment is projected to fall 5% from 2025 to 2035, and about 289,500 openings a year still come from people leaving the occupation.
+
+Posted remote rates sit at the bottom of that range, because the ads are entry level and the hours are monitored:
+
+| Example seen while researching | Pay on the ad | What the schedule actually is |
+| --- | --- | --- |
+| Concentrix, Customer Service Rep, Financial. Remote. Posted 22 October 2026 for Lake Tansi, Tennessee, and 27 October 2026 for Dover, Pennsylvania. | $15–$17 an hour | Full time. High school diploma, 6 months of customer service, a quiet room, a computer, and wired high-speed internet. Paid training, health insurance, 401(k), and paid time off for eligible employees. |
+| TTEC, Healthcare Customer Service Representative. Remote in North Carolina. Listed on Indeed on 2 November 2026. | $16 an hour, plus a performance bonus | High school diploma, 6 months of customer service, HIPAA rules, wired headset. |
+| Firstsource Healthcare, Customer Service Representative. Remote in the U.S. Posted 8 September 2026. | $15 an hour | An 8-hour shift assigned between 7 a.m. and 7 p.m. Pacific, Monday to Friday. One year of customer service and six months in healthcare. Camera on. Private workstation. |
+
+“Flexible” on these ads means the person works from home. The shift itself is assigned. Open availability is a requirement at Concentrix. A parent who needs to leave at 3 p.m. will not fit that ad.
+
+Sources: [FlexJobs, entry-level remote jobs, updated 28 May 2026](https://www.flexjobs.com/blog/post/entry-level-remote-jobs-new-college-graduates-v2); [BLS, customer service representatives](https://www.bls.gov/ooh/office-and-administrative-support/customer-service-representatives.htm); [Concentrix, Lake Tansi posting](https://www.concentrix.com/gfj/customer-service-rep-financial-remote-lake-tansi-tn-6ad9e8cb2365020385861d1b); [Concentrix, Dover posting](https://www.concentrix.com/gfj/customer-service-rep-financial-remote-dover-pa-6ae081e9b472b803804d4541); [Indeed, TTEC healthcare customer service](https://www.indeed.com/q-remote-customer-service-ttec-jobs.html); [Indeed, Firstsource Healthcare customer service](https://www.indeed.com/viewjob?jk=9a4bf71eaa6a2c26).
+
+### Remote jobs that pay more and ask for a credential
+
+These are posted less often than customer service, and they are the ads that draw the heavy application counts.
+
+| Occupation | May 2025 median | Usual entry | Where the remote version shows up |
+| --- | --- | --- | --- |
+| Bookkeeping, accounting, and auditing clerks | $24.36 an hour, $50,670 a year | Some college, no degree | Small-firm bookkeeping, accounts payable, billing support. Often hybrid. FlexJobs lists billing support and bookkeeping assistant among no-experience remote titles, with its own averages near $50,000. |
+| Medical records specialists | $24.59 an hour, $51,140 a year | A postsecondary certificate | Coding and records work for insurers and hospital groups. Centene, Elevance, HCA, and Mass General Brigham are among the employers posting entry-level remote health roles. Outlook is +8% from 2025 to 2035, about 14,000 openings a year. |
+| Software developers | $135,980 a year | Bachelor’s degree | A secondary compilation of Indeed’s remote tracker put remote or hybrid mentions at 30.8% of software-development postings on 31 August 2026. Crowded. |
+| Interpreters and translators | $28.93 an hour, $60,170 a year | Bachelor’s degree | Remote translation and, for interpreters, video sessions for hospitals and schools. Bilingual customer service is the lower-paid cousin and is hired by the call-center employers above. |
+
+Sources: [BLS, bookkeeping clerks](https://www.bls.gov/ooh/office-and-administrative-support/bookkeeping-accounting-and-auditing-clerks.htm); [BLS, medical records specialists](https://www.bls.gov/ooh/healthcare/medical-records-and-health-information-technicians.htm); [BLS, software developers](https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm); [BLS, interpreters and translators](https://www.bls.gov/ooh/media-and-communication/interpreters-and-translators.htm).
+
+### Flexible hours, including work that is not fully remote
+
+This is the second-income and schedule-control market. The hours are the product. The person can often stay under 20 hours.
+
+| Example | Pay | What is flexible about it |
+| --- | --- | --- |
+| Tutors. BLS May 2025: 175,070 tutors, median $20.84 an hour, mean annual wage $48,050. | Littera Education, online tutor, listed on Indeed in September 2026 at $18.00–$22.50 an hour. | Part time, up to 25 hours, evenings. A short mock session is part of hiring. |
+| Data entry. Live ads cluster around $16 an hour, well under the “type from home and earn a salary” pitch. | MetaSource, document data entry, remote in Utah, $16 an hour. Firstsource Healthcare data entry, $16 an hour. Both listed on Indeed around 1 November 2026. | MetaSource is part time and mainly Mondays, with extra hours when the workload allows. That is a real side shift. It is not a full income. |
+| Virtual assistant, contract. | Peachtree Versatile Assistants, $22 an hour, contract, remote. Calendar, email, travel booking, and light marketing tasks. | Hours follow the client. The worker is a contractor, so taxes and benefits sit with them. |
+| Delivery, rideshare, and in-store shifts. | Bankrate’s side-hustle list: food delivery 9% of side hustlers, rideshare 3%. | The phone chooses the hours. The person still has to be in a specific city, cover fuel or a bike, and accept the platform’s take rate. This is flexible local work, not remote work. |
+
+Sources: [BLS OEWS table 1, May 2025, tutors](https://www.bls.gov/news.release/ocwage.t01.htm); [Indeed, Littera and virtual roles](https://www.indeed.com/q-virtual-l-anywhere-in-remote-jobs.html); [Indeed, remote data entry](https://www.indeed.com/q-remote-data-entry-jobs.html); [Indeed, remote assistant](https://www.indeed.com/jobs?q=Remote+Assistant&sc=0kf%3Aattr%28DSQF7%29%3B&vjk=705a07f2f5447d83).
+
+### Where to look for each kind
+
+| Kind of work | Start here |
+| --- | --- |
+| A remote employee job with a named company | Indeed and LinkedIn, then the employer’s own careers page. For a screened list, FlexJobs. Its public inventory, when checked for this note, was about 243,000 remote jobs from about 15,800 companies. |
+| Healthcare, insurance, or phone support from home | Concentrix, TTEC, Foundever, and the health plans and hospital groups named above. Read the state restriction. Many “remote” ads hire in one state only. |
+| A few hours on your own schedule | Tutoring platforms, a contract virtual-assistant firm, and part-time data entry. Upwork and similar marketplaces cover freelance writing, design, and bookkeeping. Those are contractor markets. |
+| Shift work that only needs to fit the week | Indeed with “part time” and a city, plus the employer’s app for delivery or warehouse shifts. Facebook groups and Craigslist still matter for local hourly work. |
+
+Ads that hide the company, promise $20 to $45 an hour with no experience, or ask the person to reply “YES” to a text are the pattern already covered in the trust section. They are common in the same search results as the jobs above. The check is the company name on the ad, a pay figure near the BLS range for that occupation, and a description of the actual calls, records, or students.
+
 ## How to read the numbers
 
 - SWAA’s 26.8% is a share of paid days, mostly among people with enough earnings to be in that survey. It is the right figure for “how much of the country’s paid work happens at home.”
