@@ -2,6 +2,8 @@
 
 Research brief compiled 2 November 2026 (Asia/Kuala_Lumpur).
 
+The reader-facing pages are in `site/`. They share this material as general information: definitions, public figures, and how to read a posting. They do not list jobs or take applications. This file remains the source note, with the survey limits and links.
+
 This note answers two questions:
 
 1. Where do people in the United States actually look when they want work they can do online, from home, or on a flexible schedule?
