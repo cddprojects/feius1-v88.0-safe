@@ -19,7 +19,7 @@ FONT = (
 
 NAV = [
     ("search.html", "Search"),
-    ("start.html", "Start"),
+    ("apply.html", "Apply"),
     ("states.html", "Pay &amp; hours"),
     ("about.html", "About"),
 ]
@@ -59,8 +59,9 @@ def footer():
 <div><p class="brand-foot">{BRAND}</p>
 <p>A reader's companion for remote, online, and independent work. Plain explanations of what usually happens once the work starts, for readers in the United States.</p></div>
 <div><h2>Start here</h2><ul>
-<li><a href="search.html">Where, how &amp; when people search</a></li>
-<li><a href="start.html">The starter's companion</a></li>
+<li><a href="search.html">How &amp; where people search</a></li>
+<li><a href="apply.html">How the application runs</a></li>
+<li><a href="apply.html#requirements">What's required to apply</a></li>
 <li><a href="states.html">Pay &amp; hours</a></li>
 <li><a href="search.html#signs">Signs of a real offer</a></li>
 <li><a href="notes.html">All notes</a></li>
@@ -131,26 +132,26 @@ def build():
 <p class="kicker">Today’s briefing</p>
 <ul class="briefing-list">
 <li><strong>Searching starts on three or four tabs, not one.</strong> General boards first, then LinkedIn, Google, and the employer’s own page.</li>
-<li><strong>Remote ads are a thin, shifting slice of the board.</strong> Roughly 1 in 12 U.S. postings mention remote or hybrid work, and that share moves by season and by field.</li>
-<li><strong>If the hours, the pay, and the employer’s name aren’t written down, that’s the finding, not a formality.</strong></li>
+<li><strong>Applying usually means a form, a screening question, and a short interview.</strong> Not just sending a résumé into the dark.</li>
+<li><strong>Most ads ask for the same handful of things:</strong> proof you can legally work in the U.S., a working setup, and sometimes a short skills check.</li>
 </ul>
 </div></section>
 
 <section class="lead"><div class="wrap lead-grid">
 <div class="lead-main">
-<p class="kicker">The search</p>
-<h1>Where, how, and when Americans search for remote, online, and flexible work.</h1>
-<p class="lede">Weekline is a reader’s companion, not a job board. Before the pay and the fine print, here is where people actually look, how a search tends to run, and when the remote ads are thin or plentiful.</p>
-<p>“Just search online” skips the parts that decide whether a search goes anywhere. Which site a person opens first, what they check before they apply, and how many of the ads they find are genuinely remote all change by the month and by the field. This note walks through where the looking starts, the five or so steps a typical search runs through, and when remote postings are scarce versus when they loosen up, using the public surveys and hiring-site data behind each figure.</p>
-<p><a class="btn btn-fill" href="search.html">Read the full search note &rarr;</a></p>
+<p class="kicker">Three ordinary questions</p>
+<h1>How people search, how they apply, and what the ad actually requires.</h1>
+<p class="lede">Weekline is a reader’s companion, not a job board. These pages answer three plain questions about remote, online, and flexible work in the United States: where the looking happens, how an application usually runs, and what you’re actually asked to have before you’re hired.</p>
+<p>“Apply online” hides a few steps worth knowing in advance: a form that usually takes 10 to 15 minutes, a handful of screening questions that can end the application right there, sometimes a short skills test, and then, if it goes well, a request for the same few things almost every U.S. employer needs: proof you can legally work, a working computer and internet connection, and the tax paperwork that comes with being an employee or a contractor. None of that is unusual. Knowing it in advance just means fewer surprises.</p>
+<p><a class="btn btn-fill" href="apply.html">Read how the application runs &rarr;</a></p>
 </div>
 <aside class="lead-side">
 <p class="kicker">In this edition</p>
 <ul class="index-list">
-<li><a href="search.html">Where, how &amp; when people search</a><span>The channels, the steps, and the timing behind an online search.</span></li>
-<li><a href="start.html">The starter’s companion</a><span>What a first week of remote, online, or independent work usually involves.</span></li>
+<li><a href="search.html">How &amp; where people search</a><span>The channels and the steps behind an online search.</span></li>
+<li><a href="apply.html">How the application runs</a><span>The form, the screening questions, and the interview.</span></li>
+<li><a href="apply.html#requirements">What’s required to apply</a><span>Eligibility, equipment, documents, and skills checks.</span></li>
 <li><a href="states.html">Pay &amp; hours</a><span>What a fair arrangement states, and how that changes by state.</span></li>
-<li><a href="notes.html">All notes</a><span>The longer record, by topic, with sources.</span></li>
 </ul>
 </aside>
 </div></section>
@@ -159,22 +160,22 @@ def build():
 <p class="kicker">More in this edition</p>
 <div class="fold-grid">
 <article class="fold-story">
-<p class="kicker">Where</p>
-<h3><a href="search.html#where">The search starts on the big boards, not a single site.</a></h3>
-<p>General job boards, LinkedIn, niche boards, and the employer’s own site are all in play at once. Which one comes first depends on whether the search is for a professional role or an hourly one.</p>
-<p class="more"><a href="search.html#where">Continue reading &rarr;</a></p>
+<p class="kicker">Search</p>
+<h3><a href="search.html">Where the looking starts, and how it runs.</a></h3>
+<p>General job boards, LinkedIn, niche boards, and the employer’s own site are all in play at once, in roughly the same five-step sequence, whether the goal is a title or just extra cash.</p>
+<p class="more"><a href="search.html">Continue reading &rarr;</a></p>
 </article>
 <article class="fold-story">
-<p class="kicker">How</p>
-<h3><a href="search.html#how">A search tends to run the same five or so steps.</a></h3>
-<p>Search a title plus “remote” or a city, screen out the ads missing pay or an employer name, check the company site, apply where the form is short, and keep a second, non-ad path for extra cash.</p>
-<p class="more"><a href="search.html#how">Continue reading &rarr;</a></p>
+<p class="kicker">Apply</p>
+<h3><a href="apply.html">A form, a screening question, and usually a short interview.</a></h3>
+<p>Most online applications follow the same shape: upload a résumé, answer a few knockout questions, sometimes take a short skills test, then a phone or video interview if it goes further.</p>
+<p class="more"><a href="apply.html">Continue reading &rarr;</a></p>
 </article>
 <article class="fold-story">
-<p class="kicker">When</p>
-<h3><a href="search.html#when">Remote ads are a thin, shifting slice of the board.</a></h3>
-<p>The remote-or-hybrid share of U.S. postings peaked near 10% in 2022 and has sat near 8% since 2024, lower in some fields and far higher in others. Applications to remote ads outrun the ads themselves.</p>
-<p class="more"><a href="search.html#when">Continue reading &rarr;</a></p>
+<p class="kicker">Requirements</p>
+<h3><a href="apply.html#requirements">What an ad actually asks you to have.</a></h3>
+<p>Proof you can legally work in the U.S., a working computer and internet connection, the right tax form for an employee or a contractor, and sometimes a typing or skills test before an offer.</p>
+<p class="more"><a href="apply.html#requirements">Continue reading &rarr;</a></p>
 </article>
 </div>
 </div></section>
@@ -296,6 +297,38 @@ def build():
     )
 
     essay(
+        "apply.html",
+        "Apply",
+        "How the application runs, and what it actually asks for",
+        "What a typical U.S. online application involves, step by step, and the documents, equipment, and checks employers commonly require before hiring.",
+        "Not what the job is. What filling out the form, and then saying yes to it, actually involves.",
+        '''
+<div class="takeaways"><h2>In short</h2><ul>
+<li>Most online applications follow the same shape: a short form, a few screening questions, sometimes a skills test, then an interview.</li>
+<li>About half of job seekers consider 10 to 15 minutes the acceptable length for that form.</li>
+<li>Nearly every U.S. employer asks for the same handful of things before a first day: proof you can legally work, a working setup, and the right tax paperwork.</li>
+<li>A fee, a kit charge, or a check you’re asked to deposit and partly send back is never a legitimate requirement.</li>
+</ul></div>
+
+<h2 id="process">How the application usually runs</h2>
+<p>An online application for a remote, hourly, or flexible role tends to move through the same handful of stages. First, a form: contact details, a résumé upload, and often a set of “knockout” questions, such as availability, location, or whether you can legally work in the U.S. These questions can end the application immediately if the answer doesn’t fit, which is a common source of silence rather than rejection. iHire’s 2025 survey of job seekers found that re-typing information already on an uploaded résumé was a specific, named complaint, and that about half of seekers think 10 to 15 minutes is the right length for the whole form.</p>
+<p>Some roles add a short skills check before a human ever looks at the application: a typing-speed test for data entry or transcription, a short writing sample for content roles, or a basic software quiz for bookkeeping or support roles. If the application clears the screening questions and any skills check, the next step is usually a phone or video interview, sometimes two rounds for office-based professional roles and one short call for hourly or entry-level remote roles. Interview response rates, in one applicant-tracking product’s 2025 data covering roughly 599,000 applications, ran about 4.5% on Indeed, 3.1% on LinkedIn, and 2.8% on ZipRecruiter — a reminder that most applications end without a reply at all, which is a volume problem more than a sign that the application itself was weak.</p>
+<p>After an offer, the paperwork starts: the specific documents are covered below, but the shape is the same almost everywhere — sign an offer or contract, complete tax and eligibility forms, and, for jobs that provide equipment, wait for it to ship or submit a reimbursement request rather than pay for it upfront.</p>
+
+<h2 id="requirements">What they’re commonly asked to have</h2>
+<p><b>Proof you can legally work in the United States.</b> Every W-2 employer must complete Form I-9 within three days of a new hire’s start date, which means presenting an acceptable document such as a U.S. passport, or a driver’s license plus a Social Security card, to confirm identity and work eligibility. This applies to remote hires exactly as it applies to on-site ones; a remote job does not skip it.</p>
+<p><b>The right tax form for how you’re paid.</b> A W-2 employee completes Form W-4, which sets how much income tax is withheld from each paycheck. An independent contractor paid as 1099 completes Form W-9 instead, and no tax is withheld; the contractor sets aside their own income tax and both halves of Social Security and Medicare. Which form you’re asked for is a quick, reliable signal of which kind of work you’ve actually agreed to, regardless of what the posting called it.</p>
+<p><b>A working setup.</b> Home-based customer-service and data roles commonly specify a computer meeting minimum specs, a quiet workspace, and a reliable internet connection — and a number of named ads reviewed for this site in 2026 required a wired connection rather than a phone hotspot or satellite internet. Some roles additionally require a webcam for video calls or supervision software installed on the work computer; this should be stated in the posting or the offer, not discovered after accepting.</p>
+<p><b>Skills proof, where the job calls for it.</b> Typing speed for data entry and transcription, a graded writing sample for content or copy roles, a basic accounting or spreadsheet test for bookkeeping, and a relevant certificate or license for occupations such as medical records or tutoring in a specific subject. Entry-level customer service, administrative, and sales roles — the largest single slice of entry-level remote postings — usually ask only for a high school diploma and some prior customer-service experience.</p>
+<p><b>Sometimes a background check.</b> Roles handling money, health information, or vulnerable people, including many bookkeeping, healthcare-adjacent, and tutoring-of-minors roles, commonly run a background check after a conditional offer. This is standard and, under the Fair Credit Reporting Act, requires your written consent before it happens.</p>
+<p><b>Nothing you pay for.</b> None of the above should ever cost the applicant money. A legitimate employer ships or reimburses required equipment; it does not ask for a kit fee, a training fee, or a deposit refunded out of a check you’re told to cash. That exact pattern — a check to deposit, then a request to send part of it back — is the single most common scam mechanism in Federal Trade Commission reports, and it shows up disguised as an “equipment” or “software license” requirement as often as anything else.</p>
+<p class="src-note">iHire, State of Online Recruiting 2025. Huntr, 2025 Annual Job Search Trends. U.S. Citizenship and Immigration Services, Form I-9. Internal Revenue Service, Form W-4 and Form W-9. Federal Trade Commission, job-scam consumer guidance. Named ads were reviewed in 2026 as examples of common requirements; they are not openings from Weekline.</p>
+''',
+        "apply.html",
+        "Companion",
+    )
+
+    essay(
         "states.html",
         "States",
         "The floor changes at the state line",
@@ -399,6 +432,7 @@ def build():
 
     notes = [
         ("search", "Search", "search.html", "Where, how, and when the search actually happens", "The channels people use, the steps a search runs through, and when remote postings are scarce or plentiful."),
+        ("apply", "Apply", "apply.html", "How the application runs, and what it actually asks for", "The form, the screening questions, and the documents, equipment, and checks employers commonly require."),
         ("start", "Start", "start.html", "The starter’s companion", "What a first week of remote, online, or independent work usually involves."),
         ("words", "Words", "arrangements.html", "Place, delivery, and hours", "Remote, online, and flexible name different parts of a week. A home shift can still be assigned."),
         ("days", "Where", "record.html", "Where paid days are spent", "The share of paid days at home, and who teleworked in one survey week."),
@@ -420,6 +454,7 @@ def build():
 <div class="filters" role="group" aria-label="Filter notes">
 <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
 <button class="chip" type="button" data-filter="search" aria-pressed="false">Search</button>
+<button class="chip" type="button" data-filter="apply" aria-pressed="false">Apply</button>
 <button class="chip" type="button" data-filter="start" aria-pressed="false">Start</button>
 <button class="chip" type="button" data-filter="words" aria-pressed="false">Words</button>
 <button class="chip" type="button" data-filter="days" aria-pressed="false">Where</button>
