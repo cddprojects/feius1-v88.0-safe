@@ -8,13 +8,12 @@ market, which is a different job from a search guide.
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1] / "site"
-THEME = "#161513"
+THEME = "#2d5bff"
 REVIEWED = "3 November 2026"
 BRAND = "Weekline"
 FONT = (
-    "https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@"
-    "0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,480&family=Public+Sans:"
-    "ital,wght@0,400;0,600;0,700;1,400&display=swap"
+    "https://fonts.googleapis.com/css2?family=Inter:ital,wght@"
+    "0,400;0,500;0,600;0,700;0,800;1,500&display=swap"
 )
 
 NAV = [
@@ -28,7 +27,7 @@ WRITTEN = set()
 
 
 def brand():
-    return f'<a class="brand" href="index.html"><span aria-hidden="true"></span>{BRAND}</a>'
+    return f'<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>{BRAND}</a>'
 
 
 def nav_block(current):
@@ -42,23 +41,21 @@ def nav_block(current):
 
 def header(current, landing=False):
     links = nav_block(current)
-    edition = "Front page" if landing else "For readers &middot; Not a job board"
     return f'''<a class="skip" href="#main">Skip to content</a>
-<header class="mast">
-<div class="wrap mast-top"><p>United States edition &middot; Reviewed {REVIEWED}</p><p class="edition">{edition}</p></div>
-<div class="wrap nameplate">{brand()}
-<p class="tagline">A reader's companion for remote, online, and independent work in the United States.</p></div>
-<div class="nav-bar"><div class="wrap nav">
-{links}
-</div></div>
+<header class="site-header">
+<div class="wrap header-row">
+{brand()}
+<div class="nav-wrap">{links}</div>
+<a class="btn btn-primary header-cta" href="apply.html">See the guides</a>
+</div>
 </header>'''
 
 
 def footer():
     return f'''<footer class="site-footer"><div class="wrap foot">
-<div><p class="brand-foot">{BRAND}</p>
-<p>A reader's companion for remote, online, and independent work. Plain explanations of what usually happens once the work starts, for readers in the United States.</p></div>
-<div><h2>Start here</h2><ul>
+<div class="foot-brand"><p class="brand-foot">{BRAND}</p>
+<p>A reader's companion for remote, online, and independent work. Plain explanations of how people search, apply, and what's required, for readers in the United States.</p></div>
+<div><h2>Guides</h2><ul>
 <li><a href="search.html">How &amp; where people search</a></li>
 <li><a href="apply.html">How the application runs</a></li>
 <li><a href="apply.html#requirements">What's required to apply</a></li>
@@ -128,60 +125,76 @@ def build():
         f"A reader's companion for remote, online, and independent work · {BRAND}",
         "Weekline is a reader's companion for remote, online, and independent work in the United States, in plain language.",
         '''
-<section class="briefing"><div class="wrap">
-<p class="kicker">Today’s briefing</p>
-<ul class="briefing-list">
-<li><strong>Searching starts on three or four tabs, not one.</strong> General boards first, then LinkedIn, Google, and the employer’s own page.</li>
-<li><strong>Applying usually means a form, a screening question, and a short interview.</strong> Not just sending a résumé into the dark.</li>
-<li><strong>Most ads ask for the same handful of things:</strong> proof you can legally work in the U.S., a working setup, and sometimes a short skills check.</li>
-</ul>
-</div></section>
-
-<section class="lead"><div class="wrap lead-grid">
-<div class="lead-main">
-<p class="kicker">Three ordinary questions</p>
-<h1>How people search, how they apply, and what the ad actually requires.</h1>
-<p class="lede">Weekline is a reader’s companion, not a job board. These pages answer three plain questions about remote, online, and flexible work in the United States: where the looking happens, how an application usually runs, and what you’re actually asked to have before you’re hired.</p>
-<p>“Apply online” hides a few steps worth knowing in advance: a form that usually takes 10 to 15 minutes, a handful of screening questions that can end the application right there, sometimes a short skills test, and then, if it goes well, a request for the same few things almost every U.S. employer needs: proof you can legally work, a working computer and internet connection, and the tax paperwork that comes with being an employee or a contractor. None of that is unusual. Knowing it in advance just means fewer surprises.</p>
-<p><a class="btn btn-fill" href="apply.html">Read how the application runs &rarr;</a></p>
+<section class="hero"><div class="wrap hero-grid">
+<div class="hero-copy">
+<p class="eyebrow">A reader’s companion, not a job board</p>
+<h1>How people search, apply, and get ready for remote, online, and independent work.</h1>
+<p class="lede">Weekline answers three plain questions about work in the United States: where the looking happens, how an application usually runs, and what you’re actually asked to have before you’re hired. No listings, no fees, no sign-up.</p>
+<div class="hero-actions">
+<a class="btn btn-primary btn-lg" href="search.html">Start with how people search</a>
+<a class="btn btn-ghost btn-lg" href="apply.html">See what applying requires</a>
 </div>
-<aside class="lead-side">
-<p class="kicker">In this edition</p>
-<ul class="index-list">
-<li><a href="search.html">How &amp; where people search</a><span>The channels and the steps behind an online search.</span></li>
-<li><a href="apply.html">How the application runs</a><span>The form, the screening questions, and the interview.</span></li>
-<li><a href="apply.html#requirements">What’s required to apply</a><span>Eligibility, equipment, documents, and skills checks.</span></li>
-<li><a href="states.html">Pay &amp; hours</a><span>What a fair arrangement states, and how that changes by state.</span></li>
+<ul class="hero-chips">
+<li><span class="chip-icon">🔍</span>Where to actually look</li>
+<li><span class="chip-icon">📝</span>How the form &amp; interview go</li>
+<li><span class="chip-icon">✅</span>What you need to have ready</li>
 </ul>
-</aside>
-</div></section>
-
-<section class="below-fold"><div class="wrap">
-<p class="kicker">More in this edition</p>
-<div class="fold-grid">
-<article class="fold-story">
-<p class="kicker">Search</p>
-<h3><a href="search.html">Where the looking starts, and how it runs.</a></h3>
-<p>General job boards, LinkedIn, niche boards, and the employer’s own site are all in play at once, in roughly the same five-step sequence, whether the goal is a title or just extra cash.</p>
-<p class="more"><a href="search.html">Continue reading &rarr;</a></p>
-</article>
-<article class="fold-story">
-<p class="kicker">Apply</p>
-<h3><a href="apply.html">A form, a screening question, and usually a short interview.</a></h3>
-<p>Most online applications follow the same shape: upload a résumé, answer a few knockout questions, sometimes take a short skills test, then a phone or video interview if it goes further.</p>
-<p class="more"><a href="apply.html">Continue reading &rarr;</a></p>
-</article>
-<article class="fold-story">
-<p class="kicker">Requirements</p>
-<h3><a href="apply.html#requirements">What an ad actually asks you to have.</a></h3>
-<p>Proof you can legally work in the U.S., a working computer and internet connection, the right tax form for an employee or a contractor, and sometimes a typing or skills test before an offer.</p>
-<p class="more"><a href="apply.html#requirements">Continue reading &rarr;</a></p>
-</article>
+</div>
+<div class="hero-card" aria-hidden="true">
+<p class="hero-card-label">Today, in plain numbers</p>
+<div class="hero-stat"><span class="num">~8%</span><span class="desc">of U.S. postings mention remote or hybrid work</span></div>
+<div class="hero-stat"><span class="num">10–15 min</span><span class="desc">is the application length most seekers call reasonable</span></div>
+<div class="hero-stat"><span class="num">$500M+</span><span class="desc">in reported job-scam losses in 2024 alone</span></div>
 </div>
 </div></section>
 
-<section class="band"><div class="wrap">
-<p class="notice">Weekline explains remote, online, and independent work. It does not list jobs, screen employers, or charge a fee. <a href="about.html">About Weekline</a>.</p>
+<section class="guides"><div class="wrap">
+<p class="section-label">Three guides</p>
+<h2>Everything starts with one of these.</h2>
+<div class="guide-grid">
+<a class="guide-card" href="search.html">
+<span class="guide-icon">🔍</span>
+<h3>Search</h3>
+<p>Where the looking actually starts, how a search tends to run step by step, and when remote ads are scarce or plentiful.</p>
+<span class="guide-link">Read the guide &rarr;</span>
+</a>
+<a class="guide-card" href="apply.html">
+<span class="guide-icon">📝</span>
+<h3>Apply</h3>
+<p>What an online application form, screening question, skills check, and interview actually look like, in order.</p>
+<span class="guide-link">Read the guide &rarr;</span>
+</a>
+<a class="guide-card" href="apply.html#requirements">
+<span class="guide-icon">✅</span>
+<h3>Requirements</h3>
+<p>What you’re commonly asked to have: work eligibility, a tax form, a working setup, and sometimes a skills test.</p>
+<span class="guide-link">Read the guide &rarr;</span>
+</a>
+</div>
+</div></section>
+
+<section class="faq"><div class="wrap faq-grid">
+<div class="faq-intro">
+<p class="section-label">Quick answers</p>
+<h2>Before you open another tab.</h2>
+<p>Short answers to what people ask first. The full guides go deeper, with sources.</p>
+<p><a class="btn btn-ghost" href="notes.html">See every note &rarr;</a></p>
+</div>
+<div class="faq-list">
+<details><summary>Do I need to pay anything to apply?</summary><p>No. Legitimate employers never charge a fee for an application, a “starter kit,” or training, and never ask you to deposit a check and send part of it back. Any of those is the clearest sign of a scam.</p></details>
+<details><summary>Will I need special equipment to work from home?</summary><p>Often yes: a computer meeting basic specs and a reliable internet connection, sometimes a wired connection rather than a hotspot. A real employer ships or reimburses required equipment; it does not make you buy it upfront.</p></details>
+<details><summary>Am I an employee or a contractor?</summary><p>Check which tax form you’re asked to complete. A W-4 means you’re a W-2 employee with tax withheld from each paycheck. A W-9 means you’re a 1099 contractor who handles your own taxes.</p></details>
+<details><summary>How long should an application actually take?</summary><p>About half of job seekers consider 10 to 15 minutes reasonable for an online form. If it’s taking much longer, or asking you to retype a résumé you already uploaded, that’s a known frustration, not something wrong with you.</p></details>
+</div>
+</div></section>
+
+<section class="cta"><div class="wrap cta-inner">
+<h2>Start wherever your question is.</h2>
+<p>No listings, no account, no fee. Just the plain explanation, with the source behind every figure.</p>
+<div class="cta-actions">
+<a class="btn btn-primary btn-lg" href="search.html">How &amp; where people search</a>
+<a class="btn btn-outline-light btn-lg" href="states.html">Pay &amp; employment status</a>
+</div>
 </div></section>
 ''',
         "index.html",
@@ -457,8 +470,8 @@ def build():
         "notes.html",
         f"Notes · {BRAND}",
         "Notes in the Weekline record on U.S. remote, online, and flexible work.",
-        f'''<div class="page-head"><div class="wrap"><p class="kicker">Notes</p><h1>More on the three words</h1>
-<p class="lede">Longer notes on where the work happens, how it is delivered, and when the hours fall.</p></div></div>
+        f'''<div class="page-head"><div class="wrap"><p class="kicker">Notes</p><h1>Every guide, in one place</h1>
+<p class="lede">The longer notes behind Search, Apply, Requirements, and Pay &amp; hours, each with sources.</p></div></div>
 <section class="band"><div class="wrap">
 <div class="filters" role="group" aria-label="Filter notes">
 <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
