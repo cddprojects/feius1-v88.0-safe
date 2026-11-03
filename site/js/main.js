@@ -55,4 +55,18 @@
       if (empty) empty.hidden = n > 0;
     });
   }
+
+  var contactForm = document.getElementById("contact-form");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var name = document.getElementById("c-name").value;
+      var topic = document.getElementById("c-topic").value;
+      var subject = encodeURIComponent("Topic suggestion from " + name);
+      var body = encodeURIComponent(topic);
+      window.location.href = "mailto:hello@weekline.example?subject=" + subject + "&body=" + body;
+      var confirm = document.getElementById("contact-confirm");
+      if (confirm) confirm.style.display = "block";
+    });
+  }
 })();

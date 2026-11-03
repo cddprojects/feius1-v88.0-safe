@@ -17,10 +17,13 @@ FONT = (
 )
 
 NAV = [
-    ("search.html", "Search"),
-    ("apply.html", "Apply"),
-    ("states.html", "Pay &amp; hours"),
+    ("index.html", "Home"),
+    ("career-guides.html", "Career Guides"),
+    ("skills-training.html", "Skills &amp; Training"),
+    ("work-options.html", "Work Options"),
+    ("extra-income.html", "Extra Income"),
     ("about.html", "About"),
+    ("contact.html", "Contact"),
 ]
 
 WRITTEN = set()
@@ -46,7 +49,7 @@ def header(current, landing=False):
 <div class="wrap header-row">
 {brand()}
 <div class="nav-wrap">{links}</div>
-<a class="btn btn-primary header-cta" href="apply.html">See the guides</a>
+<a class="btn btn-primary header-cta" href="career-guides.html">Explore career guides</a>
 </div>
 </header>'''
 
@@ -54,25 +57,27 @@ def header(current, landing=False):
 def footer():
     return f'''<footer class="site-footer"><div class="wrap foot">
 <div class="foot-brand"><p class="brand-foot">{BRAND}</p>
-<p>General information about remote, online, and independent work. Plain explanations of how people search, apply, and what's required, for readers in the United States.</p></div>
-<div><h2>Guides</h2><ul>
-<li><a href="search.html">How &amp; where people search</a></li>
-<li><a href="apply.html">How the application runs</a></li>
-<li><a href="apply.html#requirements">What's required to apply</a></li>
-<li><a href="states.html">Pay &amp; hours</a></li>
-<li><a href="search.html#signs">Signs of a real offer</a></li>
-<li><a href="notes.html">All notes</a></li>
+<p>Articles and guides on U.S. careers, pay, training, flexible work, and ways to earn extra income.</p></div>
+<div><h2>Explore</h2><ul>
+<li><a href="career-guides.html">Career Guides</a></li>
+<li><a href="skills-training.html">Skills &amp; Training</a></li>
+<li><a href="work-options.html">Work Options</a></li>
+<li><a href="extra-income.html">Extra Income</a></li>
 </ul></div>
-<div><h2>Publisher</h2><ul>
-<li><a href="about.html">About</a></li>
-<li><a href="corrections.html">Corrections</a></li>
-<li><a href="terms.html">Terms</a></li>
-<li><a href="questions.html">Questions</a></li>
-<li><a href="privacy.html">Privacy</a></li>
-<li><a href="disclaimer.html">Disclaimer</a></li>
+<div><h2>About</h2><ul>
+<li><a href="about.html">About Us</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="privacy.html">Privacy Policy</a></li>
+<li><a href="corrections.html">Editorial Standards</a></li>
+</ul></div>
+<div><h2>Data and resources</h2><ul>
+<li><a href="https://www.bls.gov/" rel="noopener">Bureau of Labor Statistics</a></li>
+<li><a href="https://www.careeronestop.org/Toolkit/Wages/find-salary.aspx" rel="noopener">CareerOneStop wage tools</a></li>
+<li><a href="https://www.apprenticeship.gov/" rel="noopener">Apprenticeship.gov</a></li>
+<li><a href="https://consumer.ftc.gov/articles/job-scams" rel="noopener">FTC job scam guidance</a></li>
 </ul></div>
 </div>
-<div class="wrap legal"><p>{BRAND} provides general information only. It explains remote, online, and independent work. It does not list jobs, screen employers, or give legal, tax, or employment advice.</p>
+<div class="wrap legal"><p>Pay, job requirements, and work arrangements vary by employer and location. Check the date and geography of wage figures and confirm the details of a role with the employer. {BRAND} provides general information only; it does not list jobs, screen employers, or give legal, tax, or financial advice.</p>
 <p>&copy; 2026 {BRAND} &middot; United States</p></div>
 </footer>
 <script src="js/main.js"></script>'''
@@ -122,134 +127,182 @@ def essay(filename, kicker, h1, description, lede, inner, current, section="Reco
 def build():
     page(
         "index.html",
-        f"General information on remote, online, and independent work · {BRAND}",
-        "Weekline explains how people in the United States search, apply, and get hired for remote and online work, with the source behind every figure.",
+        f"Career guides, pay, training, and flexible work · {BRAND}",
+        "Weekline covers U.S. career paths, pay, training options, and flexible or extra-income work, with a source named behind every figure.",
         '''
 <section class="hero"><div class="wrap hero-grid">
 <div class="hero-copy">
 <p class="eyebrow">General information, not job listings</p>
-<h1>An algorithm often screens you first. Whether “remote” is even on the table depends on your field.</h1>
-<p class="lede">Nearly two-thirds of candidates who reached the interview stage in 2026 faced an AI interview, most without being told in advance. At the same time, remote and hybrid work is nowhere near evenly spread — common in insurance, legal, and software, almost nonexistent in construction, retail, and driving. This explains both: how AI now filters applicants before a person ever does, and where remote work actually still exists.</p>
-<p class="reassure">Neither of these responds to applying harder. Knowing how each one actually works just means fewer surprises along the way.</p>
+<h1>What’s changing in the U.S. job market, and what it means for your next move.</h1>
+<p class="lede">See where jobs are projected to grow, what training or credentials different roles ask for, and how pay and openings compare near you. These guides also cover remote and part-time work, and whether a side gig fits your schedule.</p>
 <div class="hero-actions">
-<a class="btn btn-primary btn-lg" href="apply.html#ai">See how AI screening works</a>
-<a class="btn btn-ghost btn-lg" href="search.html#when">See where remote work exists</a>
+<a class="btn btn-primary btn-lg" href="career-guides.html">Explore career guides</a>
+<a class="btn btn-ghost btn-lg" href="work-options.html">Compare work options</a>
 </div>
 <ul class="hero-chips">
-<li><span class="chip-icon">🤖</span>How AI screening works</li>
-<li><span class="chip-icon">🗺️</span>Where remote jobs concentrate</li>
-<li><span class="chip-icon">✅</span>What you need to have ready</li>
+<li><span class="chip-icon">📈</span>Where jobs are growing</li>
+<li><span class="chip-icon">🎓</span>What it takes to qualify</li>
+<li><span class="chip-icon">🗺️</span>Remote, hybrid, or flexible</li>
 </ul>
 </div>
 <div class="hero-card" aria-hidden="true">
-<p class="hero-card-label">Two forces reshaping hiring in 2026</p>
-<div class="hero-stat"><span class="num">63%</span><span class="desc">of interviewed candidates faced an AI interview</span></div>
-<div class="hero-stat"><span class="num">70%</span><span class="desc">were never told in advance that AI would evaluate them</span></div>
-<div class="hero-stat"><span class="num">~40% vs 4%</span><span class="desc">remote-or-hybrid share: insurance &amp; legal postings vs. construction &amp; retail</span></div>
+<p class="hero-card-label">A few figures to start with</p>
+<div class="hero-stat"><span class="num">5.9M</span><span class="desc">jobs the BLS projects the U.S. economy will add, 2025–2035</span></div>
+<div class="hero-stat"><span class="num">35%</span><span class="desc">of employed people did some or all of their work at home on days they worked, 2025</span></div>
+<div class="hero-stat"><span class="num">34.6%</span><span class="desc">projected growth for data scientists, among the fastest of any occupation</span></div>
 </div>
 </div></section>
 
-<section class="compare"><div class="wrap">
-<p class="section-label">Two forces, one hiring process</p>
-<h2>What’s actually deciding whether you get hired.</h2>
-<p class="section-intro">These two shifts move independently of each other, and most job seekers run into both without ever being told so.</p>
-<div class="compare-grid">
-<div class="compare-card">
-<p class="compare-kicker">Shift one</p>
-<h3>An algorithm often screens you first.</h3>
-<div class="compare-stat"><span class="num">63%</span><span class="desc">of candidates who reached the interview stage faced an AI interview in 2026</span></div>
-<div class="compare-stat"><span class="num">70%</span><span class="desc">were never told in advance that AI would be evaluating them</span></div>
-<div class="compare-stat"><span class="num">50.5%</span><span class="desc">were rejected at least once with zero human contact</span></div>
-<p><a class="guide-link" href="apply.html#ai">See how AI screening actually works &rarr;</a></p>
+<section class="featured"><div class="wrap featured-row">
+<div class="featured-copy">
+<p class="section-label">Featured story &middot; U.S. job outlook</p>
+<h2>Where U.S. jobs are projected to grow through 2035.</h2>
+<p>The U.S. Bureau of Labor Statistics projects that the economy will add 5.9 million jobs from 2025 to 2035. This covers where that growth is expected, what it takes to enter selected occupations, and how to check pay and openings near you.</p>
+<p class="src-note">Source: BLS employment projections, 2025–2035.</p>
+<p><a class="guide-link" href="career-guides.html#job-outlook">Read the U.S. job outlook &rarr;</a></p>
 </div>
-<div class="compare-card">
-<p class="compare-kicker">Shift two</p>
-<h3>Whether remote work exists depends on your field.</h3>
-<div class="compare-stat"><span class="num">~40%</span><span class="desc">of insurance and legal postings mention remote or hybrid work</span></div>
-<div class="compare-stat"><span class="num">&lt;4%</span><span class="desc">of construction and retail postings do the same</span></div>
-<div class="compare-stat"><span class="num">8.3%</span><span class="desc">is the current share of all U.S. postings mentioning remote or hybrid</span></div>
-<p><a class="guide-link" href="search.html#when">See the breakdown by field &rarr;</a></p>
+<div class="featured-art" aria-hidden="true">
+<span class="featured-icon">📊</span>
+</div>
+</div></section>
+
+<section class="pillars"><div class="wrap">
+<p class="section-label">The big picture</p>
+<h2>Four things to consider before your next career move.</h2>
+<div class="pillar-grid">
+<div class="pillar-card">
+<p class="pillar-num">01</p>
+<h3>Job demand</h3>
+<p>Healthcare support is among the occupational groups projected to grow fastest through 2035, and data scientists rank among the fastest-growing individual occupations. Once a role catches your eye, check pay and openings where you live.</p>
+<p class="src-note">BLS employment projections &middot; CareerOneStop wage tools</p>
+</div>
+<div class="pillar-card">
+<p class="pillar-num">02</p>
+<h3>Skills and training</h3>
+<p>Start with the job you want, then compare ways to qualify. A community college program, certification, degree, or paid Registered Apprenticeship can each be worth exploring, depending on the role.</p>
+<p class="src-note">Apprenticeship.gov career seeker resources</p>
+</div>
+<div class="pillar-card">
+<p class="pillar-num">03</p>
+<h3>Work flexibility</h3>
+<p>In 2025, 35% of employed people did some or all of their work at home on days they worked. When comparing jobs, look at where you’re expected to work, which hours you need to be available, and how often you’ll need to go in.</p>
+<p class="src-note">BLS American Time Use Survey</p>
+</div>
+<div class="pillar-card">
+<p class="pillar-num">04</p>
+<h3>Extra income</h3>
+<p>In a 2024 Federal Reserve survey, some gig workers said they would struggle to make ends meet without gig income, and many wanted steadier pay. When comparing options, look at what you could earn after expenses and how reliably the work comes in.</p>
+<p class="src-note">Federal Reserve household survey, 2024</p>
 </div>
 </div>
 </div></section>
 
 <section class="guides"><div class="wrap">
-<p class="section-label">Three guides</p>
-<h2>Three stages of getting hired, start to finish.</h2>
-<p class="section-intro">From the first search through the paperwork after an offer, each stage runs on a fairly predictable pattern — covered here in order, with the source behind each fact.</p>
+<p class="section-label">Career guides</p>
+<h2>Find out what jobs pay and what it takes to qualify.</h2>
 <div class="guide-grid">
-<a class="guide-card" href="search.html">
-<span class="guide-icon">🔍</span>
-<h3>Search</h3>
-<p>Where to actually look, how a search tends to go week by week, and how much remote work really exists in your field versus others.</p>
+<a class="guide-card" href="career-guides.html#job-outlook">
+<span class="guide-icon">📈</span>
+<h3>Job outlook</h3>
+<p>Selected roles in healthcare, technology, and other fields with strong projected growth, plus how to check demand in your area.</p>
 <span class="guide-link">Read the guide &rarr;</span>
 </a>
-<a class="guide-card" href="apply.html">
-<span class="guide-icon">📝</span>
-<h3>Apply</h3>
-<p>What happens after you hit submit: the screening questions, a possible skills test, and an interview that’s increasingly run by AI.</p>
+<a class="guide-card" href="career-guides.html#pay">
+<span class="guide-icon">💲</span>
+<h3>Pay</h3>
+<p>How to look up wages for your occupation and location, and use local figures to put a posted salary range or hourly rate in context.</p>
 <span class="guide-link">Read the guide &rarr;</span>
 </a>
-<a class="guide-card" href="apply.html#requirements">
-<span class="guide-icon">✅</span>
-<h3>Requirements</h3>
-<p>What you’ll be asked to have before you’re hired: proof you can work in the U.S., a tax form, a working setup, sometimes a skills test.</p>
+<a class="guide-card" href="skills-training.html">
+<span class="guide-icon">🎓</span>
+<h3>Skills and training</h3>
+<p>How long an apprenticeship, certificate, or degree path takes, what it costs, and what credential it ends in.</p>
+<span class="guide-link">Read the guide &rarr;</span>
+</a>
+<a class="guide-card" href="work-options.html">
+<span class="guide-icon">🗺️</span>
+<h3>Flexible work</h3>
+<p>What “flexibility” can mean in where you work, when you work, or both, and what to ask about office days and required hours.</p>
+<span class="guide-link">Read the guide &rarr;</span>
+</a>
+<a class="guide-card" href="career-guides.html#career-change">
+<span class="guide-icon">🔁</span>
+<h3>Career change</h3>
+<p>How to find roles that use skills you already have, and identify what you’d still need to learn to move toward a new one.</p>
+<span class="guide-link">Read the guide &rarr;</span>
+</a>
+<a class="guide-card" href="career-guides.html#signs">
+<span class="guide-icon">🚩</span>
+<h3>Job search safety</h3>
+<p>How to verify a listing on the employer’s own site, recognize a request for upfront payment, and decide when it’s safe to share personal information.</p>
 <span class="guide-link">Read the guide &rarr;</span>
 </a>
 </div>
+<p class="guides-more"><a class="btn btn-ghost" href="career-guides.html">Browse all career guides &rarr;</a></p>
+</div></section>
+
+<section class="extra-teaser"><div class="wrap">
+<p class="section-label">Extra income</p>
+<h2>What could a second job or side gig add to your budget?</h2>
+<p>A weekend shift, a freelance project, and app-based gig work each bring in extra income, and each makes different demands on your time. Start with the hours you can realistically give, then compare how often you’ll get paid, what the work costs you, and how reliably it comes in.</p>
+<p class="src-note">Source: Federal Reserve household survey, 2024. General information, not tax or financial advice — actual take-home pay depends on your own tax situation and expenses.</p>
+<p><a class="guide-link" href="extra-income.html">Compare ways to earn extra income &rarr;</a></p>
+</div></section>
+
+<section class="opts"><div class="wrap">
+<p class="section-label">Work options</p>
+<h2>Compare six ways to work.</h2>
+<div class="opts-table-wrap"><table class="opts-table">
+<thead><tr><th>Work option</th><th>What to check</th></tr></thead>
+<tbody>
+<tr><td>Part-time jobs</td><td>Expected weekly hours, shift changes, and which benefits are available.</td></tr>
+<tr><td>Remote jobs</td><td>Eligible states, time zone requirements, and whether travel is expected.</td></tr>
+<tr><td>Hybrid jobs</td><td>Required office days, commute time, and who sets the schedule.</td></tr>
+<tr><td>Flexible schedules</td><td>Required hours, how far ahead shifts are posted, and whether you can change your availability.</td></tr>
+<tr><td>Freelance work</td><td>Project scope, payment terms, and the time it takes to find clients.</td></tr>
+<tr><td>App-based gigs</td><td>Pay per task, unpaid waiting time, and expenses such as mileage or supplies.</td></tr>
+</tbody>
+</table></div>
+<p class="guides-more"><a class="btn btn-ghost" href="work-options.html">Explore all work options &rarr;</a></p>
+</div></section>
+
+<section class="guides practical"><div class="wrap">
+<p class="section-label">Practical guides</p>
+<h2>What to ask before you apply or accept an offer.</h2>
+<div class="guide-grid">
+<div class="guide-card static">
+<h3>How to ask for a flexible schedule</h3>
+<p>Put together a proposal that explains the schedule you want, how you’ll cover your responsibilities, and when you and your manager can review how it’s working.</p>
+</div>
+<div class="guide-card static">
+<h3>Employee or independent contractor?</h3>
+<p>Ask how you’ll be paid, who covers equipment and expenses, and which benefits, if any, come with the arrangement.</p>
+</div>
+<div class="guide-card static">
+<h3>How to write a résumé for a remote role</h3>
+<p>Show how you’ve handled deadlines, shared updates, and worked with people in different locations, using specific examples of what you delivered.</p>
+</div>
+</div>
+<p class="guides-more"><a class="btn btn-ghost" href="work-options.html#practical">Read more practical guides &rarr;</a></p>
 </div></section>
 
 <section class="sources"><div class="wrap sources-row">
-<p class="sources-label">Every number you’ll see here comes from one of these</p>
+<p class="sources-label">Every figure you’ll see here names its source</p>
 <ul class="sources-list">
 <li>U.S. Bureau of Labor Statistics</li>
+<li>CareerOneStop</li>
+<li>Apprenticeship.gov</li>
 <li>Federal Trade Commission</li>
-<li>U.S. Department of Labor</li>
+<li>Federal Reserve</li>
 <li>IRS</li>
-<li>Indeed Hiring Lab</li>
-<li>SHRM</li>
-<li>Huntr Job Search Trends</li>
-<li>LinkedIn Job Search Safety Pulse</li>
-<li>Greenhouse Candidate AI Interview Report</li>
 </ul>
 </div></section>
 
-<section class="warn-section"><div class="wrap">
-<p class="section-label warn-label">Before you say yes</p>
-<h2>Four signs an offer isn’t real.</h2>
-<p class="section-intro">Reported job-scam losses topped $500 million in 2024, and most job seekers now encounter at least one scam per search. These four patterns show up most often in that reporting — not a reason to doubt every offer, just what regulators see repeated most.</p>
-<div class="warn-grid">
-<div class="warn-card"><span class="warn-flag">🚩</span><h3>No employer name</h3><p>If the company won’t say who they are, that’s the single biggest red flag job seekers and fraud reports keep pointing to.</p></div>
-<div class="warn-card"><span class="warn-flag">🚩</span><h3>They want money upfront</h3><p>A kit fee, a training fee, a “deposit” before you’ve even started — however it’s framed, it’s never legitimate.</p></div>
-<div class="warn-card"><span class="warn-flag">🚩</span><h3>They send you a check to deposit</h3><p>Deposit this check, then send part of it back — that’s the single most common scam the FTC tracks.</p></div>
-<div class="warn-card"><span class="warn-flag">🚩</span><h3>They want an answer right now</h3><p>A real offer can survive you sleeping on it. If they’re rushing you, that’s the tactic, not how real hiring works.</p></div>
-</div>
-<p class="warn-more"><a href="search.html#signs">See the full list, with sources &rarr;</a></p>
-</div></section>
-
-<section class="faq"><div class="wrap faq-grid">
-<div class="faq-intro">
-<p class="section-label">Quick answers</p>
-<h2>Probably already on your mind.</h2>
-<p>You’re likely wondering about at least one of these. None of them are too basic to ask — here’s the short version, and the full guides go deeper with sources.</p>
-<p><a class="btn btn-ghost" href="notes.html">See every note &rarr;</a></p>
-</div>
-<div class="faq-list">
-<details><summary>Do I need to pay anything to apply?</summary><p>No. A real employer never charges you to apply, never sells you a “starter kit” or training, and never asks you to deposit a check and send part of it back. If any of that happens, you’re looking at a scam.</p></details>
-<details><summary>Will I need specific equipment to work from home?</summary><p>Usually, yes — a computer that meets some basic specs and a reliable internet connection, sometimes a wired one instead of a hotspot. A real employer ships you the equipment or pays you back for it. They don’t make you buy it yourself first.</p></details>
-<details><summary>Am I an employee or a contractor?</summary><p>The tax form used is the reliable signal: a W-4 means a W-2 employee with taxes withheld from every paycheck, while a W-9 means a 1099 contractor handling their own taxes.</p></details>
-<details><summary>How long should an application actually take?</summary><p>About half of job seekers say 10 to 15 minutes feels fair for an online form. If yours is taking a lot longer, or making you retype a résumé you already uploaded, that’s a known annoyance — not something you’re doing wrong.</p></details>
-<details><summary>Will I know if an employer uses AI to screen me?</summary><p>Not reliably. Most candidates are never told in advance that AI reviewed their application or ran their interview, even though most want that disclosed by law. It's reasonable to ask directly before an AI-run interview whether a person will review the result.</p></details>
-</div>
-</div></section>
-
-<section class="cta"><div class="wrap cta-inner">
-<h2>Start wherever your question is.</h2>
-<p>No listings, no account, no fee — just a straight answer, backed by a real source. Works the same whether this is your first search or your fifth.</p>
-<div class="cta-actions">
-<a class="btn btn-primary btn-lg" href="search.html">How &amp; where people search</a>
-<a class="btn btn-outline-light btn-lg" href="states.html">Pay &amp; employment status</a>
-</div>
+<section class="contact-teaser"><div class="wrap">
+<p class="section-label">Contact</p>
+<h2>What would you like us to cover next?</h2>
+<p>Have a question about a career path, a training program, or a type of work? Tell us what you’re trying to figure out — your suggestions help shape future guides.</p>
+<p><a class="btn btn-primary" href="contact.html">Send a suggestion</a></p>
 </div></section>
 ''',
         "index.html",
@@ -689,6 +742,133 @@ def build():
 <p>Links exist so a reader can reach the original source. Weekline does not control those sites.</p>
 </div></section>''',
         "about.html",
+    )
+
+    page(
+        "career-guides.html",
+        f"Career Guides · {BRAND}",
+        "Career paths, pay lookups, and job-search safety for U.S. readers, with the source behind every figure.",
+        '''<div class="page-head"><div class="wrap"><p class="kicker">Career Guides</p><h1>Find out what jobs pay and what it takes to qualify.</h1>
+<p class="lede">Explore selected roles with strong projected growth, compare entry requirements, and learn how to check demand and pay where you live.</p></div></div>
+
+<section><div class="wrap article" style="max-width:72ch">
+<h2 id="job-outlook">Job outlook: where U.S. jobs are projected to grow</h2>
+<p>The U.S. Bureau of Labor Statistics projects the economy will add 5.9 million jobs from 2025 to 2035, growing total employment from about 170.3 million to 176.2 million (3.5%). Growth is not even across fields. Healthcare support is projected to grow fastest among major occupational groups (+13.3%), followed by healthcare practitioners and technical occupations (+8.0%); together these two groups account for close to a third of all new jobs through 2035. Computer and mathematical occupations rank fifth (+7.3%), driven largely by AI-related roles. Among individual occupations, nurse practitioners (+41%) and data scientists (+34.6%) are projected to grow fastest.</p>
+<p>These are national projections, not a guarantee for any specific job or location. Once a role catches your interest, check current pay and openings in your own area using a wage-lookup tool, since both can differ a great deal by region.</p>
+<p class="src-note">Source: BLS Employment Projections, 2025–2035 news release and Occupational Outlook Handbook.</p>
+
+<h2 id="pay">Pay: how to find out what a job pays near you</h2>
+<p>A posted salary range or hourly rate means more once you can compare it with your local market. CareerOneStop's wage-lookup tool, built on BLS Occupational Employment and Wage Statistics, breaks pay down by occupation and by state or metro area, which can differ substantially from a national median. Checking the local figure before accepting, or before deciding a posted range looks fair, is a reasonable step regardless of the role.</p>
+<p class="src-note">Source: CareerOneStop wage tools, built on BLS Occupational Employment and Wage Statistics.</p>
+
+<h2>Skills and training</h2>
+<p>Comparing credential paths side by side — how long each takes, what it costs, and what it leads to — is covered in the <a href="skills-training.html">Skills &amp; Training guide</a>, including where a paid Registered Apprenticeship fits.</p>
+
+<h2 id="career-change">Career change: using experience you already have</h2>
+<p>Moving fields doesn’t always mean starting over. Start by listing what you actually did in past roles — the tasks, tools, and outcomes, not just job titles — and compare that list against postings in the field you’re considering. Many roles share transferable skills (scheduling, customer communication, basic data work, project coordination) even when the job titles look unrelated. Where a gap remains, the <a href="skills-training.html">Skills &amp; Training guide</a> covers common ways to close it.</p>
+
+<h2 id="signs">Job search safety: how to spot a fake remote job listing</h2>
+<p>Fake and "ghost" postings are common enough that most job seekers now say they encounter one. A few checks reduce the risk before you spend time on an application:</p>
+<ul class="steps">
+<li>Look up the role on the employer’s own careers page, not just the board where you found it. A real opening is usually listed in both places.</li>
+<li>Treat any request for payment — a fee, a "starter kit," training costs, or a check to deposit and partly send back — as a stop sign. Legitimate employers do not charge applicants.</li>
+<li>Be cautious about sharing a Social Security number, bank details, or a copy of an ID before an offer is made in writing from a named, verifiable employer.</li>
+<li>Be skeptical of contact that happens only through a messaging app rather than a company email address or phone line.</li>
+</ul>
+<p class="src-note">Source: Federal Trade Commission job-scam consumer guidance.</p>
+</div></section>''',
+        "career-guides.html",
+    )
+
+    page(
+        "skills-training.html",
+        f"Skills &amp; Training · {BRAND}",
+        "Comparing apprenticeships, certificates, and degrees for U.S. career paths, with the source behind every figure.",
+        '''<div class="page-head"><div class="wrap"><p class="kicker">Skills &amp; Training</p><h1>Apprenticeship, certificate, or degree?</h1>
+<p class="lede">Start with the job you want, then compare how long each path to it takes, what it costs, and what credential you end up with.</p></div></div>
+
+<section><div class="wrap article" style="max-width:72ch">
+<div class="ready-box"><div class="ready-grid">
+<div><h4>Registered Apprenticeship</h4><ul><li>Paid, on-the-job training combined with classroom instruction</li><li>Typically 1–4 years depending on the occupation</li><li>Ends in a nationally recognized credential</li></ul></div>
+<div><h4>Certificate or license</h4><ul><li>Weeks to about a year, often at a community college or trade school</li><li>Usually the fastest, lowest-cost path to an entry-level role in a specific field</li><li>May need renewal or continuing education</li></ul></div>
+<div><h4>Associate degree</h4><ul><li>About 2 years at a community college</li><li>Often required for technical and allied-health roles</li><li>Can sometimes transfer toward a bachelor’s degree later</li></ul></div>
+<div><h4>Bachelor’s degree</h4><ul><li>Typically 4 years</li><li>Still commonly required or preferred for many professional and managerial roles</li><li>The largest cost and time commitment of the four</li></ul></div>
+</div></div>
+<p>Which path makes sense depends heavily on the specific occupation; there is no single correct order to this list. The U.S. Department of Labor's Apprenticeship.gov is a reasonable starting point for comparing registered, paid apprenticeships by field and location, since availability varies by industry and by state.</p>
+<p>This is general information about how these paths typically work, not a recommendation for any individual's circumstances. Program cost, financial aid eligibility, and licensing requirements vary by state and by school; confirm current figures directly with the program before enrolling.</p>
+<p class="src-note">Source: Apprenticeship.gov career seeker resources, U.S. Department of Labor.</p>
+</div></section>''',
+        "skills-training.html",
+    )
+
+    page(
+        "work-options.html",
+        f"Work Options · {BRAND}",
+        "Comparing part-time, remote, hybrid, flexible, freelance, and gig work in the United States.",
+        '''<div class="page-head"><div class="wrap"><p class="kicker">Work Options</p><h1>Remote, hybrid, or flexible hours?</h1>
+<p class="lede">A job can offer flexibility in where you work, when you work, or both. Here is what each common arrangement usually means, and what to ask before you accept one.</p></div></div>
+
+<section><div class="wrap article" style="max-width:72ch">
+<p>In 2025, 35% of employed people did some or all of their work at home on days they worked, while 70% did some or all of their work at their workplace; these overlap because many people split time between the two. "Flexible" does not describe one single arrangement — it can mean where you work, when you work, or both, and the specifics are worth confirming before you accept an offer.</p>
+<div class="opts-table-wrap"><table class="opts-table">
+<thead><tr><th>Work option</th><th>What to check</th></tr></thead>
+<tbody>
+<tr><td>Part-time jobs</td><td>Expected weekly hours, shift changes, and which benefits are available.</td></tr>
+<tr><td>Remote jobs</td><td>Eligible states, time zone requirements, and whether travel is expected.</td></tr>
+<tr><td>Hybrid jobs</td><td>Required office days, commute time, and who sets the schedule.</td></tr>
+<tr><td>Flexible schedules</td><td>Required hours, how far ahead shifts are posted, and whether you can change your availability.</td></tr>
+<tr><td>Freelance work</td><td>Project scope, payment terms, and the time it takes to find clients.</td></tr>
+<tr><td>App-based gigs</td><td>Pay per task, unpaid waiting time, and expenses such as mileage or supplies.</td></tr>
+</tbody>
+</table></div>
+<p class="src-note">Source: BLS American Time Use Survey, 2025 annual averages.</p>
+
+<h2 id="practical">Practical guides: what to ask before you apply or accept an offer</h2>
+<h3>How to ask for a flexible schedule</h3>
+<p>Put together a short, written proposal: the schedule you’re asking for, how you’ll cover your responsibilities during that schedule, and a date when you and your manager will check in on how it’s working. A concrete plan is easier to say yes to than an open-ended request.</p>
+<h3>Employee or independent contractor?</h3>
+<p>Before accepting, ask how you’ll be paid, who covers equipment and work-related expenses, and which benefits, if any, come with the arrangement. Which tax form you’re asked to complete is a reliable signal: a W-4 points to employee status with taxes withheld from each paycheck, while a W-9 points to independent-contractor status, where you’re responsible for your own tax payments.</p>
+<h3>How to write a résumé for a remote role</h3>
+<p>Show, with specific examples, how you’ve handled deadlines independently, communicated progress without in-person check-ins, and worked with people in different locations or time zones. Concrete outcomes read as more convincing than general claims of being "self-motivated" or "a strong communicator."</p>
+</div></section>''',
+        "work-options.html",
+    )
+
+    page(
+        "extra-income.html",
+        f"Extra Income · {BRAND}",
+        "Comparing part-time shifts, freelance work, and app-based gigs as sources of extra income in the United States.",
+        '''<div class="page-head"><div class="wrap"><p class="kicker">Extra Income</p><h1>What could a second job or side gig add to your budget?</h1>
+<p class="lede">A weekend shift, a freelance project, and app-based gig work can each bring in extra income. They also make very different demands on your time.</p></div></div>
+
+<section><div class="wrap article" style="max-width:72ch">
+<p>A part-time shift usually comes with set hours and a predictable hourly rate. A freelance project can pay more per hour of actual work, but also involves unpaid time finding clients, scoping work, and sending invoices. A delivery or rideshare gig offers flexible timing, but involves driving and vehicle expenses that reduce what you actually keep.</p>
+<p>In September 2026, 9.00 million people (5.5% of employed people) held more than one job, most often a full-time main job plus a part-time second one. Separately, in a 2024 Federal Reserve survey of household finances, some gig workers said they would struggle to make ends meet without that income, and many said they wanted more predictable pay — a reminder that "extra income" ranges from a planned supplement to a necessary part of covering expenses.</p>
+<p>Before committing time to any option, it's worth comparing: how often you'll actually get paid, what the work costs you in gas, mileage, supplies, or your own tools, and how consistent the hours or assignments tend to be. If you need a predictable amount each month, ask directly about consistency before you commit rather than assuming it.</p>
+<p class="reassure">This is general information about how these options typically work, not tax or financial advice. What you actually keep after taxes and expenses depends on your own situation — a tax professional can give figures specific to you.</p>
+<p class="src-note">Sources: Bureau of Labor Statistics, multiple jobholders, September 2026 (not seasonally adjusted). Federal Reserve, Report on the Economic Well-Being of U.S. Households, 2024.</p>
+</div></section>''',
+        "extra-income.html",
+    )
+
+    page(
+        "contact.html",
+        f"Contact · {BRAND}",
+        "Suggest a career, training, or work-arrangement topic for Weekline to cover.",
+        f'''<div class="page-head"><div class="wrap"><p class="kicker">Contact</p><h1>What would you like us to cover next?</h1>
+<p class="lede">Have a question about a career path, a training program, or a type of work? Tell us what you're trying to figure out. Your suggestions help shape future guides.</p></div></div>
+<section><div class="wrap article" style="max-width:48rem">
+<form class="contact-form" id="contact-form">
+<div><label for="c-name">Name</label><input id="c-name" name="name" type="text" autocomplete="name" required></div>
+<div><label for="c-email">Email address</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
+<div><label for="c-topic">Your question or topic suggestion</label><textarea id="c-topic" name="topic" required></textarea></div>
+<button class="btn btn-primary" type="submit">Send a suggestion</button>
+<p class="form-note">This opens a message in your own email app, addressed to {BRAND} — nothing is sent from this page directly.</p>
+<p id="contact-confirm" role="status">Thanks for sending your suggestion.</p>
+</form>
+<p>{BRAND} does not take job applications or list openings through this form. For a question about a specific employer or role, contact that employer directly.</p>
+</div></section>''',
+        "contact.html",
     )
 
     stale = [p for p in ROOT.glob("*.html") if p.name not in WRITTEN]
