@@ -18,10 +18,9 @@ FONT = (
 )
 
 NAV = [
-    ("record.html", "The record"),
-    ("gap.html", "The gap"),
-    ("states.html", "States"),
-    ("notes.html", "Notes"),
+    ("remote", "Remote"),
+    ("online", "Online"),
+    ("flexible", "Flexible"),
     ("about.html", "About"),
 ]
 
@@ -32,30 +31,35 @@ def brand():
     return f'<a class="brand" href="index.html"><span aria-hidden="true"></span>{BRAND}</a>'
 
 
-def nav_block(current):
+def nav_block(current, landing=False):
     items = []
-    for href, label in NAV:
-        cur = ' aria-current="page"' if href == current else ""
+    for key, label in NAV:
+        if key.endswith(".html"):
+            href = key
+            cur = ' aria-current="page"' if href == current else ""
+        else:
+            href = f"#{key}" if landing else f"index.html#{key}"
+            cur = ""
         items.append(f'<li><a href="{href}"{cur}>{label}</a></li>')
     return f'''<nav aria-label="Primary"><ul id="nav-list">{"".join(items)}</ul></nav>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Open menu"><span class="bars" aria-hidden="true"></span></button>'''
 
 
 def header(current, landing=False):
-    links = nav_block(current)
+    links = nav_block(current, landing=landing)
     if landing:
         return f'''<a class="skip" href="#main">Skip to content</a>
 <header class="topbar">
 <div class="wrap topbar-row">
 {brand()}
-<div class="nav">{links}<a class="btn btn-fill top-cta" href="record.html">Read the counts</a></div>
+<div class="nav">{links}</div>
 </div>
 </header>'''
     return f'''<a class="skip" href="#main">Skip to content</a>
 <header class="mast">
-<div class="wrap mast-top"><p>United States · Reviewed {REVIEWED}</p><p class="edition">Public record · Not a job list</p></div>
+<div class="wrap mast-top"><p>United States · Reviewed {REVIEWED}</p><p class="edition">For readers · Not a job list</p></div>
 <div class="wrap nameplate">{brand()}
-<p class="tagline">Where the published work week and the ad market disagree.</p></div>
+<p class="tagline">Remote, online, and flexible work in the United States.</p></div>
 <div class="nav-bar"><div class="wrap nav">
 {links}
 </div></div>
@@ -65,13 +69,12 @@ def header(current, landing=False):
 def footer():
     return f'''<footer class="site-footer"><div class="wrap foot">
 <div><p class="brand-foot">{BRAND}</p>
-<p>A public record of remote, online, and flexible work in the United States. The counts stay in the survey that produced them.</p></div>
-<div><h2>In the record</h2><ul>
-<li><a href="record.html">Days, people, and ads</a></li>
-<li><a href="gap.html">Ads and applications</a></li>
-<li><a href="states.html">Wages by state</a></li>
-<li><a href="arrangements.html">Place, delivery, hours</a></li>
-<li><a href="notes.html">All notes</a></li>
+<p>A plain explanation of remote, online, and flexible work in the United States. Three different parts of the same week.</p></div>
+<div><h2>The three words</h2><ul>
+<li><a href="index.html#remote">Remote</a></li>
+<li><a href="index.html#online">Online</a></li>
+<li><a href="index.html#flexible">Flexible</a></li>
+<li><a href="arrangements.html">How the words differ</a></li>
 </ul></div>
 <div><h2>Publisher</h2><ul>
 <li><a href="about.html">About</a></li>
@@ -132,58 +135,67 @@ def essay(filename, kicker, h1, description, lede, inner, current):
 def build():
     page(
         "index.html",
-        f"The remote-work search and the work week · {BRAND}",
-        "Weekline is a U.S. record that keeps paid days, telework, and remote job ads in separate columns. It does not list jobs.",
+        f"Remote, online, and flexible work · {BRAND}",
+        "A plain explanation of remote, online, and flexible work in the United States. Three different parts of the same week.",
         '''
 <section class="hero"><div class="wrap">
-<p class="kicker">United States · For readers</p>
-<h1>The remote-work search and the work week are not the same number.</h1>
-<p class="lede">Weekline sets three public counts side by side. Days at home, people who teleworked in one week, and ads that say remote. Most paid days are still on a site.</p>
-<div class="actions"><a class="btn btn-fill" href="record.html">Read the three counts</a><a class="btn" href="gap.html">See ads against applications</a></div>
-<div class="measures" aria-label="Three measures that are not one statistic">
-<article class="measure"><p class="label">Paid days at home</p><p class="fig">26.8%</p><p>September 2026. Share of full paid working days. Survey of Working Arrangements and Attitudes.</p></article>
-<article class="measure"><p class="label">People who teleworked</p><p class="fig">21.9%</p><p>September 2026 survey week. Any hours at home for pay. Bureau of Labor Statistics.</p></article>
-<article class="measure"><p class="label">Ads, then applications</p><p class="fig">8% → 35%</p><p>September 2025. LinkedIn’s share of paid U.S. postings that were remote, then the share of applications those postings drew.</p></article>
+<p class="kicker">United States</p>
+<h1>Remote, online, and flexible work.</h1>
+<p class="lede">Three different parts of the same week.</p>
+<div class="word-grid">
+<article class="word" id="remote">
+<p class="ask">Where</p>
+<h2>Remote</h2>
+<p class="mean">Work done away from the usual workplace, or split between home and that workplace.</p>
+<p class="fact"><b>12.1% fully remote</b>Among full-time employees in August 2026, 27.1% were hybrid and 60.8% were fully on site.</p>
+</article>
+<article class="word" id="online">
+<p class="ask">How</p>
+<h2>Online</h2>
+<p class="mean">Work done or handed in over the internet. The person may be at home or in an office.</p>
+<p class="fact"><b>Delivered over the internet</b>A video call, a chat, or a file can be sent from home or from an office. The word leaves the hours open.</p>
+</article>
+<article class="word" id="flexible">
+<p class="ask">When</p>
+<h2>Flexible</h2>
+<p class="mean">Some choice over the schedule. The choice can be small. A shift can still be assigned.</p>
+<p class="fact"><b>62% had little control</b>In early 2025, 62% of workers lacked a predictable, stable schedule they controlled.</p>
+</article>
 </div>
 </div></section>
 
 <section class="band"><div class="wrap">
-<p class="kicker">Why the figures disagree</p>
-<h2 class="reveal">Each number answers a different question.</h2>
-<div class="paths">
-<a class="path reveal" href="record.html"><span class="step">Days</span><h3>A share of the week, not a share of workers.</h3><p>26.8% of paid days were at home in September 2026. The rest of those days were somewhere else.</p></a>
-<a class="path reveal" href="record.html"><span class="step">People</span><h3>A survey week, not a preference.</h3><p>21.9% of people at work that week teleworked at least some hours. Gallup’s higher remote share covers only jobs that can be done remotely.</p></a>
-<a class="path reveal" href="gap.html"><span class="step">Ads</span><h3>A thin shelf, a thick pile of applications.</h3><p>About 8% of paid U.S. postings were remote and drew about 35% of applications. That is not a count of people working from home.</p></a>
+<p class="kicker">One week</p>
+<h2>A week can include one word, two, or all three.</h2>
+<div class="mix">
+<article>
+<h3>From home, on a set shift</h3>
+<p class="mix-words">Remote and online</p>
+<p>The person is away from the workplace and uses the internet. The hours are still assigned.</p>
+</article>
+<article>
+<h3>In the office, sent over the internet</h3>
+<p class="mix-words">Online</p>
+<p>The work moves online. The workplace is still the office.</p>
+</article>
+<article>
+<h3>Chosen hours, still at a workplace</h3>
+<p class="mix-words">Flexible</p>
+<p>The person has some say over the clock. The work can still happen on site.</p>
+</article>
 </div>
+<p class="src-note">August 2026 shares are for full-time wage-and-salary workers, from the Survey of Working Arrangements and Attitudes. The 62% figure is from the American Job Quality Study, January to February 2025. <a href="arrangements.html">A longer note on the three words</a>.</p>
 </div></section>
 
-<section class="band"><div class="wrap">
-<p class="kicker">What the record is for</p>
-<h2 class="reveal">Read the fact that matches the question.</h2>
-<ol class="findings">
-<li class="reveal"><span class="n">01</span><div><h3>Separate place, delivery, and hours.</h3><p>Remote is where the work happens. Online is how it is delivered. Flexible is when the hours fall. A home-based shift can still be assigned. <a href="arrangements.html">The three words</a>.</p></div></li>
-<li class="reveal"><span class="n">02</span><div><h3>Follow the wage across a state line.</h3><p>The federal minimum is still $7.25. Many states require more, and a separate set of states requires a pay range on a posting. <a href="states.html">Wages and states</a>.</p></div></li>
-<li class="reveal"><span class="n">03</span><div><h3>Keep a second job apart from a side survey.</h3><p>In September 2026, 5.5% of employed people held two jobs. A wider side-hustle survey found 27% of adults and a median of $200 a month. <a href="side-work.html">The two definitions</a>.</p></div></li>
-</ol>
-</div></section>
-
-<section class="band"><div class="wrap">
-<p class="kicker">The limit</p>
-<h2 class="reveal">Weekline stops at the record.</h2>
-<div class="paths limits">
-<div class="path reveal"><span class="step">Not a job list</span><h3>No openings, no applications.</h3><p>Hiring stays between a person and the employer named on a posting.</p></div>
-<div class="path reveal"><span class="step">Not a match</span><h3>No advice on which arrangement suits a household.</h3><p>The pages separate facts. They do not rank a schedule for a reader’s life.</p></div>
-<div class="path reveal"><span class="step">Not a ruling</span><h3>No legal, tax, or employment advice.</h3><p>Wage rules and worker status belong with the agency that publishes them, or with a qualified professional.</p></div>
-</div>
-</div></section>
-
-<section class="close-band"><div class="wrap close-grid">
+<section class="band quiet"><div class="wrap split">
 <div>
-<p class="kicker">Start here</p>
-<h2>Open the count that matches the question.</h2>
-<p>Days, people, or ads. The sources and the dates sit on the next page.</p>
+<h2>What this page is for</h2>
+<p>Weekline explains remote, online, and flexible work in plain language. It is general information for readers in the United States.</p>
 </div>
-<div class="actions"><a class="btn btn-fill" href="record.html">Read the three counts</a><a class="btn" href="about.html">About Weekline</a></div>
+<div>
+<p>Weekline does not list jobs or take applications. It does not say which arrangement fits a particular household, and it does not give legal, tax, or employment advice.</p>
+<p><a class="btn" href="about.html">About Weekline</a></p>
+</div>
 </div></section>
 ''',
         "index.html",
@@ -193,15 +205,14 @@ def build():
     essay(
         "record.html",
         "The record",
-        "Days, people, and ads are three counts",
-        "How U.S. figures on home-based work, telework, and remote ads differ.",
-        "Late 2026 has three careful sources. They do not measure the same object.",
+        "Where the paid days are spent",
+        "How U.S. figures describe remote and hybrid work among people, not among postings.",
+        "These figures describe where people work. A share of days and a share of people are different counts.",
         '''
 <div class="takeaways"><h2>In short</h2><ul>
 <li>One series counts paid days at home.</li>
 <li>One series counts people who teleworked in a single week.</li>
-<li>One series counts ads, not workers.</li>
-<li>A preference among people whose jobs can be remote is a fourth, smaller group.</li>
+<li>A third series asks people whose jobs can be done remotely where they prefer to work.</li>
 </ul></div>
 <h2>Paid days at home</h2>
 <p>The Survey of Working Arrangements and Attitudes asks about the share of full paid working days done at home. The sample is workers who earned at least $10,000 in a prior year, reweighted toward the Current Population Survey. The share was 7.2% in December 2019, about 62% in May 2020, and 26.8% in September 2026. It has stayed in the mid-20s since 2023.</p>
@@ -212,9 +223,7 @@ def build():
 <p>The same month’s household survey, seasonally adjusted, put unemployment at 4.2% (7.1 million people). Labor-force participation was 61.8%. Employment as a share of the population was 59.2%. Payrolls rose by 29,000. Part time for economic reasons was 4.501 million. People unemployed 27 weeks or longer numbered 1.944 million.</p>
 <h2>Preference is a smaller room</h2>
 <p>Gallup’s location figures cover employees whose work can be done remotely. In August 2026 that group was 54% hybrid, 25% exclusively remote, and 21% on site. In November 2025, preference in the same kind of group was 61% hybrid, 33% remote, and 6% on site. In May 2025, Gen Z was the least likely to want fully remote work: 23%, against 35% of older employees, with 71% preferring hybrid.</p>
-<h2>Ads are a third object</h2>
-<p>Indeed’s count of postings that mention remote or hybrid work was 2.6% in January 2019, 10.4% at the February 2022 peak, 7.8% on 31 October 2024, and 8.3% on 31 January 2025. A secondary compilation of that tracker put the share at 8.4% on 31 August 2026. LinkedIn told Business Insider that in September 2025 about 8% of paid U.S. postings were remote and those postings drew 35% of applications. July 2025 was about 9% of postings and 37% of applications. The ad share and the application share are both real, and they are not a count of people who work from home.</p>
-<p class="src-note">FRED series WFHCOVIDMATQUESTION. Survey of Working Arrangements and Attitudes, Barrero, Bloom, and Davis. Bureau of Labor Statistics, Employment Situation and table A-41, September 2026. Gallup, Hybrid Work indicator. Indeed Hiring Lab and Forbes, 20 March 2025. Business Insider, 19 October 2025, quoting LinkedIn. The 31 August 2026 Indeed share is a secondary compilation.</p>
+<p class="src-note">FRED series WFHCOVIDMATQUESTION. Survey of Working Arrangements and Attitudes, Barrero, Bloom, and Davis. Bureau of Labor Statistics, Employment Situation and table A-41, September 2026. Gallup, Hybrid Work indicator.</p>
 ''',
         "record.html",
     )
@@ -351,12 +360,9 @@ def build():
     )
 
     notes = [
-        ("days", "Days", "record.html", "Days, people, and ads are three counts", "Home days, a survey week of telework, and a count of postings."),
-        ("ads", "Ads", "gap.html", "A thin shelf of ads, a thick pile of applications", "Where searches start, which occupations mention remote work, and the fraud pattern in public reports."),
-        ("states", "States", "states.html", "The floor changes at the state line", "The federal minimum, higher state rates, and where a pay range has to appear."),
-        ("words", "Words", "arrangements.html", "Place, delivery, and hours", "Remote, online, and flexible name different facts, including an assigned shift worked from home."),
-        ("jobs", "Occupations", "occupations.html", "Which occupations the remote shelf actually holds", "Public medians beside the entry-level remote titles in one database."),
-        ("hours", "Hours", "side-work.html", "Two jobs, and the wider side-work surveys", "5.5% of employed people held two jobs. Side-hustle surveys count a wider set."),
+        ("words", "Words", "arrangements.html", "Place, delivery, and hours", "Remote, online, and flexible name different parts of a week. A home shift can still be assigned."),
+        ("days", "Where", "record.html", "Where paid days are spent", "The share of paid days at home, and who teleworked in one survey week."),
+        ("hours", "When", "side-work.html", "A second, smaller part of the week", "5.5% of employed people held two jobs. Side-work surveys use a wider definition."),
     ]
     items = []
     for cat, label, href, title, dek in notes:
@@ -368,17 +374,14 @@ def build():
         "notes.html",
         f"Notes · {BRAND}",
         "Notes in the Weekline record on U.S. remote, online, and flexible work.",
-        f'''<div class="page-head"><div class="wrap"><p class="kicker">Notes</p><h1>Six notes, one record</h1>
-<p class="lede">Each note keeps its survey, its date, and its population. Weekline does not list openings.</p></div></div>
+        f'''<div class="page-head"><div class="wrap"><p class="kicker">Notes</p><h1>More on the three words</h1>
+<p class="lede">Longer notes on where the work happens, how it is delivered, and when the hours fall.</p></div></div>
 <section class="band"><div class="wrap">
 <div class="filters" role="group" aria-label="Filter notes">
 <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
-<button class="chip" type="button" data-filter="days" aria-pressed="false">Days</button>
-<button class="chip" type="button" data-filter="ads" aria-pressed="false">Ads</button>
-<button class="chip" type="button" data-filter="states" aria-pressed="false">States</button>
 <button class="chip" type="button" data-filter="words" aria-pressed="false">Words</button>
-<button class="chip" type="button" data-filter="jobs" aria-pressed="false">Occupations</button>
-<button class="chip" type="button" data-filter="hours" aria-pressed="false">Hours</button>
+<button class="chip" type="button" data-filter="days" aria-pressed="false">Where</button>
+<button class="chip" type="button" data-filter="hours" aria-pressed="false">When</button>
 </div>
 <ul class="note-list">{"".join(items)}</ul>
 </div></section>''',
@@ -423,13 +426,13 @@ def build():
 <p class="lede">Answers about the publication. They are not answers about a particular job.</p></div></div>
 <section><div class="wrap article">
 <details><summary>Does Weekline list jobs or take applications?</summary>
-<p>No. The pages record public figures, definitions, and the shape of the ad market. Hiring is between a person and an employer or a client.</p></details>
+<p>No. The pages explain remote, online, and flexible work. Hiring stays between a person and an employer or a client.</p></details>
 <details><summary>Is this a guide to choosing an arrangement?</summary>
 <p>No. The pages do not tell a reader which arrangement suits their hours, their household, or their training. They separate facts that are easy to treat as one fact.</p></details>
 <details><summary>Is this legal, tax, or employment advice?</summary>
 <p>No. Wage rules, tax withholding, and worker classification depend on the facts and on federal, state, and local law. Each note names the office that publishes the figure.</p></details>
 <details><summary>Why do the percentages disagree?</summary>
-<p>They measure different things. A share of paid days, a share of people who teleworked in one week, a share of job ads, and a share of adults who report a side hustle are not one statistic. <a href="record.html">Days, people, and ads</a> keeps them apart.</p></details>
+<p>They measure different things. A share of paid days and a share of people who teleworked in one week are different counts. <a href="record.html">Where the paid days are spent</a> keeps them apart.</p></details>
 <details><summary>Does remote work mean the worker chooses the hours?</summary>
 <p>No. Many home-based customer-service roles assign a shift. Hours are a separate fact. <a href="arrangements.html">Place, delivery, and hours</a>.</p></details>
 <details><summary>How current are the figures?</summary>
@@ -443,11 +446,11 @@ def build():
         f"About · {BRAND}",
         "Weekline is an independent record of published U.S. figures on remote, online, and flexible work.",
         '''<div class="page-head"><div class="wrap"><p class="kicker">About</p><h1>A record, not a search.</h1>
-<p class="lede">Weekline sets published U.S. figures next to the ad market. It stops at the record.</p></div></div>
+<p class="lede">Weekline explains remote, online, and flexible work in the United States. Three different parts of the same week.</p></div></div>
 <section class="band"><div class="wrap split">
 <div>
 <h2>What is being recorded</h2>
-<p>The subject is the distance between three things: how Americans spend paid days, how many people telework in a given week, and how job ads use the words remote, online, and flexible. State wage floors and pay-range rules are part of that record because they change the meaning of a number on a posting.</p>
+<p>The subject is three words. Remote is where the work happens. Online is how it is delivered. Flexible is when the hours fall. A week can include one of them, two, or all three.</p>
 <p>Weekline is an independent publisher. It is not a government agency, not an employer, and not an employment agency. It does not list jobs, receive applications, or send reader information to employers.</p>
 </div>
 <div>

@@ -124,7 +124,66 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 }
 .topbar .nav a.top-cta { color: var(--paper); white-space: nowrap; }
 .topbar .nav a.top-cta:hover { color: #fff; }
-.landing h1 { font-size: clamp(2.35rem, 4.6vw, 3.9rem); max-width: 16ch; }
+.landing h1 { font-size: clamp(2.6rem, 5.4vw, 4.4rem); max-width: 12ch; }
+.landing .lede { max-width: 22ch; font-size: clamp(1.35rem, 2vw, 1.75rem); }
+.word-grid { display: grid; gap: 0.9rem; margin-top: 1.75rem; }
+.word {
+  scroll-margin-top: 84px;
+  background: #fffdf8;
+  border: 1px solid var(--ink);
+  padding: 1.15rem 1.15rem 1.2rem;
+}
+.word .ask {
+  margin: 0;
+  font: 700 0.72rem/1 var(--sans);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+.word h2 { font-size: clamp(2.1rem, 3vw, 2.7rem); margin: 0.3rem 0 0.45rem; }
+.word .mean {
+  font-family: var(--serif);
+  font-size: 1.22rem;
+  line-height: 1.35;
+  margin: 0 0 1rem;
+}
+.word .fact {
+  margin: 0;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--hair);
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.word .fact b {
+  display: block;
+  margin-bottom: 0.2rem;
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 1.45rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+.mix { margin-top: 0.4rem; border-top: 1px solid var(--ink); }
+.mix article {
+  display: grid;
+  gap: 0.2rem 1.5rem;
+  padding: 1.05rem 0;
+  border-bottom: 1px solid var(--hair);
+}
+.mix h3 { font-size: 1.35rem; margin: 0; }
+.mix p { margin: 0; color: var(--muted); }
+.mix-words {
+  color: var(--red) !important;
+  font: 700 0.78rem/1.4 var(--sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.quiet .btn { margin-top: 0.4rem; }
+@media (min-width: 860px) {
+  .word-grid { grid-template-columns: repeat(3, 1fr); align-items: stretch; }
+  .mix article { grid-template-columns: 1.15fr 0.7fr 1.15fr; align-items: start; }
+}
 .hero { padding: clamp(1.6rem, 4vw, 2.6rem) 0 1.5rem; }
 .paths { display: grid; gap: 1.25rem; margin-top: 1.4rem; }
 .path {

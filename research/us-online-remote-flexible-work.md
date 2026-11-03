@@ -2,7 +2,7 @@
 
 Research brief compiled 2 November 2026 (Asia/Kuala_Lumpur).
 
-The reader-facing pages are in `site/`, published as Weekline. They are a public record of the distance between U.S. labor counts and the ad market: paid days, people in a survey week, and postings. They are not a job-search guide, they do not list jobs, and they do not take applications. This file remains the source note, with the survey limits and links.
+The reader-facing pages are in `site/`, published as Weekline. They explain remote, online, and flexible work as three different parts of a week. They do not list jobs or take applications. This file remains the source note, with the survey limits and links.
 
 This note answers two questions:
 
