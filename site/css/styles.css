@@ -241,7 +241,7 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .featured-copy p { color: var(--muted); }
 .featured-art { display: flex; align-items: center; justify-content: center; }
 .featured-icon { font-size: 3rem; opacity: 0.85; }
-.src-note { color: var(--muted); font-size: 0.82rem; margin: 0.4rem 0 0; }
+.mini-src { color: var(--muted); font-size: 0.82rem; margin: 0.5rem 0 0; }
 
 /* Four-pillar grid */
 .pillars { padding: clamp(1.6rem, 4vw, 2.6rem) 0; }

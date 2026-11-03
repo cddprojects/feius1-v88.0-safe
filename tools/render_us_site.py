@@ -156,7 +156,7 @@ def build():
 <p class="section-label">Featured story &middot; U.S. job outlook</p>
 <h2>Where U.S. jobs are projected to grow through 2035.</h2>
 <p>The U.S. Bureau of Labor Statistics projects that the economy will add 5.9 million jobs from 2025 to 2035. This covers where that growth is expected, what it takes to enter selected occupations, and how to check pay and openings near you.</p>
-<p class="src-note">Source: BLS employment projections, 2025–2035.</p>
+<p class="mini-src">Source: BLS employment projections, 2025–2035.</p>
 <p><a class="guide-link" href="career-guides.html#job-outlook">Read the U.S. job outlook &rarr;</a></p>
 </div>
 <div class="featured-art" aria-hidden="true">
@@ -172,25 +172,25 @@ def build():
 <p class="pillar-num">01</p>
 <h3>Job demand</h3>
 <p>Healthcare support is among the occupational groups projected to grow fastest through 2035, and data scientists rank among the fastest-growing individual occupations. Once a role catches your eye, check pay and openings where you live.</p>
-<p class="src-note">BLS employment projections &middot; CareerOneStop wage tools</p>
+<p class="mini-src">BLS employment projections &middot; CareerOneStop wage tools</p>
 </div>
 <div class="pillar-card">
 <p class="pillar-num">02</p>
 <h3>Skills and training</h3>
 <p>Start with the job you want, then compare ways to qualify. A community college program, certification, degree, or paid Registered Apprenticeship can each be worth exploring, depending on the role.</p>
-<p class="src-note">Apprenticeship.gov career seeker resources</p>
+<p class="mini-src">Apprenticeship.gov career seeker resources</p>
 </div>
 <div class="pillar-card">
 <p class="pillar-num">03</p>
 <h3>Work flexibility</h3>
 <p>In 2025, 35% of employed people did some or all of their work at home on days they worked. When comparing jobs, look at where you’re expected to work, which hours you need to be available, and how often you’ll need to go in.</p>
-<p class="src-note">BLS American Time Use Survey</p>
+<p class="mini-src">BLS American Time Use Survey</p>
 </div>
 <div class="pillar-card">
 <p class="pillar-num">04</p>
 <h3>Extra income</h3>
 <p>In a 2024 Federal Reserve survey, some gig workers said they would struggle to make ends meet without gig income, and many wanted steadier pay. When comparing options, look at what you could earn after expenses and how reliably the work comes in.</p>
-<p class="src-note">Federal Reserve household survey, 2024</p>
+<p class="mini-src">Federal Reserve household survey, 2024</p>
 </div>
 </div>
 </div></section>
@@ -243,7 +243,7 @@ def build():
 <p class="section-label">Extra income</p>
 <h2>What could a second job or side gig add to your budget?</h2>
 <p>A weekend shift, a freelance project, and app-based gig work each bring in extra income, and each makes different demands on your time. Start with the hours you can realistically give, then compare how often you’ll get paid, what the work costs you, and how reliably it comes in.</p>
-<p class="src-note">Source: Federal Reserve household survey, 2024. General information, not tax or financial advice — actual take-home pay depends on your own tax situation and expenses.</p>
+<p class="mini-src">Source: Federal Reserve household survey, 2024. General information, not tax or financial advice — actual take-home pay depends on your own tax situation and expenses.</p>
 <p><a class="guide-link" href="extra-income.html">Compare ways to earn extra income &rarr;</a></p>
 </div></section>
 
