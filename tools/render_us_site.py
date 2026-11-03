@@ -123,7 +123,7 @@ def build():
     page(
         "index.html",
         f"General information on remote, online, and independent work · {BRAND}",
-        "Weekline provides general information about remote, online, and independent work in the United States, in plain language.",
+        "Weekline explains how people in the United States search, apply, and get hired for remote and online work, with the source behind every figure.",
         '''
 <section class="hero"><div class="wrap hero-grid">
 <div class="hero-copy">
@@ -151,7 +151,7 @@ def build():
 
 <section class="guides"><div class="wrap">
 <p class="section-label">Three guides</p>
-<h2>Three stages of getting hired, covered in plain language.</h2>
+<h2>Three stages of getting hired, start to finish.</h2>
 <p class="section-intro">From the first search through the paperwork after an offer, each stage runs on a fairly predictable pattern — covered here in order, with the source behind each fact.</p>
 <div class="guide-grid">
 <a class="guide-card" href="search.html">
@@ -232,7 +232,7 @@ def build():
         "start.html",
         "Start here",
         "The starter’s companion",
-        "A plain-language guide to what remote, online, and independent work usually involves in the first weeks, for readers in the United States.",
+        "What remote, online, and independent work usually involves in the first weeks, for readers in the United States.",
         "Not what the job is called. What actually happens once you say yes.",
         '''
 <div class="takeaways"><h2>In short</h2><ul>
@@ -579,7 +579,7 @@ def build():
 <div>
 <h2>What you’ll learn here</h2>
 <p>Remote is the place. Online is how the work travels. Flexible is the schedule. Independent is who you answer to. Each page keeps those apart using everyday situations, then points to the public figure behind a number when one is used.</p>
-<p>You don’t need to already know the vocabulary or have done any of this before. If a term, a form, or a step anywhere on this site isn’t explained in plain language, that’s on us to fix — not something you missed.</p>
+<p>You don’t need to already know the vocabulary or have done any of this before. If a term, a form, or a step anywhere on this site isn’t explained clearly, with an example, that’s on us to fix — not something you missed.</p>
 <p>Weekline is an independent publisher. It is not an employer, a staffing agency, or a job board. It does not list openings and it does not take applications. Reading a page does not sign you up for anything.</p>
 </div>
 <div>
