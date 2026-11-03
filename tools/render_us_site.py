@@ -54,7 +54,7 @@ def header(current, landing=False):
 def footer():
     return f'''<footer class="site-footer"><div class="wrap foot">
 <div class="foot-brand"><p class="brand-foot">{BRAND}</p>
-<p>A reader's companion for remote, online, and independent work. Plain explanations of how people search, apply, and what's required, for readers in the United States.</p></div>
+<p>General information about remote, online, and independent work. Plain explanations of how people search, apply, and what's required, for readers in the United States.</p></div>
 <div><h2>Guides</h2><ul>
 <li><a href="search.html">How &amp; where people search</a></li>
 <li><a href="apply.html">How the application runs</a></li>
@@ -72,7 +72,7 @@ def footer():
 <li><a href="disclaimer.html">Disclaimer</a></li>
 </ul></div>
 </div>
-<div class="wrap legal"><p>{BRAND} is a reader's companion. It explains remote, online, and independent work. It does not list jobs, screen employers, or give legal, tax, or employment advice.</p>
+<div class="wrap legal"><p>{BRAND} provides general information only. It explains remote, online, and independent work. It does not list jobs, screen employers, or give legal, tax, or employment advice.</p>
 <p>&copy; 2026 {BRAND} &middot; United States</p></div>
 </footer>
 <script src="js/main.js"></script>'''
@@ -122,12 +122,12 @@ def essay(filename, kicker, h1, description, lede, inner, current, section="Reco
 def build():
     page(
         "index.html",
-        f"A reader's companion for remote, online, and independent work · {BRAND}",
-        "Weekline is a reader's companion for remote, online, and independent work in the United States, in plain language.",
+        f"General information on remote, online, and independent work · {BRAND}",
+        "Weekline provides general information about remote, online, and independent work in the United States, in plain language.",
         '''
 <section class="hero"><div class="wrap hero-grid">
 <div class="hero-copy">
-<p class="eyebrow">A reader’s companion, not a job board</p>
+<p class="eyebrow">General information only, not a job board</p>
 <h1>How people search, apply, and get ready for remote, online, and independent work.</h1>
 <p class="lede">Weekline makes an unfamiliar process plain to see: where the looking happens, how an application usually runs, and what you’re actually asked to have before you’re hired. No listings, no fees, no sign-up.</p>
 <p class="reassure">If any of this feels like a mystery, that’s not you — it’s just a process nobody explains well. Nothing below assumes you’ve done this before.</p>
@@ -547,7 +547,7 @@ def build():
     page(
         "about.html",
         f"About · {BRAND}",
-        "Weekline is a reader's companion for remote, online, and independent work in the United States.",
+        "Weekline provides general information about remote, online, and independent work in the United States.",
         '''<div class="page-head"><div class="wrap"><p class="kicker">About</p><h1>Weekline makes this easy to understand.</h1>
 <p class="lede">Remote, online, and independent work come with a process almost nobody explains plainly. Weekline explains it, in everyday language, before a reader says yes to any of it.</p></div></div>
 <section class="band"><div class="wrap split">
