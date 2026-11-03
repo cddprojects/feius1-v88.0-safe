@@ -17,9 +17,7 @@ FONT = (
 )
 
 NAV = [
-    ("index.html", "Home"),
     ("career-guides.html", "Career Guides"),
-    ("skills-training.html", "Skills &amp; Training"),
     ("work-options.html", "Work Options"),
     ("extra-income.html", "Extra Income"),
     ("about.html", "About"),
