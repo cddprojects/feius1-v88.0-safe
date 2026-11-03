@@ -128,38 +128,49 @@ def build():
 <section class="hero"><div class="wrap hero-grid">
 <div class="hero-copy">
 <p class="eyebrow">General information, not job listings</p>
-<h1>72% of job seekers ran into a scam this year. Here’s how to tell before you don’t.</h1>
-<p class="lede">Almost three in four U.S. job seekers hit a fraudulent posting, a fake recruiter, or a request for payment during their search last year, and only 1% say they trust online listings completely. This explains what a real hiring process actually looks like — where people search, how an application really moves, and what employers legitimately ask for — so it’s easier to spot what doesn’t fit.</p>
-<p class="reassure">Suspicion isn’t paranoia here — the data backs it up. Most people are given no explanation of how real hiring works, which is exactly what makes a fake offer hard to catch.</p>
+<h1>An algorithm often screens you first. Whether “remote” is even on the table depends on your field.</h1>
+<p class="lede">Nearly two-thirds of candidates who reached the interview stage in 2026 faced an AI interview, most without being told in advance. At the same time, remote and hybrid work is nowhere near evenly spread — common in insurance, legal, and software, almost nonexistent in construction, retail, and driving. This explains both: how AI now filters applicants before a person ever does, and where remote work actually still exists.</p>
+<p class="reassure">Neither of these responds to applying harder. Knowing how each one actually works just means fewer surprises along the way.</p>
 <div class="hero-actions">
-<a class="btn btn-primary btn-lg" href="search.html#signs">See the warning signs</a>
-<a class="btn btn-ghost btn-lg" href="apply.html">See how a real application runs</a>
+<a class="btn btn-primary btn-lg" href="apply.html#ai">See how AI screening works</a>
+<a class="btn btn-ghost btn-lg" href="search.html#when">See where remote work exists</a>
 </div>
 <ul class="hero-chips">
-<li><span class="chip-icon">🚩</span>How to spot a fake offer</li>
-<li><span class="chip-icon">📝</span>How the form &amp; interview go</li>
+<li><span class="chip-icon">🤖</span>How AI screening works</li>
+<li><span class="chip-icon">🗺️</span>Where remote jobs concentrate</li>
 <li><span class="chip-icon">✅</span>What you need to have ready</li>
 </ul>
 </div>
 <div class="hero-card" aria-hidden="true">
-<p class="hero-card-label">What job seekers reported in 2026</p>
-<div class="hero-stat"><span class="num">72%</span><span class="desc">ran into a scam during their job search</span></div>
-<div class="hero-stat"><span class="num">93%</span><span class="desc">applied to, or suspect, a job that was never real</span></div>
-<div class="hero-stat"><span class="num">$500M+</span><span class="desc">lost to job scams in 2024 alone</span></div>
+<p class="hero-card-label">Two forces reshaping hiring in 2026</p>
+<div class="hero-stat"><span class="num">63%</span><span class="desc">of interviewed candidates faced an AI interview</span></div>
+<div class="hero-stat"><span class="num">70%</span><span class="desc">were never told in advance that AI would evaluate them</span></div>
+<div class="hero-stat"><span class="num">~40% vs 4%</span><span class="desc">remote-or-hybrid share: insurance &amp; legal postings vs. construction &amp; retail</span></div>
 </div>
 </div></section>
 
-<section class="warn-section"><div class="wrap">
-<p class="section-label warn-label">Before you say yes</p>
-<h2>Four signs an offer isn’t real.</h2>
-<p class="section-intro">Reported job-scam losses topped $500 million in 2024, and most job seekers now encounter at least one scam per search. These four patterns show up most often in that reporting — not a reason to doubt every offer, just what regulators see repeated most.</p>
-<div class="warn-grid">
-<div class="warn-card"><span class="warn-flag">🚩</span><h3>No employer name</h3><p>If the company won’t say who they are, that’s the single biggest red flag job seekers and fraud reports keep pointing to.</p></div>
-<div class="warn-card"><span class="warn-flag">🚩</span><h3>They want money upfront</h3><p>A kit fee, a training fee, a “deposit” before you’ve even started — however it’s framed, it’s never legitimate.</p></div>
-<div class="warn-card"><span class="warn-flag">🚩</span><h3>They send you a check to deposit</h3><p>Deposit this check, then send part of it back — that’s the single most common scam the FTC tracks.</p></div>
-<div class="warn-card"><span class="warn-flag">🚩</span><h3>They want an answer right now</h3><p>A real offer can survive you sleeping on it. If they’re rushing you, that’s the tactic, not how real hiring works.</p></div>
+<section class="compare"><div class="wrap">
+<p class="section-label">Two forces, one hiring process</p>
+<h2>What’s actually deciding whether you get hired.</h2>
+<p class="section-intro">These two shifts move independently of each other, and most job seekers run into both without ever being told so.</p>
+<div class="compare-grid">
+<div class="compare-card">
+<p class="compare-kicker">Shift one</p>
+<h3>An algorithm often screens you first.</h3>
+<div class="compare-stat"><span class="num">63%</span><span class="desc">of candidates who reached the interview stage faced an AI interview in 2026</span></div>
+<div class="compare-stat"><span class="num">70%</span><span class="desc">were never told in advance that AI would be evaluating them</span></div>
+<div class="compare-stat"><span class="num">50.5%</span><span class="desc">were rejected at least once with zero human contact</span></div>
+<p><a class="guide-link" href="apply.html#ai">See how AI screening actually works &rarr;</a></p>
 </div>
-<p class="warn-more"><a href="search.html#signs">See the full list, with sources &rarr;</a></p>
+<div class="compare-card">
+<p class="compare-kicker">Shift two</p>
+<h3>Whether remote work exists depends on your field.</h3>
+<div class="compare-stat"><span class="num">~40%</span><span class="desc">of insurance and legal postings mention remote or hybrid work</span></div>
+<div class="compare-stat"><span class="num">&lt;4%</span><span class="desc">of construction and retail postings do the same</span></div>
+<div class="compare-stat"><span class="num">8.3%</span><span class="desc">is the current share of all U.S. postings mentioning remote or hybrid</span></div>
+<p><a class="guide-link" href="search.html#when">See the breakdown by field &rarr;</a></p>
+</div>
+</div>
 </div></section>
 
 <section class="guides"><div class="wrap">
@@ -170,13 +181,13 @@ def build():
 <a class="guide-card" href="search.html">
 <span class="guide-icon">🔍</span>
 <h3>Search</h3>
-<p>Where to actually look, how a search tends to go week by week, and the stretches where remote postings genuinely dry up.</p>
+<p>Where to actually look, how a search tends to go week by week, and how much remote work really exists in your field versus others.</p>
 <span class="guide-link">Read the guide &rarr;</span>
 </a>
 <a class="guide-card" href="apply.html">
 <span class="guide-icon">📝</span>
 <h3>Apply</h3>
-<p>What happens after you hit submit: the screening questions, a possible skills test, and the interview, in the order they usually come.</p>
+<p>What happens after you hit submit: the screening questions, a possible skills test, and an interview that’s increasingly run by AI.</p>
 <span class="guide-link">Read the guide &rarr;</span>
 </a>
 <a class="guide-card" href="apply.html#requirements">
@@ -199,7 +210,21 @@ def build():
 <li>SHRM</li>
 <li>Huntr Job Search Trends</li>
 <li>LinkedIn Job Search Safety Pulse</li>
+<li>Greenhouse Candidate AI Interview Report</li>
 </ul>
+</div></section>
+
+<section class="warn-section"><div class="wrap">
+<p class="section-label warn-label">Before you say yes</p>
+<h2>Four signs an offer isn’t real.</h2>
+<p class="section-intro">Reported job-scam losses topped $500 million in 2024, and most job seekers now encounter at least one scam per search. These four patterns show up most often in that reporting — not a reason to doubt every offer, just what regulators see repeated most.</p>
+<div class="warn-grid">
+<div class="warn-card"><span class="warn-flag">🚩</span><h3>No employer name</h3><p>If the company won’t say who they are, that’s the single biggest red flag job seekers and fraud reports keep pointing to.</p></div>
+<div class="warn-card"><span class="warn-flag">🚩</span><h3>They want money upfront</h3><p>A kit fee, a training fee, a “deposit” before you’ve even started — however it’s framed, it’s never legitimate.</p></div>
+<div class="warn-card"><span class="warn-flag">🚩</span><h3>They send you a check to deposit</h3><p>Deposit this check, then send part of it back — that’s the single most common scam the FTC tracks.</p></div>
+<div class="warn-card"><span class="warn-flag">🚩</span><h3>They want an answer right now</h3><p>A real offer can survive you sleeping on it. If they’re rushing you, that’s the tactic, not how real hiring works.</p></div>
+</div>
+<p class="warn-more"><a href="search.html#signs">See the full list, with sources &rarr;</a></p>
 </div></section>
 
 <section class="faq"><div class="wrap faq-grid">
@@ -214,6 +239,7 @@ def build():
 <details><summary>Will I need specific equipment to work from home?</summary><p>Usually, yes — a computer that meets some basic specs and a reliable internet connection, sometimes a wired one instead of a hotspot. A real employer ships you the equipment or pays you back for it. They don’t make you buy it yourself first.</p></details>
 <details><summary>Am I an employee or a contractor?</summary><p>The tax form used is the reliable signal: a W-4 means a W-2 employee with taxes withheld from every paycheck, while a W-9 means a 1099 contractor handling their own taxes.</p></details>
 <details><summary>How long should an application actually take?</summary><p>About half of job seekers say 10 to 15 minutes feels fair for an online form. If yours is taking a lot longer, or making you retype a résumé you already uploaded, that’s a known annoyance — not something you’re doing wrong.</p></details>
+<details><summary>Will I know if an employer uses AI to screen me?</summary><p>Not reliably. Most candidates are never told in advance that AI reviewed their application or ran their interview, even though most want that disclosed by law. It's reasonable to ask directly before an AI-run interview whether a person will review the result.</p></details>
 </div>
 </div></section>
 
@@ -359,6 +385,11 @@ def build():
 <p>Some roles add a short skills check before a human ever looks at the application: a typing-speed test for data entry or transcription, a short writing sample for content roles, or a basic software quiz for bookkeeping or support roles. If the application clears the screening questions and any skills check, the next step is usually a phone or video interview, sometimes two rounds for office-based professional roles and one short call for hourly or entry-level remote roles. Interview response rates, in one applicant-tracking product’s 2025 data covering roughly 599,000 applications, ran about 4.5% on Indeed, 3.1% on LinkedIn, and 2.8% on ZipRecruiter — a reminder that most applications end without a reply at all, which is a volume problem more than a sign that the application itself was weak.</p>
 <p>After an offer, the paperwork starts: the specific documents are covered below, but the shape is the same almost everywhere — sign an offer or contract, complete tax and eligibility forms, and, for jobs that provide equipment, wait for it to ship or submit a reimbursement request rather than pay for it upfront.</p>
 
+<h2 id="ai">How AI has changed the interview itself</h2>
+<p>By 2026, an AI interview is common rather than rare: Greenhouse’s 2026 survey found 63% of candidates who reached the interview stage had been interviewed by AI, up 13 points in six months. The format varies — a pre-recorded video scored by AI with no person present, a chatbot screening call, or a real-time interview with an AI interviewer — but the common thread is that a person may not review the result before a candidate is moved forward or rejected.</p>
+<p>Disclosure is the weak point. In the same survey, 70% of candidates said they were never clearly told in advance that AI would evaluate them, and 21% only found out once the interview had already started. Separately, Enhancv’s 2026 survey found 50.5% of job seekers had been rejected at least once in the past year without any human contact, and 68.5% said AI’s role in that decision was never disclosed to them at all. Most candidates are not against AI being used — Greenhouse found only 19% want less of it — but a large majority want upfront notice, a clear explanation of what is being measured, and a human reviewing the result before a final decision.</p>
+<p>None of this changes what the underlying requirements below actually are. It mainly changes who, or what, reviews the application first.</p>
+
 <h2 id="requirements">What they’re commonly asked to have</h2>
 <p>A U.S. job application, online or on paper, asks for the same core information almost everywhere. None of it is unusual to be asked for, and none of it should catch you off guard. Having it ready before starting just saves having to stop mid-form to look something up:</p>
 <div class="ready-box">
@@ -375,7 +406,7 @@ def build():
 <p><b>Skills proof, where the job calls for it.</b> Typing speed for data entry and transcription, a graded writing sample for content or copy roles, a basic accounting or spreadsheet test for bookkeeping, and a relevant certificate or license for occupations such as medical records or tutoring in a specific subject. Entry-level customer service, administrative, and sales roles — the largest single slice of entry-level remote postings — usually ask only for a high school diploma and some prior customer-service experience.</p>
 <p><b>Sometimes a background check, or more.</b> Roles handling money, health information, or vulnerable people, including many bookkeeping, healthcare-adjacent, and tutoring-of-minors roles, commonly run a background check after a conditional offer, and some add a credit check, a basic cognitive or personality assessment, or a drug or medical screening depending on the field and the state. These are standard, and under the Fair Credit Reporting Act a background or credit check requires your written consent before it happens.</p>
 <p><b>Nothing you pay for.</b> None of the above should ever cost the applicant money. A legitimate employer ships or reimburses required equipment; it does not ask for a kit fee, a training fee, or a deposit refunded out of a check you’re told to cash. That exact pattern — a check to deposit, then a request to send part of it back — is the single most common scam mechanism in Federal Trade Commission reports, and it shows up disguised as an “equipment” or “software license” requirement as often as anything else.</p>
-<p class="src-note">iHire, State of Online Recruiting 2025. Huntr, 2025 Annual Job Search Trends. U.S. Citizenship and Immigration Services, Form I-9. Internal Revenue Service, Form W-4 and Form W-9. Federal Trade Commission, job-scam consumer guidance. Specific postings are referenced only as illustrative examples; none are current openings from Weekline.</p>
+<p class="src-note">iHire, State of Online Recruiting 2025 and 2026. Huntr, 2025 Annual Job Search Trends and Q1 2026 Job Search Trends Report. Greenhouse, 2026 Candidate AI Interview Report. Enhancv, 2026 AI Hiring Statistics. U.S. Citizenship and Immigration Services, Form I-9. Internal Revenue Service, Form W-4 and Form W-9. Federal Trade Commission, job-scam consumer guidance. Specific postings are referenced only as illustrative examples; none are current openings from Weekline.</p>
 ''',
         "apply.html",
         "Companion",

@@ -230,6 +230,25 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .sources-list { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.2rem; }
 .sources-list li { font: 600 0.9rem/1 var(--sans); color: var(--ink); opacity: 0.75; }
 
+/* Two-forces comparison */
+.compare { padding: clamp(1.6rem, 4vw, 2.6rem) 0; }
+.compare-grid { display: grid; gap: 1.2rem; margin-top: 1.4rem; }
+@media (min-width: 800px) { .compare-grid { grid-template-columns: 1fr 1fr; } }
+.compare-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.6rem;
+  box-shadow: var(--shadow-sm);
+}
+.compare-kicker { margin: 0 0 0.4rem; font: 700 0.78rem/1.3 var(--sans); letter-spacing: 0.04em; text-transform: uppercase; color: var(--primary); }
+.compare-card h3 { font-size: 1.2rem; margin-bottom: 1rem; }
+.compare-stat { padding: 0.65rem 0; border-top: 1px solid var(--border); }
+.compare-stat:first-of-type { border-top: 0; padding-top: 0; }
+.compare-stat .num { display: block; font: 800 1.5rem/1.1 var(--sans); letter-spacing: -0.01em; color: var(--ink); }
+.compare-stat .desc { display: block; color: var(--muted); font-size: 0.88rem; margin-top: 0.15rem; }
+.compare-card > p:last-child { margin-top: 1.1rem; margin-bottom: 0; }
+
 /* Warning / scam-signs section */
 .warn-section { padding: clamp(1.6rem, 4vw, 2.6rem) 0; }
 .warn-label { background: var(--warn-soft); color: #b3261e; }
