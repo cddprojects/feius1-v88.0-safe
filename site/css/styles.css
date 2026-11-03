@@ -1,4 +1,4 @@
-/* Paid Day — a ruled public record. */
+/* Weekline — a ruled public record, with a proof-first front page. */
 :root {
   --paper: #f4f0e6;
   --paper-2: #e9e3d4;
@@ -63,9 +63,10 @@ p { margin: 0 0 1em; text-wrap: pretty; }
   display: inline-block;
   color: var(--ink);
   text-decoration: none;
-  font: 500 clamp(2.4rem, 6vw, 3.6rem)/0.85 var(--serif);
+  font: 500 1.55rem/1 var(--serif);
   letter-spacing: -0.03em;
 }
+.nameplate .brand { font: 500 clamp(2.4rem, 6vw, 3.6rem)/0.85 var(--serif); }
 .brand span {
   display: inline-block;
   width: 0.55rem; height: 0.55rem;
@@ -99,7 +100,60 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .bars::before { top: -6px; }
 .bars::after { top: 6px; }
 
-.hero { padding: clamp(2rem, 5vw, 3.5rem) 0 2rem; }
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: var(--paper);
+  border-bottom: 1px solid var(--ink);
+}
+.topbar-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.5rem;
+  min-height: 64px;
+}
+.topbar .nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  min-height: 64px;
+}
+.topbar .nav a.top-cta { color: var(--paper); white-space: nowrap; }
+.topbar .nav a.top-cta:hover { color: #fff; }
+.landing h1 { font-size: clamp(2.35rem, 4.6vw, 3.9rem); max-width: 16ch; }
+.hero { padding: clamp(1.6rem, 4vw, 2.6rem) 0 1.5rem; }
+.paths { display: grid; gap: 1.25rem; margin-top: 1.4rem; }
+.path {
+  display: block;
+  padding-top: 0.85rem;
+  border-top: 3px solid var(--ink);
+  color: inherit;
+  text-decoration: none;
+}
+.path .step {
+  display: block;
+  margin-bottom: 0.45rem;
+  font: 700 0.72rem/1.3 var(--sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+a.path:hover h3 { color: var(--red); }
+.close-band { background: var(--ink); color: #efeae0; padding: clamp(2.2rem, 5vw, 3.5rem) 0; }
+.close-band h2, .close-band p { color: #efeae0; }
+.close-band .kicker { color: #e4c4c0; }
+.close-grid { display: grid; gap: 1.25rem; align-items: end; }
+.close-band .btn { border-color: #efeae0; color: #efeae0; background: transparent; }
+.close-band .btn-fill { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.close-band .btn:hover { background: var(--red); border-color: var(--red); color: #fff; }
+@media (min-width: 800px) {
+  .paths { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .close-grid { grid-template-columns: 1.4fr auto; }
+}
 .kicker {
   margin: 0 0 0.8rem;
   font: 700 0.75rem/1 var(--sans);
@@ -302,6 +356,8 @@ details p { margin: 0.6rem 0 0.2rem; color: var(--muted); }
 @media (max-width: 760px) {
   .mast-top { flex-direction: column; gap: 0.2rem; }
   .menu-btn { display: inline-flex; align-items: center; justify-content: center; }
+  .top-cta { display: none; }
+  .topbar .nav { flex: 0; }
   .nav ul {
     display: none;
     position: absolute;
@@ -316,7 +372,9 @@ details p { margin: 0.6rem 0 0.2rem; color: var(--muted); }
     padding: 0.3rem 1.25rem 0.8rem;
   }
   .nav ul.open { display: flex; }
+  .topbar .nav ul.open { position: fixed; top: 64px; left: 0; right: 0; }
   .nav li { border-top: 1px solid var(--hair); }
   .nav a { display: block; padding: 0.75rem 0; }
+  .topbar .nav a.top-cta { display: none; }
   .note-list a { grid-template-columns: 1fr; gap: 0.15rem; }
 }
