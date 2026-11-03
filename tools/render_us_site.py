@@ -69,7 +69,7 @@ def header(current, landing=False):
 def footer():
     return f'''<footer class="site-footer"><div class="wrap foot">
 <div><p class="brand-foot">{BRAND}</p>
-<p>A plain explanation of remote, online, and flexible work in the United States. Three different parts of the same week.</p></div>
+<p>Written for readers. Remote, online, and flexible work are three different parts of a week in the United States.</p></div>
 <div><h2>The three words</h2><ul>
 <li><a href="index.html#remote">Remote</a></li>
 <li><a href="index.html#online">Online</a></li>
@@ -85,7 +85,7 @@ def footer():
 <li><a href="disclaimer.html">Disclaimer</a></li>
 </ul></div>
 </div>
-<div class="wrap legal"><p>{BRAND} publishes a public record for readers. It does not list jobs, take applications, or give legal, tax, or employment advice.</p>
+<div class="wrap legal"><p>{BRAND} is written for readers. It explains remote, online, and flexible work. It does not list jobs or give legal, tax, or employment advice.</p>
 <p>&copy; 2026 {BRAND} &middot; United States</p></div>
 </footer>
 <script src="js/main.js"></script>'''
@@ -136,64 +136,66 @@ def build():
     page(
         "index.html",
         f"Remote, online, and flexible work · {BRAND}",
-        "A plain explanation of remote, online, and flexible work in the United States. Three different parts of the same week.",
+        "What remote, online, and flexible work mean in an ordinary week in the United States.",
         '''
 <section class="hero"><div class="wrap">
-<p class="kicker">United States</p>
+<p class="kicker">A reader’s guide · United States</p>
 <h1>Remote, online, and flexible work.</h1>
-<p class="lede">Three different parts of the same week.</p>
+<p class="lede">Three kinds of work people talk about as if they were one. Each word describes a different part of the week.</p>
 <div class="word-grid">
 <article class="word" id="remote">
 <p class="ask">Where</p>
 <h2>Remote</h2>
-<p class="mean">Work done away from the usual workplace, or split between home and that workplace.</p>
-<p class="fact"><b>12.1% fully remote</b>Among full-time employees in August 2026, 27.1% were hybrid and 60.8% were fully on site.</p>
+<p>The work happens away from the usual workplace. Often that means home. Some people are home all week. Others are home on some days and at the workplace on others. A split week is often called hybrid.</p>
+<p class="aside">Home is a place. A person can work from home and still keep a fixed start and finish time.</p>
 </article>
 <article class="word" id="online">
 <p class="ask">How</p>
 <h2>Online</h2>
-<p class="mean">Work done or handed in over the internet. The person may be at home or in an office.</p>
-<p class="fact"><b>Delivered over the internet</b>A video call, a chat, or a file can be sent from home or from an office. The word leaves the hours open.</p>
+<p>The work travels over the internet. It might be a video lesson, a customer chat, a call on a headset, or a document sent when it is finished.</p>
+<p class="aside">Online tells you how the work moves. It does not tell you whether the desk is at home or in an office, or who chooses the hours.</p>
 </article>
 <article class="word" id="flexible">
 <p class="ask">When</p>
 <h2>Flexible</h2>
-<p class="mean">Some choice over the schedule. The choice can be small. A shift can still be assigned.</p>
-<p class="fact"><b>62% had little control</b>In early 2025, 62% of workers lacked a predictable, stable schedule they controlled.</p>
+<p>The person has some say over the clock. They might start later, keep the week short, or work in the evening around school, family, or another job.</p>
+<p class="aside">The say can be small. If someone else assigns the shift, the hours are still fixed, even when the work is done at home.</p>
 </article>
 </div>
 </div></section>
 
 <section class="band"><div class="wrap">
-<p class="kicker">One week</p>
-<h2>A week can include one word, two, or all three.</h2>
-<div class="mix">
-<article>
-<h3>From home, on a set shift</h3>
+<p class="kicker">Ordinary weeks</p>
+<h2>How the words show up together.</h2>
+<div class="scenes">
+<article class="scene">
 <p class="mix-words">Remote and online</p>
-<p>The person is away from the workplace and uses the internet. The hours are still assigned.</p>
+<h3>A daytime week at home</h3>
+<p>Customer questions are answered on a laptop, from home, on a set schedule such as 9 to 5. The week is remote because of the place, and online because of the laptop. The hours were assigned, so the week is not flexible.</p>
 </article>
-<article>
-<h3>In the office, sent over the internet</h3>
+<article class="scene">
 <p class="mix-words">Online</p>
-<p>The work moves online. The workplace is still the office.</p>
+<h3>A week at the office</h3>
+<p>The person sits at the workplace, finishes a report, and sends it to the team. The work moved online. The person did not. This week is not remote.</p>
 </article>
-<article>
-<h3>Chosen hours, still at a workplace</h3>
-<p class="mix-words">Flexible</p>
-<p>The person has some say over the clock. The work can still happen on site.</p>
+<article class="scene">
+<p class="mix-words">Online, flexible, and remote</p>
+<h3>A few evenings of tutoring</h3>
+<p>Lessons happen on a video call, a few evenings a week, around school or another responsibility. The hours are chosen, the lesson is online, and the tutor is at home. All three words fit this week.</p>
 </article>
 </div>
-<p class="src-note">August 2026 shares are for full-time wage-and-salary workers, from the Survey of Working Arrangements and Attitudes. The 62% figure is from the American Job Quality Study, January to February 2025. <a href="arrangements.html">A longer note on the three words</a>.</p>
 </div></section>
 
-<section class="band quiet"><div class="wrap split">
+<section class="band"><div class="wrap split">
 <div>
-<h2>What this page is for</h2>
-<p>Weekline explains remote, online, and flexible work in plain language. It is general information for readers in the United States.</p>
+<p class="kicker">If you want the counts</p>
+<h2>Where full-time weeks happened in August 2026.</h2>
+<p>About 12 in 100 full-time employees worked only from home. About 27 in 100 split the week between home and a workplace. About 61 in 100 worked only at the workplace. The count is of weeks, not a promise about any one person.</p>
+<p class="src-note">Survey of Working Arrangements and Attitudes, full-time employees, August 2026. <a href="arrangements.html">Read the longer explanation</a>.</p>
 </div>
 <div>
-<p>Weekline does not list jobs or take applications. It does not say which arrangement fits a particular household, and it does not give legal, tax, or employment advice.</p>
+<h2>These pages are for reading.</h2>
+<p>Weekline describes remote, online, and flexible work in the United States. It does not list jobs, and it does not tell a reader which kind of week to choose.</p>
 <p><a class="btn" href="about.html">About Weekline</a></p>
 </div>
 </div></section>
@@ -289,23 +291,24 @@ def build():
         "arrangements.html",
         "Definitions",
         "Place, delivery, and hours",
-        "How remote, online, and flexible work differ in the U.S. published record.",
-        "The three words often share a sentence. They still name different facts.",
+        "A longer explanation of remote, online, and flexible work for readers in the United States.",
+        "The three words often appear in the same sentence. A reader can still take them one at a time.",
         '''
 <div class="takeaways"><h2>In short</h2><ul>
-<li>Remote describes where the work is done.</li>
-<li>Online describes how the work is delivered.</li>
-<li>Flexible describes the hours or the workload.</li>
-<li>A job can include one of them, or all three, and still have an assigned shift.</li>
+<li>Remote is the place.</li>
+<li>Online is the way the work travels.</li>
+<li>Flexible is the schedule.</li>
+<li>A week can use one of them, or all three, and still have set hours.</li>
 </ul></div>
-<h2>Where</h2>
-<p>Remote work happens away from the employer’s usual site. Hybrid mixes home days and site days. Among full-time wage-and-salary workers in August 2026, 12.1% were fully remote, 27.1% hybrid, and 60.8% fully on site. A posting that requires regular office days is hybrid. Education changes the week: in the September 2026 survey, 37.8% of people with a bachelor’s degree teleworked at least some hours, compared with 8.3% of high school graduates with no college.</p>
-<h2>How</h2>
-<p>Online work is done or turned in over the internet. A hospital coder, a tutor on a video call, and a person answering calls from a spare room are all doing online work. The coder may have a certificate and a set caseload. The tutor may work evenings. The call shift may be assigned between set clock times. The word “online” does not choose among those.</p>
-<h2>When</h2>
-<p>Flexible work means some say over the schedule. Part-time work, in Bureau of Labor Statistics household data, is fewer than 35 hours. It is a count of hours, not a promise of choice. A part-time data-entry shift every Monday is regular. A contract whose hours follow a client is a different arrangement. In the American Job Quality Study, fielded 13 January to 25 February 2025 with 18,429 workers, 62% lacked a predictable, stable schedule they controlled. About 27% had unpredictable schedules, about 28% unstable ones, and 41% had little or no control. Fifty-four percent often or sometimes worked longer than planned.</p>
-<p>Employer benefit surveys describe a related, narrower fact. SHRM’s 2026 benefits report said 57% of employers offered hybrid work, 45% offered flextime during core hours, and 10% offered a four-day week. Those are employer policies, not a count of workers at home.</p>
-<p class="src-note">Survey of Working Arrangements and Attitudes, August 2026. Bureau of Labor Statistics, table A-41, September 2026, and the full-time definition of 35 hours. American Job Quality Study, Jobs for the Future and Gallup, 2025. SHRM, 2026 employee benefits.</p>
+<h2>Remote is the place</h2>
+<p>Remote work happens away from the usual workplace. Home is the place most people mean. A hybrid week mixes the two: some days at home, some days at the workplace. In August 2026, about 12 in 100 full-time employees worked only from home, about 27 in 100 split the week, and about 61 in 100 worked only at the workplace.</p>
+<p>Schooling changes how common home days are. In the September 2026 survey week, about 38 in 100 people with a bachelor’s degree did at least some paid work at home, compared with about 8 in 100 people whose schooling stopped at high school.</p>
+<h2>Online is the way the work travels</h2>
+<p>Online work is done or turned in over the internet. A hospital worker updating records, a tutor on a video call, and a person answering calls from a spare room are all doing online work. Their weeks are still different. One may have a set pile of records. One may choose evenings. One may have a shift that starts and ends at a set time. The word “online” does not choose among those weeks.</p>
+<h2>Flexible is the schedule</h2>
+<p>Flexible means some say over when the work happens. Part-time is a different idea. In the federal household survey, part-time means fewer than 35 hours. A short Monday shift that happens every week is regular. It is not the same as a week whose hours follow a client, or a week a person shapes around school.</p>
+<p>A national study of workers, taken from January to February 2025, found that 62 in 100 did not have a predictable schedule they could control. So when people say “flexible,” it helps to ask how much of the clock they actually choose. Some employers offer a limited version of that choice: in 2026, 45 in 100 employers in one benefits survey offered flextime inside core hours, and 10 in 100 offered a four-day week.</p>
+<p class="src-note">Survey of Working Arrangements and Attitudes, August 2026. Bureau of Labor Statistics, September 2026. American Job Quality Study, Jobs for the Future and Gallup, early 2025. SHRM employee benefits survey, 2026.</p>
 ''',
         "notes.html",
     )
@@ -444,22 +447,22 @@ def build():
     page(
         "about.html",
         f"About · {BRAND}",
-        "Weekline is an independent record of published U.S. figures on remote, online, and flexible work.",
-        '''<div class="page-head"><div class="wrap"><p class="kicker">About</p><h1>A record, not a search.</h1>
-<p class="lede">Weekline explains remote, online, and flexible work in the United States. Three different parts of the same week.</p></div></div>
+        "Weekline explains remote, online, and flexible work for readers in the United States.",
+        '''<div class="page-head"><div class="wrap"><p class="kicker">About</p><h1>Written for readers.</h1>
+<p class="lede">Weekline explains what remote, online, and flexible work mean in an ordinary week.</p></div></div>
 <section class="band"><div class="wrap split">
 <div>
-<h2>What is being recorded</h2>
-<p>The subject is three words. Remote is where the work happens. Online is how it is delivered. Flexible is when the hours fall. A week can include one of them, two, or all three.</p>
-<p>Weekline is an independent publisher. It is not a government agency, not an employer, and not an employment agency. It does not list jobs, receive applications, or send reader information to employers.</p>
+<h2>What a reader can learn here</h2>
+<p>Remote is the place. Online is the way the work travels. Flexible is the schedule. The pages use everyday weeks so those words stay separate, and they point to the public count behind a figure when a number appears.</p>
+<p>Weekline is an independent publisher. It is not an employer and it does not list jobs. Reading a page does not sign anyone up for work.</p>
 </div>
 <div>
-<div class="col"><h3>The line</h3><p>A paid day, a person in a survey week, and an advertisement are different units. Weekline keeps those units in separate columns, because they are the figures most often treated as one figure.</p></div>
-<div class="col" style="margin-top:1.25rem"><h3>The limit</h3><p>The record does not rank arrangements for a reader’s life, and it does not replace the Department of Labor, the Internal Revenue Service, a state labor office, or the Federal Trade Commission.</p></div>
+<div class="col"><h3>The weeks on the front page</h3><p>A daytime week at home, a week at the office, and a few evenings of tutoring are illustrations. They are not offers, and they are not stories about real named people.</p></div>
+<div class="col" style="margin-top:1.25rem"><h3>The limit</h3><p>The pages do not choose a week for a reader, and they do not replace the Department of Labor, the Internal Revenue Service, a state labor office, or the Federal Trade Commission.</p></div>
 </div>
 </div></section>
 <section class="band"><div class="wrap">
-<p class="notice">Weekline publishes general information. It has no application inbox. A question about a specific posting belongs with the employer named on that posting, or with the agency that wrote the rule.</p>
+<p class="notice">Weekline publishes general information for reading. It has no application form. A question about a particular job belongs with the employer who offers it.</p>
 </div></section>''',
         "about.html",
     )

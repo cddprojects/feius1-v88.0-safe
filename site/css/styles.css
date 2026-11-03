@@ -125,7 +125,18 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .topbar .nav a.top-cta { color: var(--paper); white-space: nowrap; }
 .topbar .nav a.top-cta:hover { color: #fff; }
 .landing h1 { font-size: clamp(2.6rem, 5.4vw, 4.4rem); max-width: 12ch; }
-.landing .lede { max-width: 22ch; font-size: clamp(1.35rem, 2vw, 1.75rem); }
+.landing .lede { max-width: 34ch; font-size: clamp(1.25rem, 2vw, 1.55rem); }
+.word p { margin: 0 0 0.8rem; }
+.word .aside {
+  margin: 0.2rem 0 0;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--hair);
+  color: var(--muted);
+}
+.scenes { border-top: 1px solid var(--ink); }
+.scene { padding: 1.15rem 0; border-bottom: 1px solid var(--hair); }
+.scene h3 { margin: 0.15rem 0 0.35rem; }
+.scene p:last-child { max-width: 62ch; margin: 0; }
 .word-grid { display: grid; gap: 0.9rem; margin-top: 1.75rem; }
 .word {
   scroll-margin-top: 84px;
