@@ -24,7 +24,7 @@
           io.unobserve(e.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.08 });
     document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
   } else {
     document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("in"); });
@@ -51,31 +51,8 @@
         t.hidden = !match;
         if (match) n++;
       });
-      document.getElementById("glossary-empty").hidden = n > 0;
-    });
-  }
-
-  var form = document.getElementById("contact-form");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var ok = true;
-      form.querySelectorAll("[required]").forEach(function (field) {
-        var err = field.parentElement.querySelector(".err");
-        var bad = !field.value.trim() || (field.type === "email" && !/^\S+@\S+\.\S+$/.test(field.value));
-        if (err) err.textContent = bad ? (field.type === "email" ? "Enter an email address." : "This field is required.") : "";
-        field.setAttribute("aria-invalid", bad ? "true" : "false");
-        if (bad) ok = false;
-      });
-      if (!ok) return;
-      var v = function (id) {
-        var el = document.getElementById(id);
-        return el ? el.value.trim() : "";
-      };
-      form.hidden = true;
-      var done = document.getElementById("form-ok");
-      done.hidden = false;
-      done.focus();
+      var empty = document.getElementById("glossary-empty");
+      if (empty) empty.hidden = n > 0;
     });
   }
 })();
