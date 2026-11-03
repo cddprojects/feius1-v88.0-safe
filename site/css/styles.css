@@ -393,6 +393,13 @@ a.path:hover h3 { color: var(--red); }
 .takeaways ul { margin: 0; padding-left: 1.1rem; }
 .takeaways li { margin: 0.25rem 0; }
 .article h2 { margin-top: 1.6rem; font-size: 1.7rem; }
+.steps {
+  margin: 0 0 1.2rem;
+  padding-left: 1.3rem;
+  border-left: 3px solid var(--red);
+}
+.steps li { margin: 0 0 0.75rem; padding-left: 0.3rem; }
+.steps li::marker { color: var(--red); font-weight: 700; }
 .src-note {
   margin-top: 1.6rem;
   padding-top: 0.8rem;

@@ -18,9 +18,9 @@ FONT = (
 )
 
 NAV = [
+    ("search.html", "Search"),
     ("start.html", "Start"),
     ("states.html", "Pay &amp; hours"),
-    ("gap.html", "Signs"),
     ("about.html", "About"),
 ]
 
@@ -59,9 +59,10 @@ def footer():
 <div><p class="brand-foot">{BRAND}</p>
 <p>A reader's companion for remote, online, and independent work. Plain explanations of what usually happens once the work starts, for readers in the United States.</p></div>
 <div><h2>Start here</h2><ul>
+<li><a href="search.html">Where, how &amp; when people search</a></li>
 <li><a href="start.html">The starter's companion</a></li>
 <li><a href="states.html">Pay &amp; hours</a></li>
-<li><a href="gap.html">Signs of a real offer</a></li>
+<li><a href="search.html#signs">Signs of a real offer</a></li>
 <li><a href="notes.html">All notes</a></li>
 </ul></div>
 <div><h2>Publisher</h2><ul>
@@ -129,26 +130,26 @@ def build():
 <section class="briefing"><div class="wrap">
 <p class="kicker">Today’s briefing</p>
 <ul class="briefing-list">
-<li><strong>Online work still expects someone to answer.</strong> "Flexible hours" usually means some choice over when, not whether, you reply.</li>
-<li><strong>Independent cuts both ways.</strong> No set hours also means no guaranteed hours, and no one else is covering a slow week.</li>
+<li><strong>Searching starts on three or four tabs, not one.</strong> General boards first, then LinkedIn, Google, and the employer’s own page.</li>
+<li><strong>Remote ads are a thin, shifting slice of the board.</strong> Roughly 1 in 12 U.S. postings mention remote or hybrid work, and that share moves by season and by field.</li>
 <li><strong>If the hours, the pay, and the employer’s name aren’t written down, that’s the finding, not a formality.</strong></li>
 </ul>
 </div></section>
 
 <section class="lead"><div class="wrap lead-grid">
 <div class="lead-main">
-<p class="kicker">Start here</p>
-<h1>What to know before your first remote, online, or independent job.</h1>
-<p class="lede">Weekline is a reader’s companion, not a job board. These pages explain what usually happens once the work starts, so the first week has fewer surprises.</p>
-<p>Most people trying remote, online, or independent work for the first time aren’t short on job titles. They’re short on a plain answer to a handful of ordinary questions: who actually checks on the work, whose clock decides the hours, what the pay should look like, and whether you’re an employee or on your own. The starter’s companion answers those in order, and the shorter notes below cover each piece in more depth.</p>
-<p><a class="btn btn-fill" href="start.html">Read the starter’s companion &rarr;</a></p>
+<p class="kicker">The search</p>
+<h1>Where, how, and when Americans search for remote, online, and flexible work.</h1>
+<p class="lede">Weekline is a reader’s companion, not a job board. Before the pay and the fine print, here is where people actually look, how a search tends to run, and when the remote ads are thin or plentiful.</p>
+<p>“Just search online” skips the parts that decide whether a search goes anywhere. Which site a person opens first, what they check before they apply, and how many of the ads they find are genuinely remote all change by the month and by the field. This note walks through where the looking starts, the five or so steps a typical search runs through, and when remote postings are scarce versus when they loosen up, using the public surveys and hiring-site data behind each figure.</p>
+<p><a class="btn btn-fill" href="search.html">Read the full search note &rarr;</a></p>
 </div>
 <aside class="lead-side">
 <p class="kicker">In this edition</p>
 <ul class="index-list">
+<li><a href="search.html">Where, how &amp; when people search</a><span>The channels, the steps, and the timing behind an online search.</span></li>
 <li><a href="start.html">The starter’s companion</a><span>What a first week of remote, online, or independent work usually involves.</span></li>
 <li><a href="states.html">Pay &amp; hours</a><span>What a fair arrangement states, and how that changes by state.</span></li>
-<li><a href="gap.html">Signs of a real offer</a><span>How job and task fraud actually shows up online.</span></li>
 <li><a href="notes.html">All notes</a><span>The longer record, by topic, with sources.</span></li>
 </ul>
 </aside>
@@ -158,22 +159,22 @@ def build():
 <p class="kicker">More in this edition</p>
 <div class="fold-grid">
 <article class="fold-story">
-<p class="kicker">Pay &amp; hours</p>
-<h3><a href="states.html">The floor changes at the state line.</a></h3>
-<p>The federal minimum wage is still $7.25 an hour. Thirty states and the District of Columbia sit above it. Whether a posting has to show a pay range, by law, also depends on the state.</p>
-<p class="more"><a href="states.html">Continue reading &rarr;</a></p>
+<p class="kicker">Where</p>
+<h3><a href="search.html#where">The search starts on the big boards, not a single site.</a></h3>
+<p>General job boards, LinkedIn, niche boards, and the employer’s own site are all in play at once. Which one comes first depends on whether the search is for a professional role or an hourly one.</p>
+<p class="more"><a href="search.html#where">Continue reading &rarr;</a></p>
 </article>
 <article class="fold-story">
-<p class="kicker">Employee or contractor</p>
-<h3><a href="states.html#status">What changes when the work is “independent.”</a></h3>
-<p>No set hours, but no guaranteed hours either. A quick look at who pays for the slow weeks, who covers the employer’s share of Social Security, and why the label on a posting isn’t the legal test.</p>
-<p class="more"><a href="states.html#status">Continue reading &rarr;</a></p>
+<p class="kicker">How</p>
+<h3><a href="search.html#how">A search tends to run the same five or so steps.</a></h3>
+<p>Search a title plus “remote” or a city, screen out the ads missing pay or an employer name, check the company site, apply where the form is short, and keep a second, non-ad path for extra cash.</p>
+<p class="more"><a href="search.html#how">Continue reading &rarr;</a></p>
 </article>
 <article class="fold-story">
-<p class="kicker">Signs of a real offer</p>
-<h3><a href="gap.html">What job fraud actually looks like online.</a></h3>
-<p>Reported losses to job and task scams passed $500 million in 2024. An unnamed employer, any fee, or a check you’re told to deposit and partly send back are the patterns regulators keep flagging.</p>
-<p class="more"><a href="gap.html">Continue reading &rarr;</a></p>
+<p class="kicker">When</p>
+<h3><a href="search.html#when">Remote ads are a thin, shifting slice of the board.</a></h3>
+<p>The remote-or-hybrid share of U.S. postings peaked near 10% in 2022 and has sat near 8% since 2024, lower in some fields and far higher in others. Applications to remote ads outrun the ads themselves.</p>
+<p class="more"><a href="search.html#when">Continue reading &rarr;</a></p>
 </article>
 </div>
 </div></section>
@@ -213,7 +214,7 @@ def build():
 <p>Four things are reasonable to ask for in writing, by text or email is fine, before the first real day of work: the pay rate or salary, who you’re actually working for (a company name you can search, not just a hiring manager’s first name), whether you’re an employee or a contractor, and roughly what hours or workload is expected. None of these are unusual requests. An employer or client who can’t answer one plainly is telling you something.</p>
 
 <h2>What a real offer tends to look like, and what a scam tends to look like</h2>
-<p>A real remote or online offer names the employer, states a pay figure or a clear range, and asks you to do the actual job, usually after a short interview, before any money changes hands in either direction. A scam, by the patterns in Federal Trade Commission guidance, tends to arrive as an unexpected text or chat, offers a vague title with no real duties, asks for a fee of any size, or has you deposit a check and send part of it back. Reported losses from job and employment scams passed half a billion dollars in 2024, so treating a “too easy” offer with some suspicion is not paranoia, it is proportionate. <a href="gap.html">The longer note on this</a> goes through the figures and the exact warning signs.</p>
+<p>A real remote or online offer names the employer, states a pay figure or a clear range, and asks you to do the actual job, usually after a short interview, before any money changes hands in either direction. A scam, by the patterns in Federal Trade Commission guidance, tends to arrive as an unexpected text or chat, offers a vague title with no real duties, asks for a fee of any size, or has you deposit a check and send part of it back. Reported losses from job and employment scams passed half a billion dollars in 2024, so treating a “too easy” offer with some suspicion is not paranoia, it is proportionate. <a href="search.html#signs">The longer note on this</a> goes through the figures and the exact warning signs.</p>
 
 <h2>Where to go next</h2>
 <p>This page is the short version. For the numbers behind each claim here, the longer notes cover pay and state minimums, the difference between an employee and a contractor, the occupations that actually show up in the remote-work shelf, and the fraud reports in more detail.</p>
@@ -249,33 +250,49 @@ def build():
     )
 
     essay(
-        "gap.html",
-        "The gap",
-        "A thin shelf of ads, a thick pile of applications",
-        "Where U.S. searches for remote and flexible work start, and how that shelf compares with applications.",
-        "The looking and the hiring are both measurable. They do not describe the same volume.",
+        "search.html",
+        "The search",
+        "Where, how, and when the search actually happens",
+        "Where Americans look for remote, online, and flexible work, how a typical search runs step by step, and when remote postings are actually available.",
+        "The looking is measurable too, not just the hiring. Here is where it starts, how it runs, and when the ads are thin.",
         '''
 <div class="takeaways"><h2>In short</h2><ul>
 <li>Searches still start on the large boards, then LinkedIn, Google, and employer sites.</li>
-<li>Remote postings are roughly a tenth of ads, or less, and about a third of applications.</li>
-<li>Insurance, law, math, and software mention remote or hybrid work far more often than retail, driving, or construction.</li>
+<li>A search tends to run the same handful of steps, in roughly the same order, whether the goal is a title or just extra cash.</li>
+<li>Remote postings are roughly a tenth of ads, or less, and about a third of applications, and the share moves by season and by field.</li>
 <li>An unnamed remote offer that asks for a fee matches a pattern in Federal Trade Commission reports.</li>
 </ul></div>
-<h2>Where the looking starts</h2>
+
+<h2 id="where">Where the looking starts</h2>
 <p>iHire’s 2025 survey of 1,421 U.S. job seekers asked which resources they use. People could choose more than one. General job boards were 78.5%, LinkedIn 54.9%, niche boards 53.8%, company websites 45.0%, and search engines 41.6%. Networking was 32.7%, social media 15.7%, associations 15.4%, job fairs 12.7%, Craigslist 8.3%, and generative tools 6.9%. The prose summary of that survey rounded the board figure differently. The chart figure used here is 78.5%.</p>
-<p>HireClix asked 1,000 adults in 2025 where a search starts. Indeed was 56%, LinkedIn 52% (up from 40% in 2023), Google 41%, and corporate career sites 40%. Fifty-seven percent said reviews on Glassdoor or Indeed affect the decision to apply. One survey asks about every channel. The other asks about the first stop. Both can be right.</p>
-<p>On the employer side of the iHire survey, 529 respondents named referrals at 71.3%, the career page at 49.5%, LinkedIn at 46.1%, and social at 43.5%.</p>
-<h2>The shelf, by occupation</h2>
-<p>A secondary compilation of Indeed’s remote tracker, through 31 August 2026, put remote or hybrid mentions at 39.7% of insurance postings, 32.9% of legal, 32.4% of mathematical, 30.8% of software, 25.2% of marketing, and 20.8% of human resources. Construction was 3.9%, retail 1.9%, and driving 1.2%. Robert Half’s second-quarter 2026 professional tracker, from the same secondary source, was 87% on site, 10% hybrid, and 3% fully remote, for professional titles only.</p>
-<p>Huntr’s 2025 file of roughly 599,000 tracked applications is a self-selected set, not a national placement rate. Response rates in that file were about 4.5% on Indeed, 3.1% on LinkedIn, 2.8% on ZipRecruiter, and 11.3% on Google Jobs.</p>
+<p>HireClix asked 1,000 adults in 2025 where a search starts. Indeed was 56%, LinkedIn 52% (up from 40% in 2023), Google 41%, and corporate career sites 40%. Fifty-seven percent said reviews on Glassdoor or Indeed affect the decision to apply. One survey asks about every channel used. The other asks about the first stop. Both can be right at once.</p>
+<p>A practical search for a professional role tends to be Indeed or LinkedIn, then the employer’s own page, then a review site. A practical search for hourly, local, or shift work still uses Indeed, and adds Facebook groups, Craigslist, and sometimes a staffing agency. Niche boards matter once the field is known: USAJobs for federal roles, Dice or Wellfound for some technology roles, and paid remote boards such as FlexJobs for people willing to pay to filter. Social media is more of a research step than an application step; HireClix found more than half of Gen Z and millennial candidates check a company’s social accounts before applying.</p>
+<p>On the employer side of the same iHire survey, 529 respondents named referrals at 71.3%, the career page at 49.5%, LinkedIn at 46.1%, and social at 43.5%. A large share of hiring never appears as a clean public ad at all.</p>
+
+<h2 id="how">How a search tends to run</h2>
+<ol class="steps">
+<li>Search a title plus “remote,” a city, or “part time.” Salary and work arrangement are the filters that decide whether an ad even gets opened.</li>
+<li>Skip the ad if the pay, the employer name, or the location type is missing. iHire found a missing salary was an instant turnoff for 60.7% of seekers, and an unnamed employer for 50.9%.</li>
+<li>Check the company site and a review site such as Glassdoor before spending time on the application form.</li>
+<li>Apply where the form is short. 51.7% of seekers in the same survey said 10 to 15 minutes is the right length for an online application.</li>
+<li>Keep a second path for extra cash that isn’t a job ad at all: marketplace selling, delivery apps, task platforms, or a direct message from someone already known.</li>
+</ol>
+<p>Competition on the big boards is high and the reply rate is low once an application is sent. Huntr’s 2025 report, based on about 599,000 applications tracked in its own product (a self-selected set of users, not a population survey), found interview response rates of about 4.5% on Indeed, 3.1% on LinkedIn, and 2.8% on ZipRecruiter, with a higher 11.3% on the smaller, more curated Google for Jobs. Ghosting after applying was the single most common frustration named in the iHire survey, at 59.0%.</p>
+
+<h2 id="when">When the ads are thin, and when they loosen up</h2>
+<p>Indeed’s own count of U.S. postings mentioning remote or hybrid work, or listing the location as remote, moved like this: 2.6% in January 2019, a peak of 10.4% in February 2022, 7.8% on 31 October 2024, and 8.3% on 31 January 2025. A secondary compilation of the same tracker puts the share at 8.4% on 31 August 2026, against 8.2% a year earlier, and says it has stayed between about 7.7% and 9.1% since the start of 2024. The all-jobs average hides large differences by field: in the same compilation, remote or hybrid mentions were 39.7% of insurance postings, 32.9% of legal, 32.4% of mathematical, 30.8% of software, 25.2% of marketing, and 20.8% of human resources, against 3.9% for construction, 1.9% for retail, and 1.2% for driving.</p>
+<p>Demand runs well ahead of that thin supply. A LinkedIn spokesperson told Business Insider that in September 2025 about 8% of paid U.S. postings offered remote work, and those postings drew 35% of applications; in July 2025 it was about 9% of postings and 37% of applications. A remote posting on LinkedIn draws on the order of four times the applications its share of the board would predict. Robert Half’s professional-job tracker described fully on-site roles rising from 65% of postings it tracks in the fourth quarter of 2025 to 87% in the second quarter of 2026, with 10% hybrid and 3% fully remote; 36% of employers in that survey said they had raised required on-site days over the prior year.</p>
+<p>The wider labor market this is happening in is not booming. BLS, seasonally adjusted, September 2026: unemployment 4.2% (7.1 million people), labor-force participation 61.8%, employment-population ratio 59.2%, payrolls up 29,000 that month. Indeed’s Job Postings Index fell from 111.7 on 1 January 2025 to 101.7 at the end of October 2025, just above the pre-pandemic baseline. Searching for remote work now means applying into a cooler market, onto a smaller set of ads, than in 2021 or 2022. Federal civilian remote work is its own special case: Gallup reported hybrid among federal employees fell from 61% in late 2024 to 28% after the 2025 federal return-to-office, with 46% fully on site.</p>
+<p>Employers have pulled back on formal flexibility benefits too, without dropping them. SHRM’s 2026 survey found 57% of employers offer hybrid work (down 3 points from 2025) and 45% offer flextime during core hours (down 6 points), while 10% now offer a four-day week (up 2 points).</p>
+
 <h2>What the crowded ads have stated</h2>
 <p>Entry-level remote titles in the FlexJobs database from 1 January to 1 May 2026 were led by customer service, administration, and sales. Named customer-service ads reviewed in autumn 2026, including Concentrix, TTEC, and Firstsource, clustered around $15 to $17 an hour, with an assigned shift, a high-school diploma, and prior customer-service experience. Some required a wired connection rather than a phone hotspot. Those ads expire. They show the shape of the shelf. They are not openings from Weekline.</p>
-<p>In the iHire survey, 60.5% said a hiring timeline would make them more likely to apply, and 57.1% said a salary range would. An unnamed employer was an instant turnoff for 50.9%, and missing pay was an instant turnoff for 60.7%. Ghosting was the most common frustration, at 59.0%. Fake or already-filled postings were 39.3% in the findings chart. Finding remote work was named as a challenge by 24.0%.</p>
-<h2>The fraud pattern in the public reports</h2>
+
+<h2 id="signs">The signs when an offer isn’t real</h2>
 <p>The Federal Trade Commission’s 10 March 2025 release said reports of job and employment-agency scams tripled from 2020 to 2024, and reported losses rose from $90 million to $501 million. A September 2025 FTC note put 2024 job-scam reports above 105,000 and losses above $513 million. Task scams were about 20,000 reports in the first half of 2024, against about 5,000 in all of 2023. The patterns in FTC consumer guidance are an unexpected text or chat, a remote title with no duties, any fee, a check the person is told to deposit and partly send back, and pay for liking or rating things followed by a demand to deposit money. Reports go to ReportFraud.ftc.gov.</p>
-<p class="src-note">iHire, State of Online Recruiting 2025, chart figures. HireClix, 2025 Candidate Experience Survey. Indeed Hiring Lab. Business Insider, 19 October 2025. FlexJobs, entry-level remote guide, updated 28 May 2026. FTC press release, 10 March 2025, and FTC business blog, September 2025. Occupation shares for 31 August 2026 are a secondary compilation.</p>
+<p class="src-note">iHire, State of Online Recruiting 2025, chart figures. HireClix, 2025 Candidate Experience Survey. Indeed Hiring Lab. Business Insider, 19 October 2025. Los Angeles Times, 8 September 2025. FlexJobs, entry-level remote guide, updated 28 May 2026. Huntr, 2025 Annual Job Search Trends. SHRM, 2026 Employee Benefits Survey. Gallup, Hybrid Work in Retreat? Barely. FTC press release, 10 March 2025, and FTC business blog, September 2025. Occupation shares for 31 August 2026 are a secondary compilation.</p>
 ''',
-        "gap.html",
+        "search.html",
     )
 
     essay(
@@ -381,6 +398,7 @@ def build():
     )
 
     notes = [
+        ("search", "Search", "search.html", "Where, how, and when the search actually happens", "The channels people use, the steps a search runs through, and when remote postings are scarce or plentiful."),
         ("start", "Start", "start.html", "The starter’s companion", "What a first week of remote, online, or independent work usually involves."),
         ("words", "Words", "arrangements.html", "Place, delivery, and hours", "Remote, online, and flexible name different parts of a week. A home shift can still be assigned."),
         ("days", "Where", "record.html", "Where paid days are spent", "The share of paid days at home, and who teleworked in one survey week."),
@@ -401,6 +419,7 @@ def build():
 <section class="band"><div class="wrap">
 <div class="filters" role="group" aria-label="Filter notes">
 <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+<button class="chip" type="button" data-filter="search" aria-pressed="false">Search</button>
 <button class="chip" type="button" data-filter="start" aria-pressed="false">Start</button>
 <button class="chip" type="button" data-filter="words" aria-pressed="false">Words</button>
 <button class="chip" type="button" data-filter="days" aria-pressed="false">Where</button>
