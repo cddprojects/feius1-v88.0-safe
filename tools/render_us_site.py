@@ -127,10 +127,10 @@ def build():
         '''
 <section class="hero"><div class="wrap hero-grid">
 <div class="hero-copy">
-<p class="eyebrow">Straight talk, not a job board</p>
-<h1>Here’s exactly how people search, apply, and land remote or online work.</h1>
-<p class="lede">We break down the stuff nobody actually explains: where folks really look for work, how an application actually goes, and what you’ll be asked for before you get hired. No listings, no fees, no signing up for anything.</p>
-<p class="reassure">Feeling lost? That’s normal — this stuff just isn’t taught anywhere. You’re not missing something everyone else already knows.</p>
+<p class="eyebrow">A plain-language guide, not a job board</p>
+<h1>How people actually search, apply, and get hired for remote and online work.</h1>
+<p class="lede">We’ve pulled together what the data and the federal agencies that track this say about where people search, how an application really moves through the system, and what employers consistently ask for before they’ll hire you. No listings, no fees, no account required.</p>
+<p class="reassure">Most of what follows isn’t common knowledge — it’s just rarely written down in one place. That’s the gap this fills.</p>
 <div class="hero-actions">
 <a class="btn btn-primary btn-lg" href="search.html">See how people search</a>
 <a class="btn btn-ghost btn-lg" href="apply.html">See what applying takes</a>
@@ -142,41 +142,41 @@ def build():
 </ul>
 </div>
 <div class="hero-card" aria-hidden="true">
-<p class="hero-card-label">The numbers, straight up</p>
+<p class="hero-card-label">What the data shows</p>
 <div class="hero-stat"><span class="num">~8%</span><span class="desc">of U.S. postings mention remote or hybrid work</span></div>
-<div class="hero-stat"><span class="num">10–15 min</span><span class="desc">is the application length most people call fair</span></div>
+<div class="hero-stat"><span class="num">10–15 min</span><span class="desc">is the application length most candidates consider reasonable</span></div>
 <div class="hero-stat"><span class="num">$500M+</span><span class="desc">lost to job scams in 2024 alone</span></div>
 </div>
 </div></section>
 
 <section class="guides"><div class="wrap">
 <p class="section-label">Three guides</p>
-<h2>Start with whichever question’s actually bugging you.</h2>
-<p class="section-intro">Nothing here is “too basic” to cover. There’s no step you’re supposed to already know.</p>
+<h2>Start with whichever part of the process you need most.</h2>
+<p class="section-intro">Each guide covers a stage of the process in full, with sources cited throughout. None of it assumes you already know the basics.</p>
 <div class="guide-grid">
 <a class="guide-card" href="search.html">
 <span class="guide-icon">🔍</span>
 <h3>Search</h3>
-<p>Where people actually start looking, how a search plays out week by week, and the stretches where remote postings just dry up.</p>
+<p>Where the search actually begins, how it tends to unfold over the following weeks, and the periods when remote postings genuinely thin out.</p>
 <span class="guide-link">Read the guide &rarr;</span>
 </a>
 <a class="guide-card" href="apply.html">
 <span class="guide-icon">📝</span>
 <h3>Apply</h3>
-<p>What the online form, that one weird screening question, the skills test, and the interview actually look like — in order.</p>
+<p>What the online application, the screening questions, any skills assessment, and the interview actually look like, in the order they happen.</p>
 <span class="guide-link">Read the guide &rarr;</span>
 </a>
 <a class="guide-card" href="apply.html#requirements">
 <span class="guide-icon">✅</span>
 <h3>Requirements</h3>
-<p>What they’ll usually ask you to have: proof you can work in the U.S., a tax form, a decent setup, maybe a quick skills test.</p>
+<p>What employers consistently ask candidates to have: proof of work eligibility, a tax form, a working setup, and sometimes a skills test.</p>
 <span class="guide-link">Read the guide &rarr;</span>
 </a>
 </div>
 </div></section>
 
 <section class="sources"><div class="wrap sources-row">
-<p class="sources-label">Every number here comes from somewhere real — no guesswork</p>
+<p class="sources-label">Every figure on this site is attributed to its source</p>
 <ul class="sources-list">
 <li>U.S. Bureau of Labor Statistics</li>
 <li>Federal Trade Commission</li>
@@ -189,13 +189,13 @@ def build():
 
 <section class="warn-section"><div class="wrap">
 <p class="section-label warn-label">Before you say yes</p>
-<h2>Four signs the offer’s not real.</h2>
-<p class="section-intro">Folks lost over $500 million to job scams in 2024. These are the patterns regulators keep catching — not a reason to assume every offer’s a scam, just stuff worth knowing.</p>
+<h2>Four signs an offer isn’t legitimate.</h2>
+<p class="section-intro">Reported job-scam losses topped $500 million in 2024. These four patterns are the ones regulators cite most often — not a reason to doubt every offer, just the signals worth knowing before you accept one.</p>
 <div class="warn-grid">
-<div class="warn-card"><span class="warn-flag">🚩</span><h3>No company name</h3><p>Vague or unnamed company? That’s the single biggest red flag seekers and fraud reports keep pointing to.</p></div>
-<div class="warn-card"><span class="warn-flag">🚩</span><h3>They want money upfront</h3><p>A “kit fee,” a training fee, a deposit before you’ve even started — doesn’t matter how it’s dressed up, it’s never legit.</p></div>
-<div class="warn-card"><span class="warn-flag">🚩</span><h3>They send you a check</h3><p>Deposit this check, then wire part of it back — that’s the single most common scam move the FTC tracks.</p></div>
-<div class="warn-card"><span class="warn-flag">🚩</span><h3>You need to decide right now</h3><p>A real offer can survive you sleeping on it. If they’re rushing you, that’s a tactic, not how real hiring works.</p></div>
+<div class="warn-card"><span class="warn-flag">🚩</span><h3>No employer name</h3><p>A vague or unnamed company is the single most common red flag identified in both seeker surveys and FTC fraud reports.</p></div>
+<div class="warn-card"><span class="warn-flag">🚩</span><h3>Any payment required upfront</h3><p>A kit fee, a training fee, or a deposit before you’ve started work is never legitimate, regardless of how it’s presented.</p></div>
+<div class="warn-card"><span class="warn-flag">🚩</span><h3>A check you’re asked to deposit</h3><p>Being asked to deposit a check and wire part of it back is the single most common mechanism the FTC tracks in job scams.</p></div>
+<div class="warn-card"><span class="warn-flag">🚩</span><h3>Pressure to decide immediately</h3><p>A legitimate offer holds up overnight. Pressure to accept on the spot is a tactic, not a feature of real hiring.</p></div>
 </div>
 <p class="warn-more"><a href="search.html#signs">See the full list, with sources &rarr;</a></p>
 </div></section>
@@ -203,21 +203,21 @@ def build():
 <section class="faq"><div class="wrap faq-grid">
 <div class="faq-intro">
 <p class="section-label">Quick answers</p>
-<h2>Before you open another tab.</h2>
-<p>These are the questions almost everyone has but almost nobody asks out loud. None of them are too obvious — promise. The full guides go deeper, with sources.</p>
+<h2>What people ask before they get started.</h2>
+<p>These are the questions nearly everyone has at some point, even if they rarely get asked out loud. Each one has a short answer here and a fuller explanation, with sources, in the guides.</p>
 <p><a class="btn btn-ghost" href="notes.html">See every note &rarr;</a></p>
 </div>
 <div class="faq-list">
-<details><summary>Do I have to pay anything to apply?</summary><p>Nope. A legit employer never charges you to apply, never sells you a “starter kit” or training, and never asks you to deposit a check and wire part back. Any of that means it’s a scam, full stop.</p></details>
-<details><summary>Do I need special equipment to work from home?</summary><p>Usually, yeah — a computer that meets some basic specs and a solid internet connection, sometimes a wired connection instead of a hotspot. A real employer ships you the gear or pays you back for it. They don’t make you buy it yourself first.</p></details>
-<details><summary>Am I an employee or a contractor?</summary><p>Look at which tax form you’re handed. A W-4 means you’re a W-2 employee and taxes come out of every paycheck. A W-9 means you’re a 1099 contractor handling your own taxes.</p></details>
-<details><summary>How long should an application actually take?</summary><p>About half of job seekers say 10 to 15 minutes feels fair for an online form. If yours is dragging way longer, or making you retype a résumé you already uploaded, that’s a known annoyance — not you doing something wrong.</p></details>
+<details><summary>Do I need to pay anything to apply?</summary><p>No. A legitimate employer never charges an application fee, never sells a “starter kit” or training, and never asks you to deposit a check and send part of it back. Any of those is one of the clearest signs of a scam.</p></details>
+<details><summary>Will I need specific equipment to work from home?</summary><p>Often, yes — a computer that meets a minimum specification and a reliable internet connection, sometimes a wired connection rather than a mobile hotspot. A legitimate employer ships or reimburses the required equipment; it doesn’t ask you to buy it upfront.</p></details>
+<details><summary>Am I classified as an employee or a contractor?</summary><p>Check which tax form you’re asked to complete. A W-4 means you’re a W-2 employee with taxes withheld from each paycheck. A W-9 means you’re a 1099 contractor responsible for your own taxes.</p></details>
+<details><summary>How long should an application actually take?</summary><p>About half of job seekers consider 10 to 15 minutes reasonable for an online form. If it’s taking considerably longer, or requiring you to retype a résumé you already uploaded, that’s a documented frustration with the process — not an indication you’re doing something wrong.</p></details>
 </div>
 </div></section>
 
 <section class="cta"><div class="wrap cta-inner">
-<h2>Jump in wherever your question is.</h2>
-<p>No listings, no account, no fee — just a straight answer, with the source behind every number. Works the same whether this is your first search or your fifth.</p>
+<h2>Start wherever your question is.</h2>
+<p>No listings, no account, no fee — just a clear explanation, with the source behind every figure. The same starting point applies whether this is your first search or your fifth.</p>
 <div class="cta-actions">
 <a class="btn btn-primary btn-lg" href="search.html">How &amp; where people search</a>
 <a class="btn btn-outline-light btn-lg" href="states.html">Pay &amp; employment status</a>
