@@ -128,9 +128,9 @@ def build():
 <section class="hero"><div class="wrap hero-grid">
 <div class="hero-copy">
 <p class="eyebrow">General information, not job listings</p>
-<h1>Thinking about remote or online work? Here’s what actually happens once you apply.</h1>
-<p class="lede">You’ll fill out a form, maybe answer a few screening questions, then wait. We’ll show you where people really look for work, what that waiting and interviewing actually involves, and what you’ll be asked to have ready before anyone hires you — all with real numbers behind it, not guesses.</p>
-<p class="reassure">If it feels confusing, that’s not on you. Almost nobody actually explains this part, so most people are figuring it out the same way you are right now.</p>
+<h1>What’s changing in how people get hired for remote work. And what it means for you.</h1>
+<p class="lede">Hiring for remote and online roles now runs mostly through online forms, automated screening, and a short list of standard requirements. This covers how that process works end to end — where people search, how an application actually moves, and what gets asked of candidates before they’re hired — using data from the agencies that track it.</p>
+<p class="reassure">Most people go through this process once with little explanation of how it actually works. That hasn’t changed much even as the process itself has moved almost entirely online.</p>
 <div class="hero-actions">
 <a class="btn btn-primary btn-lg" href="search.html">See how people search</a>
 <a class="btn btn-ghost btn-lg" href="apply.html">See what applying takes</a>
@@ -151,8 +151,8 @@ def build():
 
 <section class="guides"><div class="wrap">
 <p class="section-label">Three guides</p>
-<h2>Jump in wherever you are right now.</h2>
-<p class="section-intro">Haven’t started looking yet? Start with Search. Already have an offer that feels off? Go straight to Requirements. You don’t need to read these in order.</p>
+<h2>Three stages of getting hired, covered in plain language.</h2>
+<p class="section-intro">From the first search through the paperwork after an offer, each stage runs on a fairly predictable pattern — covered here in order, with the source behind each fact.</p>
 <div class="guide-grid">
 <a class="guide-card" href="search.html">
 <span class="guide-icon">🔍</span>
@@ -190,7 +190,7 @@ def build():
 <section class="warn-section"><div class="wrap">
 <p class="section-label warn-label">Before you say yes</p>
 <h2>Four signs an offer isn’t real.</h2>
-<p class="section-intro">People lost over $500 million to job scams in 2024. Watch for these before you accept anything — not because every offer is fake, but because these are the exact patterns scammers keep reusing.</p>
+<p class="section-intro">Reported job-scam losses topped $500 million in 2024. These four patterns show up most often in that reporting — not a reason to doubt every offer, just what regulators see repeated most.</p>
 <div class="warn-grid">
 <div class="warn-card"><span class="warn-flag">🚩</span><h3>No employer name</h3><p>If the company won’t say who they are, that’s the single biggest red flag job seekers and fraud reports keep pointing to.</p></div>
 <div class="warn-card"><span class="warn-flag">🚩</span><h3>They want money upfront</h3><p>A kit fee, a training fee, a “deposit” before you’ve even started — however it’s framed, it’s never legitimate.</p></div>
@@ -210,7 +210,7 @@ def build():
 <div class="faq-list">
 <details><summary>Do I need to pay anything to apply?</summary><p>No. A real employer never charges you to apply, never sells you a “starter kit” or training, and never asks you to deposit a check and send part of it back. If any of that happens, you’re looking at a scam.</p></details>
 <details><summary>Will I need specific equipment to work from home?</summary><p>Usually, yes — a computer that meets some basic specs and a reliable internet connection, sometimes a wired one instead of a hotspot. A real employer ships you the equipment or pays you back for it. They don’t make you buy it yourself first.</p></details>
-<details><summary>Am I an employee or a contractor?</summary><p>Look at which tax form you’re handed. A W-4 means you’re a W-2 employee and taxes come out of every paycheck. A W-9 means you’re a 1099 contractor handling your own taxes.</p></details>
+<details><summary>Am I an employee or a contractor?</summary><p>The tax form used is the reliable signal: a W-4 means a W-2 employee with taxes withheld from every paycheck, while a W-9 means a 1099 contractor handling their own taxes.</p></details>
 <details><summary>How long should an application actually take?</summary><p>About half of job seekers say 10 to 15 minutes feels fair for an online form. If yours is taking a lot longer, or making you retype a résumé you already uploaded, that’s a known annoyance — not something you’re doing wrong.</p></details>
 </div>
 </div></section>
