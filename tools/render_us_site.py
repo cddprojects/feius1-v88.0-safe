@@ -129,8 +129,8 @@ def build():
 <div class="hero-copy">
 <p class="eyebrow">A plain-language guide, not a job board</p>
 <h1>How people actually search, apply, and get hired for remote and online work.</h1>
-<p class="lede">We’ve pulled together what the data and the federal agencies that track this say about where people search, how an application really moves through the system, and what employers consistently ask for before they’ll hire you. No listings, no fees, no account required.</p>
-<p class="reassure">Most of what follows isn’t common knowledge — it’s just rarely written down in one place. That’s the gap this fills.</p>
+<p class="lede">Where people actually search, how an online application moves once you submit it, and what employers consistently ask you to have before they’ll hire you. No listings, no fees, no account required.</p>
+<p class="reassure">Most of this isn’t common knowledge. It’s just rarely written down in one place, which is why the whole process can feel harder than it actually is.</p>
 <div class="hero-actions">
 <a class="btn btn-primary btn-lg" href="search.html">See how people search</a>
 <a class="btn btn-ghost btn-lg" href="apply.html">See what applying takes</a>
@@ -152,7 +152,7 @@ def build():
 <section class="guides"><div class="wrap">
 <p class="section-label">Three guides</p>
 <h2>Start with whichever part of the process you need most.</h2>
-<p class="section-intro">Each guide covers a stage of the process in full, with sources cited throughout. None of it assumes you already know the basics.</p>
+<p class="section-intro">Every guide explains a stage of the process in plain terms, with the source behind each fact. You don’t need to know the basics going in.</p>
 <div class="guide-grid">
 <a class="guide-card" href="search.html">
 <span class="guide-icon">🔍</span>
@@ -369,11 +369,11 @@ def build():
 </div>
 <p><b>Proof you can legally work in the United States.</b> Every W-2 employer must complete Form I-9 within three days of a new hire’s start date, which means presenting an acceptable document such as a U.S. passport, or a driver’s license plus a Social Security card, to confirm identity and work eligibility. This applies to remote hires exactly as it applies to on-site ones; a remote job does not skip it.</p>
 <p><b>The right tax form for how you’re paid.</b> A W-2 employee completes Form W-4, which sets how much income tax is withheld from each paycheck. An independent contractor paid as 1099 completes Form W-9 instead, and no tax is withheld; the contractor sets aside their own income tax and both halves of Social Security and Medicare. Which form you’re asked for is a quick, reliable signal of which kind of work you’ve actually agreed to, regardless of what the posting called it.</p>
-<p><b>A working setup.</b> Home-based customer-service and data roles commonly specify a computer meeting minimum specs, a quiet workspace, and a reliable internet connection — and a number of named ads reviewed for this site in 2026 required a wired connection rather than a phone hotspot or satellite internet. Some roles additionally require a webcam for video calls or supervision software installed on the work computer; this should be stated in the posting or the offer, not discovered after accepting.</p>
+<p><b>A working setup.</b> Home-based customer-service and data roles commonly specify a computer meeting minimum specs, a quiet workspace, and a reliable internet connection, and many postings require a wired connection rather than a phone hotspot or satellite internet. Some roles additionally require a webcam for video calls or supervision software installed on the work computer; this should be stated in the posting or the offer, not discovered after accepting.</p>
 <p><b>Skills proof, where the job calls for it.</b> Typing speed for data entry and transcription, a graded writing sample for content or copy roles, a basic accounting or spreadsheet test for bookkeeping, and a relevant certificate or license for occupations such as medical records or tutoring in a specific subject. Entry-level customer service, administrative, and sales roles — the largest single slice of entry-level remote postings — usually ask only for a high school diploma and some prior customer-service experience.</p>
 <p><b>Sometimes a background check, or more.</b> Roles handling money, health information, or vulnerable people, including many bookkeeping, healthcare-adjacent, and tutoring-of-minors roles, commonly run a background check after a conditional offer, and some add a credit check, a basic cognitive or personality assessment, or a drug or medical screening depending on the field and the state. These are standard, and under the Fair Credit Reporting Act a background or credit check requires your written consent before it happens.</p>
 <p><b>Nothing you pay for.</b> None of the above should ever cost the applicant money. A legitimate employer ships or reimburses required equipment; it does not ask for a kit fee, a training fee, or a deposit refunded out of a check you’re told to cash. That exact pattern — a check to deposit, then a request to send part of it back — is the single most common scam mechanism in Federal Trade Commission reports, and it shows up disguised as an “equipment” or “software license” requirement as often as anything else.</p>
-<p class="src-note">iHire, State of Online Recruiting 2025. Huntr, 2025 Annual Job Search Trends. U.S. Citizenship and Immigration Services, Form I-9. Internal Revenue Service, Form W-4 and Form W-9. Federal Trade Commission, job-scam consumer guidance. Named ads were reviewed in 2026 as examples of common requirements; they are not openings from Weekline.</p>
+<p class="src-note">iHire, State of Online Recruiting 2025. Huntr, 2025 Annual Job Search Trends. U.S. Citizenship and Immigration Services, Form I-9. Internal Revenue Service, Form W-4 and Form W-9. Federal Trade Commission, job-scam consumer guidance. Specific postings are referenced only as illustrative examples; none are current openings from Weekline.</p>
 ''',
         "apply.html",
         "Companion",
@@ -577,14 +577,14 @@ def build():
 <p class="lede">Remote, online, and independent work come with a process almost nobody explains plainly. Weekline explains it, in everyday language, before a reader says yes to any of it.</p></div></div>
 <section class="band"><div class="wrap split">
 <div>
-<h2>What a reader can learn here</h2>
-<p>Remote is the place. Online is how the work travels. Flexible is the schedule. Independent is who you answer to. The pages keep those apart using everyday situations, then point to the public count behind a figure when one is used.</p>
-<p>Nothing here assumes a reader already knows the vocabulary or has done this before. If a term, a form, or a step isn’t explained in plain language somewhere on this site, that’s a gap we want to hear about, not a sign the reader missed something obvious.</p>
-<p>Weekline is an independent publisher. It is not an employer, a staffing agency, or a job board. It does not list openings and it does not take applications. Reading a page does not sign anyone up for work.</p>
+<h2>What you’ll learn here</h2>
+<p>Remote is the place. Online is how the work travels. Flexible is the schedule. Independent is who you answer to. Each page keeps those apart using everyday situations, then points to the public figure behind a number when one is used.</p>
+<p>You don’t need to already know the vocabulary or have done any of this before. If a term, a form, or a step anywhere on this site isn’t explained in plain language, that’s on us to fix — not something you missed.</p>
+<p>Weekline is an independent publisher. It is not an employer, a staffing agency, or a job board. It does not list openings and it does not take applications. Reading a page does not sign you up for anything.</p>
 </div>
 <div>
-<div class="col"><h3>Who this is for</h3><p>Someone trying remote, online, or independent work for the first time, or anyone who wants a plain answer before taking an offer that sounds too easy. No prior experience with any of it is assumed.</p></div>
-<div class="col" style="margin-top:1.25rem"><h3>The limit</h3><p>The pages do not choose a week for a reader, and they do not replace the Department of Labor, the Internal Revenue Service, a state labor office, or the Federal Trade Commission.</p></div>
+<div class="col"><h3>Who this is for</h3><p>Anyone trying remote, online, or independent work for the first time, or anyone who wants a plain answer before taking an offer that sounds too easy. No prior experience with any of it is assumed.</p></div>
+<div class="col" style="margin-top:1.25rem"><h3>The limit</h3><p>These pages don’t make the decision for you, and they don’t replace the Department of Labor, the Internal Revenue Service, a state labor office, or the Federal Trade Commission.</p></div>
 </div>
 </div></section>
 <section class="band"><div class="wrap">
