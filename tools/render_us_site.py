@@ -18,9 +18,9 @@ FONT = (
 )
 
 NAV = [
-    ("remote", "Remote"),
-    ("online", "Online"),
-    ("flexible", "Flexible"),
+    ("start.html", "Start"),
+    ("states.html", "Pay &amp; hours"),
+    ("gap.html", "Signs"),
     ("about.html", "About"),
 ]
 
@@ -31,35 +31,23 @@ def brand():
     return f'<a class="brand" href="index.html"><span aria-hidden="true"></span>{BRAND}</a>'
 
 
-def nav_block(current, landing=False):
+def nav_block(current):
     items = []
-    for key, label in NAV:
-        if key.endswith(".html"):
-            href = key
-            cur = ' aria-current="page"' if href == current else ""
-        else:
-            href = f"#{key}" if landing else f"index.html#{key}"
-            cur = ""
+    for href, label in NAV:
+        cur = ' aria-current="page"' if href == current else ""
         items.append(f'<li><a href="{href}"{cur}>{label}</a></li>')
     return f'''<nav aria-label="Primary"><ul id="nav-list">{"".join(items)}</ul></nav>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Open menu"><span class="bars" aria-hidden="true"></span></button>'''
 
 
 def header(current, landing=False):
-    links = nav_block(current, landing=landing)
-    if landing:
-        return f'''<a class="skip" href="#main">Skip to content</a>
-<header class="topbar">
-<div class="wrap topbar-row">
-{brand()}
-<div class="nav">{links}</div>
-</div>
-</header>'''
+    links = nav_block(current)
+    edition = "Front page" if landing else "For readers &middot; Not a job board"
     return f'''<a class="skip" href="#main">Skip to content</a>
 <header class="mast">
-<div class="wrap mast-top"><p>United States · Reviewed {REVIEWED}</p><p class="edition">For readers · Not a job list</p></div>
+<div class="wrap mast-top"><p>United States edition &middot; Reviewed {REVIEWED}</p><p class="edition">{edition}</p></div>
 <div class="wrap nameplate">{brand()}
-<p class="tagline">Remote, online, and flexible work in the United States.</p></div>
+<p class="tagline">A reader's companion for remote, online, and independent work in the United States.</p></div>
 <div class="nav-bar"><div class="wrap nav">
 {links}
 </div></div>
@@ -69,12 +57,12 @@ def header(current, landing=False):
 def footer():
     return f'''<footer class="site-footer"><div class="wrap foot">
 <div><p class="brand-foot">{BRAND}</p>
-<p>Written for readers. Remote, online, and flexible work are three different parts of a week in the United States.</p></div>
-<div><h2>The three words</h2><ul>
-<li><a href="index.html#remote">Remote</a></li>
-<li><a href="index.html#online">Online</a></li>
-<li><a href="index.html#flexible">Flexible</a></li>
-<li><a href="arrangements.html">How the words differ</a></li>
+<p>A reader's companion for remote, online, and independent work. Plain explanations of what usually happens once the work starts, for readers in the United States.</p></div>
+<div><h2>Start here</h2><ul>
+<li><a href="start.html">The starter's companion</a></li>
+<li><a href="states.html">Pay &amp; hours</a></li>
+<li><a href="gap.html">Signs of a real offer</a></li>
+<li><a href="notes.html">All notes</a></li>
 </ul></div>
 <div><h2>Publisher</h2><ul>
 <li><a href="about.html">About</a></li>
@@ -85,7 +73,7 @@ def footer():
 <li><a href="disclaimer.html">Disclaimer</a></li>
 </ul></div>
 </div>
-<div class="wrap legal"><p>{BRAND} is written for readers. It explains remote, online, and flexible work. It does not list jobs or give legal, tax, or employment advice.</p>
+<div class="wrap legal"><p>{BRAND} is a reader's companion. It explains remote, online, and independent work. It does not list jobs, screen employers, or give legal, tax, or employment advice.</p>
 <p>&copy; 2026 {BRAND} &middot; United States</p></div>
 </footer>
 <script src="js/main.js"></script>'''
@@ -121,11 +109,11 @@ def page(filename, title, description, body, current, landing=False):
     WRITTEN.add(filename)
 
 
-def essay(filename, kicker, h1, description, lede, inner, current):
+def essay(filename, kicker, h1, description, lede, inner, current, section="Record"):
     body = f'''<div class="page-head"><div class="wrap"><p class="kicker">{kicker}</p><h1>{h1}</h1>
 <p class="lede">{lede}</p></div></div>
 <section><div class="wrap article">
-<p class="byline">{BRAND} · Record · Reviewed {REVIEWED}</p>
+<p class="byline">{BRAND} &middot; {section} &middot; Reviewed {REVIEWED}</p>
 {inner}
 <p class="back"><a href="notes.html">All notes</a></p>
 </div></section>'''
@@ -135,73 +123,103 @@ def essay(filename, kicker, h1, description, lede, inner, current):
 def build():
     page(
         "index.html",
-        f"Remote, online, and flexible work · {BRAND}",
-        "What remote, online, and flexible work mean in an ordinary week in the United States.",
+        f"A reader's companion for remote, online, and independent work · {BRAND}",
+        "Weekline is a reader's companion for remote, online, and independent work in the United States, in plain language.",
         '''
-<section class="hero"><div class="wrap">
-<p class="kicker">A reader’s guide · United States</p>
-<h1>Remote, online, and flexible work.</h1>
-<p class="lede">Three kinds of work people talk about as if they were one. Each word describes a different part of the week.</p>
-<div class="word-grid">
-<article class="word" id="remote">
-<p class="ask">Where</p>
-<h2>Remote</h2>
-<p>The work happens away from the usual workplace. Often that means home. Some people are home all week. Others are home on some days and at the workplace on others. A split week is often called hybrid.</p>
-<p class="aside">Home is a place. A person can work from home and still keep a fixed start and finish time.</p>
+<section class="briefing"><div class="wrap">
+<p class="kicker">Today’s briefing</p>
+<ul class="briefing-list">
+<li><strong>Online work still expects someone to answer.</strong> "Flexible hours" usually means some choice over when, not whether, you reply.</li>
+<li><strong>Independent cuts both ways.</strong> No set hours also means no guaranteed hours, and no one else is covering a slow week.</li>
+<li><strong>If the hours, the pay, and the employer’s name aren’t written down, that’s the finding, not a formality.</strong></li>
+</ul>
+</div></section>
+
+<section class="lead"><div class="wrap lead-grid">
+<div class="lead-main">
+<p class="kicker">Start here</p>
+<h1>What to know before your first remote, online, or independent job.</h1>
+<p class="lede">Weekline is a reader’s companion, not a job board. These pages explain what usually happens once the work starts, so the first week has fewer surprises.</p>
+<p>Most people trying remote, online, or independent work for the first time aren’t short on job titles. They’re short on a plain answer to a handful of ordinary questions: who actually checks on the work, whose clock decides the hours, what the pay should look like, and whether you’re an employee or on your own. The starter’s companion answers those in order, and the shorter notes below cover each piece in more depth.</p>
+<p><a class="btn btn-fill" href="start.html">Read the starter’s companion &rarr;</a></p>
+</div>
+<aside class="lead-side">
+<p class="kicker">In this edition</p>
+<ul class="index-list">
+<li><a href="start.html">The starter’s companion</a><span>What a first week of remote, online, or independent work usually involves.</span></li>
+<li><a href="states.html">Pay &amp; hours</a><span>What a fair arrangement states, and how that changes by state.</span></li>
+<li><a href="gap.html">Signs of a real offer</a><span>How job and task fraud actually shows up online.</span></li>
+<li><a href="notes.html">All notes</a><span>The longer record, by topic, with sources.</span></li>
+</ul>
+</aside>
+</div></section>
+
+<section class="below-fold"><div class="wrap">
+<p class="kicker">More in this edition</p>
+<div class="fold-grid">
+<article class="fold-story">
+<p class="kicker">Pay &amp; hours</p>
+<h3><a href="states.html">The floor changes at the state line.</a></h3>
+<p>The federal minimum wage is still $7.25 an hour. Thirty states and the District of Columbia sit above it. Whether a posting has to show a pay range, by law, also depends on the state.</p>
+<p class="more"><a href="states.html">Continue reading &rarr;</a></p>
 </article>
-<article class="word" id="online">
-<p class="ask">How</p>
-<h2>Online</h2>
-<p>The work travels over the internet. It might be a video lesson, a customer chat, a call on a headset, or a document sent when it is finished.</p>
-<p class="aside">Online tells you how the work moves. It does not tell you whether the desk is at home or in an office, or who chooses the hours.</p>
+<article class="fold-story">
+<p class="kicker">Employee or contractor</p>
+<h3><a href="states.html#status">What changes when the work is “independent.”</a></h3>
+<p>No set hours, but no guaranteed hours either. A quick look at who pays for the slow weeks, who covers the employer’s share of Social Security, and why the label on a posting isn’t the legal test.</p>
+<p class="more"><a href="states.html#status">Continue reading &rarr;</a></p>
 </article>
-<article class="word" id="flexible">
-<p class="ask">When</p>
-<h2>Flexible</h2>
-<p>The person has some say over the clock. They might start later, keep the week short, or work in the evening around school, family, or another job.</p>
-<p class="aside">The say can be small. If someone else assigns the shift, the hours are still fixed, even when the work is done at home.</p>
+<article class="fold-story">
+<p class="kicker">Signs of a real offer</p>
+<h3><a href="gap.html">What job fraud actually looks like online.</a></h3>
+<p>Reported losses to job and task scams passed $500 million in 2024. An unnamed employer, any fee, or a check you’re told to deposit and partly send back are the patterns regulators keep flagging.</p>
+<p class="more"><a href="gap.html">Continue reading &rarr;</a></p>
 </article>
 </div>
 </div></section>
 
 <section class="band"><div class="wrap">
-<p class="kicker">Ordinary weeks</p>
-<h2>How the words show up together.</h2>
-<div class="scenes">
-<article class="scene">
-<p class="mix-words">Remote and online</p>
-<h3>A daytime week at home</h3>
-<p>Customer questions are answered on a laptop, from home, on a set schedule such as 9 to 5. The week is remote because of the place, and online because of the laptop. The hours were assigned, so the week is not flexible.</p>
-</article>
-<article class="scene">
-<p class="mix-words">Online</p>
-<h3>A week at the office</h3>
-<p>The person sits at the workplace, finishes a report, and sends it to the team. The work moved online. The person did not. This week is not remote.</p>
-</article>
-<article class="scene">
-<p class="mix-words">Online, flexible, and remote</p>
-<h3>A few evenings of tutoring</h3>
-<p>Lessons happen on a video call, a few evenings a week, around school or another responsibility. The hours are chosen, the lesson is online, and the tutor is at home. All three words fit this week.</p>
-</article>
-</div>
-</div></section>
-
-<section class="band"><div class="wrap split">
-<div>
-<p class="kicker">If you want the counts</p>
-<h2>Where full-time weeks happened in August 2026.</h2>
-<p>About 12 in 100 full-time employees worked only from home. About 27 in 100 split the week between home and a workplace. About 61 in 100 worked only at the workplace. The count is of weeks, not a promise about any one person.</p>
-<p class="src-note">Survey of Working Arrangements and Attitudes, full-time employees, August 2026. <a href="arrangements.html">Read the longer explanation</a>.</p>
-</div>
-<div>
-<h2>These pages are for reading.</h2>
-<p>Weekline describes remote, online, and flexible work in the United States. It does not list jobs, and it does not tell a reader which kind of week to choose.</p>
-<p><a class="btn" href="about.html">About Weekline</a></p>
-</div>
+<p class="notice">Weekline explains remote, online, and independent work. It does not list jobs, screen employers, or charge a fee. <a href="about.html">About Weekline</a>.</p>
 </div></section>
 ''',
         "index.html",
         True,
+    )
+
+    essay(
+        "start.html",
+        "Start here",
+        "The starter’s companion",
+        "A plain-language guide to what remote, online, and independent work usually involves in the first weeks, for readers in the United States.",
+        "Not what the job is called. What actually happens once you say yes.",
+        '''
+<div class="takeaways"><h2>In short</h2><ul>
+<li>Someone still checks the work. Remote and online do not mean unsupervised.</li>
+<li>“Flexible” is a smaller promise than it sounds. Ask how much of the clock is actually yours.</li>
+<li>Independent work trades a boss for a client, and a paycheck for an invoice. Both have upsides and both have gaps.</li>
+<li>Write down the hours, the pay, and the employer’s name before the first day. If one is missing, that is the finding.</li>
+</ul></div>
+
+<h2>Who checks on the work</h2>
+<p>Remote and online are not the same as unsupervised. A customer-service week done from a spare room usually comes with a login, a queue, and a supervisor who can see when you signed in. A tutoring session on video has a parent or a platform watching the same screen. Independent contract work swaps a supervisor for a client, and a client who goes quiet is its own kind of check-in problem. Before starting, it is worth asking plainly: who will I hear from if something is wrong, and how often will they expect to hear from me?</p>
+
+<h2>What “flexible” usually buys you</h2>
+<p>Flexible schedules exist on a spectrum, from “pick any eight hours this week” to “start whenever, as long as the shift still gets covered by 9 a.m.” Most arrangements sit closer to the second end. A national study taken in early 2025 found 62 in 100 workers did not have a predictable schedule they could control themselves, and even among employers who advertise flexibility, only about 1 in 10 offer a genuinely shortened week. The useful question isn’t “is this flexible,” it’s “which part of the clock do I actually choose, and which part does someone else still assign.”</p>
+
+<h2>Employee or on your own</h2>
+<p>A job with a W-2 withholds income tax and splits the Social Security and Medicare bill with the employer. Independent, 1099-style work puts both halves of that bill on you, along with your own equipment, your own slow weeks, and usually your own health insurance. In exchange, you set more of your own schedule and can often work for more than one client at once. Neither is better by default. What matters is whether the arrangement matches what was promised: a “contractor” role that assigns your exact hours and only lets you work for one company starts to look like a job in contractor’s clothing, and that gap is exactly what regulators and courts spend their time sorting out. <a href="states.html#status">The longer note on status</a> covers where that rule currently stands.</p>
+
+<h2>What should be written down before day one</h2>
+<p>Four things are reasonable to ask for in writing, by text or email is fine, before the first real day of work: the pay rate or salary, who you’re actually working for (a company name you can search, not just a hiring manager’s first name), whether you’re an employee or a contractor, and roughly what hours or workload is expected. None of these are unusual requests. An employer or client who can’t answer one plainly is telling you something.</p>
+
+<h2>What a real offer tends to look like, and what a scam tends to look like</h2>
+<p>A real remote or online offer names the employer, states a pay figure or a clear range, and asks you to do the actual job, usually after a short interview, before any money changes hands in either direction. A scam, by the patterns in Federal Trade Commission guidance, tends to arrive as an unexpected text or chat, offers a vague title with no real duties, asks for a fee of any size, or has you deposit a check and send part of it back. Reported losses from job and employment scams passed half a billion dollars in 2024, so treating a “too easy” offer with some suspicion is not paranoia, it is proportionate. <a href="gap.html">The longer note on this</a> goes through the figures and the exact warning signs.</p>
+
+<h2>Where to go next</h2>
+<p>This page is the short version. For the numbers behind each claim here, the longer notes cover pay and state minimums, the difference between an employee and a contractor, the occupations that actually show up in the remote-work shelf, and the fraud reports in more detail.</p>
+''',
+        "start.html",
+        "Companion",
     )
 
     essay(
@@ -280,7 +298,7 @@ def build():
 <p>In September 2026, preliminary and seasonally adjusted, average hourly earnings for all private employees were $37.81 and average weekly earnings were $1,300.66, at 34.4 hours. Retail trade averaged $26.38 an hour, or $807.23 a week. Leisure and hospitality averaged $23.90 an hour, or $609.45 a week. The May 2025 median for customer service representatives was $21.53 an hour, or $44,770 a year. The lowest 10% of that occupation earned under $15.27, and the highest 10% over $30.57. Entry-level remote call-center ads have been clustering near $15 to $17, which is the bottom of that range, not the private-economy average.</p>
 <h2>Where a posting has to show a range</h2>
 <p>A compilation of official pages, current as of 13 October 2026, found pay-range rules in Colorado (1 January 2021), New York City (1 November 2022), California and Washington (1 January 2023), New York State (17 September 2023), Hawaii (1 January 2024), the District of Columbia (30 June 2024), Maryland (1 October 2024), Illinois and Minnesota (1 January 2025), New Jersey (1 June 2025), Vermont (1 July 2025), Massachusetts (29 October 2025), Virginia (1 July 2026), Maine (29 July 2026), and Connecticut (1 October 2026). Thresholds differ by employer size and by whether the work is done in the state. In that compiler’s own postings on 1 November 2026, 69.5% stated a range inside those jurisdictions and 32.6% stated one elsewhere. This list is a map of public rules, not legal advice.</p>
-<h2>Employee or contractor, still unsettled on paper</h2>
+<h2 id="status">Employee or contractor, still unsettled on paper</h2>
 <p>Some online offers are written as independent-contractor work. The comparison with a job includes overtime, unemployment insurance, and who pays the employer share of Social Security. On 26 February 2026 the Department of Labor proposed to replace its 2024 classification guidance with a modified economic-reality test. Comments closed on 28 April 2026. On 28 October 2026 that final rule had cleared White House review, and as of this review date it had no publication date. Until publication, the 2024 guidance is what the Department has published. Courts apply their own case law. State tests, including California’s ABC test, are separate. This is a status note, not a classification of any engagement.</p>
 <p class="src-note">U.S. Department of Labor, consolidated minimum-wage table dated 1 July 2026. Bureau of Labor Statistics, table B-3, September 2026, and the Occupational Outlook Handbook, May 2025. LAYIQ compilation of official pay-transparency pages, 13 October 2026. Federal Register, 27 February 2026. OIRA record RIN 1235-AA46, concluded 28 October 2026.</p>
 ''',
@@ -363,6 +381,7 @@ def build():
     )
 
     notes = [
+        ("start", "Start", "start.html", "The starter’s companion", "What a first week of remote, online, or independent work usually involves."),
         ("words", "Words", "arrangements.html", "Place, delivery, and hours", "Remote, online, and flexible name different parts of a week. A home shift can still be assigned."),
         ("days", "Where", "record.html", "Where paid days are spent", "The share of paid days at home, and who teleworked in one survey week."),
         ("hours", "When", "side-work.html", "A second, smaller part of the week", "5.5% of employed people held two jobs. Side-work surveys use a wider definition."),
@@ -382,6 +401,7 @@ def build():
 <section class="band"><div class="wrap">
 <div class="filters" role="group" aria-label="Filter notes">
 <button class="chip" type="button" data-filter="all" aria-pressed="true">All</button>
+<button class="chip" type="button" data-filter="start" aria-pressed="false">Start</button>
 <button class="chip" type="button" data-filter="words" aria-pressed="false">Words</button>
 <button class="chip" type="button" data-filter="days" aria-pressed="false">Where</button>
 <button class="chip" type="button" data-filter="hours" aria-pressed="false">When</button>
@@ -447,17 +467,17 @@ def build():
     page(
         "about.html",
         f"About · {BRAND}",
-        "Weekline explains remote, online, and flexible work for readers in the United States.",
-        '''<div class="page-head"><div class="wrap"><p class="kicker">About</p><h1>Written for readers.</h1>
-<p class="lede">Weekline explains what remote, online, and flexible work mean in an ordinary week.</p></div></div>
+        "Weekline is a reader's companion for remote, online, and independent work in the United States.",
+        '''<div class="page-head"><div class="wrap"><p class="kicker">About</p><h1>A companion, not a job board.</h1>
+<p class="lede">Weekline explains what remote, online, and independent work actually involve, in plain language, before a reader says yes to any of them.</p></div></div>
 <section class="band"><div class="wrap split">
 <div>
 <h2>What a reader can learn here</h2>
-<p>Remote is the place. Online is the way the work travels. Flexible is the schedule. The pages use everyday weeks so those words stay separate, and they point to the public count behind a figure when a number appears.</p>
-<p>Weekline is an independent publisher. It is not an employer and it does not list jobs. Reading a page does not sign anyone up for work.</p>
+<p>Remote is the place. Online is how the work travels. Flexible is the schedule. Independent is who you answer to. The pages keep those apart using everyday situations, then point to the public count behind a figure when one is used.</p>
+<p>Weekline is an independent publisher. It is not an employer, a staffing agency, or a job board. It does not list openings and it does not take applications. Reading a page does not sign anyone up for work.</p>
 </div>
 <div>
-<div class="col"><h3>The weeks on the front page</h3><p>A daytime week at home, a week at the office, and a few evenings of tutoring are illustrations. They are not offers, and they are not stories about real named people.</p></div>
+<div class="col"><h3>Who this is for</h3><p>Someone trying remote, online, or independent work for the first time, or anyone who wants a plain answer before taking an offer that sounds too easy.</p></div>
 <div class="col" style="margin-top:1.25rem"><h3>The limit</h3><p>The pages do not choose a week for a reader, and they do not replace the Department of Labor, the Internal Revenue Service, a state labor office, or the Federal Trade Commission.</p></div>
 </div>
 </div></section>
