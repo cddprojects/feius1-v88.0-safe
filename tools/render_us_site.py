@@ -129,7 +129,8 @@ def build():
 <div class="hero-copy">
 <p class="eyebrow">A reader’s companion, not a job board</p>
 <h1>How people search, apply, and get ready for remote, online, and independent work.</h1>
-<p class="lede">Weekline answers three plain questions about work in the United States: where the looking happens, how an application usually runs, and what you’re actually asked to have before you’re hired. No listings, no fees, no sign-up.</p>
+<p class="lede">Weekline makes an unfamiliar process plain to see: where the looking happens, how an application usually runs, and what you’re actually asked to have before you’re hired. No listings, no fees, no sign-up.</p>
+<p class="reassure">If any of this feels like a mystery, that’s not you — it’s just a process nobody explains well. Nothing below assumes you’ve done this before.</p>
 <div class="hero-actions">
 <a class="btn btn-primary btn-lg" href="search.html">Start with how people search</a>
 <a class="btn btn-ghost btn-lg" href="apply.html">See what applying requires</a>
@@ -151,6 +152,7 @@ def build():
 <section class="guides"><div class="wrap">
 <p class="section-label">Three guides</p>
 <h2>Everything starts with one of these.</h2>
+<p class="section-intro">No step here is too basic to explain. Start wherever your question actually is — there’s no “you should already know this.”</p>
 <div class="guide-grid">
 <a class="guide-card" href="search.html">
 <span class="guide-icon">🔍</span>
@@ -177,7 +179,7 @@ def build():
 <div class="faq-intro">
 <p class="section-label">Quick answers</p>
 <h2>Before you open another tab.</h2>
-<p>Short answers to what people ask first. The full guides go deeper, with sources.</p>
+<p>These are the questions most people wonder about but rarely ask out loud. None of them are too obvious to answer. The full guides go deeper, with sources.</p>
 <p><a class="btn btn-ghost" href="notes.html">See every note &rarr;</a></p>
 </div>
 <div class="faq-list">
@@ -190,7 +192,7 @@ def build():
 
 <section class="cta"><div class="wrap cta-inner">
 <h2>Start wherever your question is.</h2>
-<p>No listings, no account, no fee. Just the plain explanation, with the source behind every figure.</p>
+<p>No listings, no account, no fee. Just the plain explanation, with the source behind every figure — and the same starting point whether this is your first search or your fifth.</p>
 <div class="cta-actions">
 <a class="btn btn-primary btn-lg" href="search.html">How &amp; where people search</a>
 <a class="btn btn-outline-light btn-lg" href="states.html">Pay &amp; employment status</a>
@@ -270,6 +272,7 @@ def build():
         "Where Americans look for remote, online, and flexible work, how a typical search runs step by step, and when remote postings are actually available.",
         "The looking is measurable too, not just the hiring. Here is where it starts, how it runs, and when the ads are thin.",
         '''
+<p class="reassure">If a remote search feels slower or more confusing than it should, that’s a reasonable reaction to how the market actually works right now, not a sign you’re searching wrong. The data below explains why.</p>
 <div class="takeaways"><h2>In short</h2><ul>
 <li>Searches still start on the large boards, then LinkedIn, Google, and employer sites.</li>
 <li>A search tends to run the same handful of steps, in roughly the same order, whether the goal is a title or just extra cash.</li>
@@ -316,6 +319,7 @@ def build():
         "What a typical U.S. online application involves, step by step, and the documents, equipment, and checks employers commonly require before hiring.",
         "Not what the job is. What filling out the form, and then saying yes to it, actually involves.",
         '''
+<p class="reassure">None of what follows is specialized knowledge. It’s just rarely written down in one place, which is why it can feel more intimidating than it actually is.</p>
 <div class="takeaways"><h2>In short</h2><ul>
 <li>Most online applications follow the same shape: a short form, a few screening questions, sometimes a skills test, then an interview.</li>
 <li>About half of job seekers consider 10 to 15 minutes the acceptable length for that form.</li>
@@ -329,7 +333,7 @@ def build():
 <p>After an offer, the paperwork starts: the specific documents are covered below, but the shape is the same almost everywhere — sign an offer or contract, complete tax and eligibility forms, and, for jobs that provide equipment, wait for it to ship or submit a reimbursement request rather than pay for it upfront.</p>
 
 <h2 id="requirements">What they’re commonly asked to have</h2>
-<p>A U.S. job application, online or on paper, asks for the same core information almost everywhere. Having it ready before starting saves having to stop mid-form to look something up:</p>
+<p>A U.S. job application, online or on paper, asks for the same core information almost everywhere. None of it is unusual to be asked for, and none of it should catch you off guard. Having it ready before starting just saves having to stop mid-form to look something up:</p>
 <div class="ready-box">
 <div class="ready-grid">
 <div><h4>Personal details</h4><ul><li>Name, address, phone, email</li><li>Whether you’re eligible to work in the U.S.</li><li>Whether you’re over 18, or have a work permit if not</li></ul></div>
@@ -544,16 +548,17 @@ def build():
         "about.html",
         f"About · {BRAND}",
         "Weekline is a reader's companion for remote, online, and independent work in the United States.",
-        '''<div class="page-head"><div class="wrap"><p class="kicker">About</p><h1>A companion, not a job board.</h1>
-<p class="lede">Weekline explains what remote, online, and independent work actually involve, in plain language, before a reader says yes to any of them.</p></div></div>
+        '''<div class="page-head"><div class="wrap"><p class="kicker">About</p><h1>Weekline makes this easy to understand.</h1>
+<p class="lede">Remote, online, and independent work come with a process almost nobody explains plainly. Weekline explains it, in everyday language, before a reader says yes to any of it.</p></div></div>
 <section class="band"><div class="wrap split">
 <div>
 <h2>What a reader can learn here</h2>
 <p>Remote is the place. Online is how the work travels. Flexible is the schedule. Independent is who you answer to. The pages keep those apart using everyday situations, then point to the public count behind a figure when one is used.</p>
+<p>Nothing here assumes a reader already knows the vocabulary or has done this before. If a term, a form, or a step isn’t explained in plain language somewhere on this site, that’s a gap we want to hear about, not a sign the reader missed something obvious.</p>
 <p>Weekline is an independent publisher. It is not an employer, a staffing agency, or a job board. It does not list openings and it does not take applications. Reading a page does not sign anyone up for work.</p>
 </div>
 <div>
-<div class="col"><h3>Who this is for</h3><p>Someone trying remote, online, or independent work for the first time, or anyone who wants a plain answer before taking an offer that sounds too easy.</p></div>
+<div class="col"><h3>Who this is for</h3><p>Someone trying remote, online, or independent work for the first time, or anyone who wants a plain answer before taking an offer that sounds too easy. No prior experience with any of it is assumed.</p></div>
 <div class="col" style="margin-top:1.25rem"><h3>The limit</h3><p>The pages do not choose a week for a reader, and they do not replace the Department of Labor, the Internal Revenue Service, a state labor office, or the Federal Trade Commission.</p></div>
 </div>
 </div></section>
