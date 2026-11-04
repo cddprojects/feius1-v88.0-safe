@@ -305,18 +305,6 @@ def build():
 <p class="guides-more"><a class="btn btn-ghost" href="work-options.html#practical">Read more practical guides &rarr;</a></p>
 </div></section>
 
-<section class="sources"><div class="wrap sources-row">
-<p class="sources-label">Every figure you’ll see here names its source</p>
-<ul class="sources-list">
-<li>U.S. Bureau of Labor Statistics</li>
-<li>CareerOneStop</li>
-<li>Apprenticeship.gov</li>
-<li>Federal Trade Commission</li>
-<li>Federal Reserve</li>
-<li>IRS</li>
-</ul>
-</div></section>
-
 <section class="contact-teaser"><div class="wrap">
 <p class="section-label">Contact</p>
 <h2>What would you like us to cover next?</h2>
