@@ -239,8 +239,14 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 }
 @media (min-width: 760px) { .featured-row { grid-template-columns: 1fr auto; } }
 .featured-copy p { color: var(--muted); }
-.featured-art { display: flex; align-items: center; justify-content: center; }
-.featured-icon { font-size: 3rem; opacity: 0.85; }
+.featured-art { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.9rem; padding: 0 0.5rem; }
+.chart-viz { display: flex; align-items: flex-end; gap: 0.5rem; height: 92px; }
+.chart-bar {
+  width: 14px; border-radius: 5px 5px 2px 2px;
+  background: linear-gradient(180deg, var(--primary-soft), var(--primary));
+}
+.chart-bar-end { background: linear-gradient(180deg, var(--accent-soft), var(--accent)); box-shadow: 0 6px 14px -4px rgba(14, 165, 163, 0.55); }
+.chart-caption { margin: 0; text-align: center; font: 700 0.82rem/1.3 var(--sans); color: var(--ink); opacity: 0.8; }
 .mini-src { color: var(--muted); font-size: 0.82rem; margin: 0.5rem 0 0; }
 
 /* Four-pillar grid */
