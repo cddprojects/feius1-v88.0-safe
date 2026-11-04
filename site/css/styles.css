@@ -315,7 +315,9 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 }
 .contact-form textarea { min-height: 7rem; resize: vertical; }
 .contact-form .form-note { color: var(--muted); font-size: 0.85rem; margin: 0; }
-#contact-confirm { display: none; margin-top: 0.8rem; font-weight: 700; color: var(--primary-dark); }
+.contact-form .form-row { display: grid; gap: 1rem; }
+@media (min-width: 560px) { .contact-form .form-row { grid-template-columns: 1fr 1fr; } }
+.contact-confirm { display: none; margin-top: 0.8rem; font-weight: 700; color: var(--primary-dark); }
 
 /* Two-forces comparison */
 .compare { padding: clamp(1.6rem, 4vw, 2.6rem) 0; }

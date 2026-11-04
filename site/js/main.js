@@ -56,17 +56,25 @@
     });
   }
 
-  var contactForm = document.getElementById("contact-form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
+  document.querySelectorAll(".contact-form").forEach(function (form) {
+    form.addEventListener("submit", function (e) {
       e.preventDefault();
-      var name = document.getElementById("c-name").value;
-      var topic = document.getElementById("c-topic").value;
+      var field = function (name) {
+        var el = form.querySelector('[name="' + name + '"]');
+        return el ? el.value.trim() : "";
+      };
+      var name = field("name");
+      var phone = field("phone");
+      var email = field("email");
+      var topic = field("topic");
+      var lines = [topic, "", "From: " + name];
+      if (email) lines.push("Email: " + email);
+      if (phone) lines.push("Phone: " + phone);
       var subject = encodeURIComponent("Topic suggestion from " + name);
-      var body = encodeURIComponent(topic);
+      var body = encodeURIComponent(lines.join("\n"));
       window.location.href = "mailto:hello@weekline.example?subject=" + subject + "&body=" + body;
-      var confirm = document.getElementById("contact-confirm");
+      var confirm = form.querySelector(".contact-confirm");
       if (confirm) confirm.style.display = "block";
     });
-  }
+  });
 })();
