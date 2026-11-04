@@ -145,7 +145,7 @@ def build():
 </div>
 <div class="hero-card" aria-hidden="true">
 <p class="hero-card-label">A few figures to start with</p>
-<div class="hero-stat"><span class="num">5.9M</span><span class="desc">jobs the BLS projects the U.S. economy will add, 2025–2035</span></div>
+<div class="hero-stat"><span class="num">5.9M</span><span class="desc">new U.S. jobs the BLS projects for 2025–2035</span></div>
 <div class="hero-stat"><span class="num">35%</span><span class="desc">of employed people did some or all of their work at home on days they worked, 2025</span></div>
 <div class="hero-stat"><span class="num">34.6%</span><span class="desc">projected growth for data scientists, among the fastest of any occupation</span></div>
 </div>
@@ -177,7 +177,7 @@ def build():
 <div class="pillar-card">
 <p class="pillar-num">02</p>
 <h3>Skills and training</h3>
-<p>Start with the job you want, then compare ways to qualify. A community college program, certification, degree, or paid Registered Apprenticeship can each be worth exploring, depending on the role.</p>
+<p>Start with the job you want, then compare ways to qualify. A community college program, certification, degree, or paid Registered Apprenticeship can each make sense, depending on the role.</p>
 <p class="mini-src">Apprenticeship.gov career seeker resources</p>
 </div>
 <div class="pillar-card">
@@ -189,7 +189,7 @@ def build():
 <div class="pillar-card">
 <p class="pillar-num">04</p>
 <h3>Extra income</h3>
-<p>In a 2024 Federal Reserve survey, some gig workers said they would struggle to make ends meet without gig income, and many wanted steadier pay. When comparing options, look at what you could earn after expenses and how reliably the work comes in.</p>
+<p>In a 2024 Federal Reserve survey, some gig workers said they'd struggle to make ends meet without that income, and many wanted steadier pay. When comparing options, look at what you could earn after expenses and how reliably the work comes in.</p>
 <p class="mini-src">Federal Reserve household survey, 2024</p>
 </div>
 </div>
@@ -214,19 +214,19 @@ def build():
 <a class="guide-card" href="skills-training.html">
 <span class="guide-icon">🎓</span>
 <h3>Skills and training</h3>
-<p>How long an apprenticeship, certificate, or degree path takes, what it costs, and what credential it ends in.</p>
+<p>How long an apprenticeship, certificate, or degree path takes, what it costs, and what credential it leads to.</p>
 <span class="guide-link">Read the guide &rarr;</span>
 </a>
 <a class="guide-card" href="work-options.html">
 <span class="guide-icon">🗺️</span>
 <h3>Flexible work</h3>
-<p>What “flexibility” can mean in where you work, when you work, or both, and what to ask about office days and required hours.</p>
+<p>What “flexibility” can mean — where you work, when you work, or both — and what to ask about office days and required hours.</p>
 <span class="guide-link">Read the guide &rarr;</span>
 </a>
 <a class="guide-card" href="career-guides.html#career-change">
 <span class="guide-icon">🔁</span>
 <h3>Career change</h3>
-<p>How to find roles that use skills you already have, and identify what you’d still need to learn to move toward a new one.</p>
+<p>How to find roles that use skills you already have, and identify what you’d still need to learn to make the move.</p>
 <span class="guide-link">Read the guide &rarr;</span>
 </a>
 <a class="guide-card" href="career-guides.html#signs">
@@ -756,7 +756,7 @@ def build():
 <p class="src-note">Source: BLS Employment Projections, 2025–2035 news release and Occupational Outlook Handbook.</p>
 
 <h2 id="pay">Pay: how to find out what a job pays near you</h2>
-<p>A posted salary range or hourly rate means more once you can compare it with your local market. CareerOneStop's wage-lookup tool, built on BLS Occupational Employment and Wage Statistics, breaks pay down by occupation and by state or metro area, which can differ substantially from a national median. Checking the local figure before accepting, or before deciding a posted range looks fair, is a reasonable step regardless of the role.</p>
+<p>A posted salary range or hourly rate is easier to judge once you can compare it with your local market. CareerOneStop's wage-lookup tool, built on BLS Occupational Employment and Wage Statistics, breaks pay down by occupation and by state or metro area, which can differ substantially from a national median. Checking the local figure before accepting, or before deciding whether a posted range looks fair, is a reasonable step regardless of the role.</p>
 <p class="src-note">Source: CareerOneStop wage tools, built on BLS Occupational Employment and Wage Statistics.</p>
 
 <h2>Skills and training</h2>
@@ -792,7 +792,7 @@ def build():
 <div><h4>Associate degree</h4><ul><li>About 2 years at a community college</li><li>Often required for technical and allied-health roles</li><li>Can sometimes transfer toward a bachelor’s degree later</li></ul></div>
 <div><h4>Bachelor’s degree</h4><ul><li>Typically 4 years</li><li>Still commonly required or preferred for many professional and managerial roles</li><li>The largest cost and time commitment of the four</li></ul></div>
 </div></div>
-<p>Which path makes sense depends heavily on the specific occupation; there is no single correct order to this list. The U.S. Department of Labor's Apprenticeship.gov is a reasonable starting point for comparing registered, paid apprenticeships by field and location, since availability varies by industry and by state.</p>
+<p>Which path makes sense depends heavily on the specific occupation — none of these four is the universally "right" choice. The U.S. Department of Labor's Apprenticeship.gov is a reasonable starting point for comparing registered, paid apprenticeships by field and location, since availability varies by industry and by state.</p>
 <p>This is general information about how these paths typically work, not a recommendation for any individual's circumstances. Program cost, financial aid eligibility, and licensing requirements vary by state and by school; confirm current figures directly with the program before enrolling.</p>
 <p class="src-note">Source: Apprenticeship.gov career seeker resources, U.S. Department of Labor.</p>
 </div></section>''',
@@ -841,7 +841,7 @@ def build():
 
 <section><div class="wrap article" style="max-width:72ch">
 <p>A part-time shift usually comes with set hours and a predictable hourly rate. A freelance project can pay more per hour of actual work, but also involves unpaid time finding clients, scoping work, and sending invoices. A delivery or rideshare gig offers flexible timing, but involves driving and vehicle expenses that reduce what you actually keep.</p>
-<p>In September 2026, 9.00 million people (5.5% of employed people) held more than one job, most often a full-time main job plus a part-time second one. Separately, in a 2024 Federal Reserve survey of household finances, some gig workers said they would struggle to make ends meet without that income, and many said they wanted more predictable pay — a reminder that "extra income" ranges from a planned supplement to a necessary part of covering expenses.</p>
+<p>In September 2026, 9.0 million people (5.5% of employed people) held more than one job, most often a full-time main job plus a part-time second one. Separately, in a 2024 Federal Reserve survey of household finances, some gig workers said they'd struggle to make ends meet without that income, and many said they wanted more predictable pay — a reminder that "extra income" ranges from a planned supplement to a necessary part of covering expenses.</p>
 <p>Before committing time to any option, it's worth comparing: how often you'll actually get paid, what the work costs you in gas, mileage, supplies, or your own tools, and how consistent the hours or assignments tend to be. If you need a predictable amount each month, ask directly about consistency before you commit rather than assuming it.</p>
 <p class="reassure">This is general information about how these options typically work, not tax or financial advice. What you actually keep after taxes and expenses depends on your own situation — a tax professional can give figures specific to you.</p>
 <p class="src-note">Sources: Bureau of Labor Statistics, multiple jobholders, September 2026 (not seasonally adjusted). Federal Reserve, Report on the Economic Well-Being of U.S. Households, 2024.</p>
