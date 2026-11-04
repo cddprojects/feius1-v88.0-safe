@@ -202,6 +202,11 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .hero-stat .desc { display: block; color: #c3ccf0; font-size: 0.92rem; margin-top: 0.15rem; }
 @media (min-width: 900px) { .hero-grid { grid-template-columns: 1.5fr 1fr; } }
 
+/* Centered section intros */
+.section-head-center { text-align: center; max-width: 46rem; margin: 0 auto; }
+.section-head-center .section-label { margin-inline: auto; }
+.section-head-center p:not(.section-label) { margin-inline: auto; }
+
 /* Guide cards */
 .guides { padding: clamp(1.5rem, 4vw, 2.5rem) 0; }
 .section-label {
@@ -342,6 +347,7 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 
 /* Contact form */
 .contact-form { display: grid; gap: 1rem; max-width: 36rem; margin-top: 1.4rem; }
+.contact-form-center { margin-inline: auto; text-align: left; }
 .contact-form label { display: block; font: 700 0.85rem/1.3 var(--sans); margin-bottom: 0.35rem; }
 .contact-form input, .contact-form textarea {
   width: 100%; padding: 0.7rem 0.9rem; border-radius: var(--radius-sm); border: 1px solid var(--border);
