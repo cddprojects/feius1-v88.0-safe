@@ -295,8 +295,7 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 
 /* Extra income & contact teasers */
 .extra-teaser, .contact-teaser { padding: clamp(1.6rem, 4vw, 2.6rem) 0; }
-.extra-teaser .wrap, .contact-teaser .wrap { max-width: 64ch; }
-.extra-teaser p, .contact-teaser p { color: var(--muted); }
+.extra-teaser p, .contact-teaser p { color: var(--muted); max-width: 64ch; }
 
 /* Work-options table */
 .opts { padding: clamp(1.6rem, 4vw, 2.6rem) 0; }
