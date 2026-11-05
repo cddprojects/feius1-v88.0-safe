@@ -325,7 +325,6 @@ def build():
 <div><label for="hc-email">Email address</label><input id="hc-email" name="email" type="email" autocomplete="email" required></div>
 <div><label for="hc-topic">Your question or topic suggestion</label><textarea id="hc-topic" name="topic" required></textarea></div>
 <button class="btn btn-primary" type="submit">Send a suggestion</button>
-<p class="form-note">This opens a message in your own email app, addressed to ''' + BRAND + ''' — nothing is sent from this page directly.</p>
 <p class="contact-confirm" role="status">Thanks for sending your suggestion.</p>
 </form>
 </div></section>
