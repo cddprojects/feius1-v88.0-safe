@@ -72,9 +72,13 @@
       if (phone) lines.push("Phone: " + phone);
       var subject = encodeURIComponent("Topic suggestion from " + name);
       var body = encodeURIComponent(lines.join("\n"));
+      var thanks = form.getAttribute("data-thanks") || "thank-you/";
       window.location.href = "mailto:hello@weekline.example?subject=" + subject + "&body=" + body;
       var confirm = form.querySelector(".contact-confirm");
       if (confirm) confirm.style.display = "block";
+      window.setTimeout(function () {
+        window.location.href = thanks;
+      }, 400);
     });
   });
 })();

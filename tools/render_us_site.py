@@ -5,6 +5,8 @@ The pages share general information. They do not list jobs or take applications.
 The editorial frame is the distance between published labor counts and the ad
 market, which is a different job from a search guide.
 """
+import re
+import shutil
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1] / "site"
@@ -24,46 +26,130 @@ NAV = [
     ("contact.html", "Contact"),
 ]
 
+CONTENT_FILES = {
+    "career-guides.html",
+    "work-options.html",
+    "extra-income.html",
+    "about.html",
+    "contact.html",
+    "skills-training.html",
+    "start.html",
+    "record.html",
+    "search.html",
+    "apply.html",
+    "states.html",
+    "arrangements.html",
+    "occupations.html",
+    "side-work.html",
+    "notes.html",
+    "terms.html",
+    "questions.html",
+    "corrections.html",
+    "disclaimer.html",
+}
+
 WRITTEN = set()
 
 
-def brand():
-    return f'<a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>{BRAND}</a>'
+def prefixes(kind):
+    if kind == "home":
+        return {
+            "home": "index.html",
+            "content": "content/",
+            "privacy": "privacy-policy/",
+            "thanks": "thank-you/",
+            "asset": "",
+            "favicon": "favicon.svg",
+        }
+    if kind == "special":
+        return {
+            "home": "../index.html",
+            "content": "../content/",
+            "privacy": "../privacy-policy/",
+            "thanks": "../thank-you/",
+            "asset": "../",
+            "favicon": "../favicon.svg",
+        }
+    return {
+        "home": "../index.html",
+        "content": "",
+        "privacy": "../privacy-policy/",
+        "thanks": "../thank-you/",
+        "asset": "../",
+        "favicon": "../favicon.svg",
+    }
 
 
-def nav_block(current):
+def href_for(target, kind, fragment=""):
+    p = prefixes(kind)
+    frag = f"#{fragment}" if fragment else ""
+    if target in ("index.html",):
+        return p["home"] + frag
+    if target in ("privacy.html", "privacy-policy/", "privacy-policy/index.html"):
+        return p["privacy"] + frag
+    if target in ("thank-you.html", "thank-you/", "thank-you/index.html"):
+        return p["thanks"] + frag
+    if target in CONTENT_FILES:
+        return p["content"] + target + frag
+    return None
+
+
+def rewrite_links(html, kind):
+    def repl(match):
+        attr, url = match.group(1), match.group(2)
+        if url.startswith(("http://", "https://", "mailto:", "#", "../", "content/", "privacy-policy/", "thank-you/")):
+            return match.group(0)
+        path, _, frag = url.partition("#")
+        new = href_for(path, kind, frag)
+        if new is None:
+            return match.group(0)
+        return f'{attr}="{new}"'
+
+    return re.sub(r'(href)=["\']([^"\']+)["\']', repl, html)
+
+
+def brand(kind):
+    p = prefixes(kind)
+    return f'<a class="brand" href="{p["home"]}"><span class="brand-mark" aria-hidden="true"></span>{BRAND}</a>'
+
+
+def nav_block(current, kind):
+    p = prefixes(kind)
     items = []
     for href, label in NAV:
+        url = p["content"] + href
         cur = ' aria-current="page"' if href == current else ""
-        items.append(f'<li><a href="{href}"{cur}>{label}</a></li>')
+        items.append(f'<li><a href="{url}"{cur}>{label}</a></li>')
     return f'''<nav aria-label="Primary"><ul id="nav-list">{"".join(items)}</ul></nav>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-list" aria-label="Open menu"><span class="bars" aria-hidden="true"></span></button>'''
 
 
-def header(current, landing=False):
-    links = nav_block(current)
+def header(current, kind="content", landing=False):
+    p = prefixes(kind)
+    links = nav_block(current, kind)
     return f'''<a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
 <div class="wrap header-row">
-{brand()}
+{brand(kind)}
 <div class="nav-wrap">{links}</div>
-<a class="btn btn-primary header-cta" href="career-guides.html">Explore career guides</a>
+<a class="btn btn-primary header-cta" href="{p["content"]}career-guides.html">Explore career guides</a>
 </div>
 </header>'''
 
 
-def footer():
+def footer(kind="content"):
+    p = prefixes(kind)
     return f'''<footer class="site-footer"><div class="wrap foot">
 <div class="foot-brand"><p class="brand-foot">{BRAND}</p>
 <p>Articles and guides on U.S. careers, pay, training, flexible work, and ways to earn extra income.</p></div>
 <div><h2>Explore</h2><ul>
-<li><a href="career-guides.html">Career Guides</a></li>
-<li><a href="skills-training.html">Skills &amp; Training</a></li>
-<li><a href="work-options.html">Work Options</a></li>
-<li><a href="extra-income.html">Extra Income</a></li>
+<li><a href="{p["content"]}career-guides.html">Career Guides</a></li>
+<li><a href="{p["content"]}skills-training.html">Skills &amp; Training</a></li>
+<li><a href="{p["content"]}work-options.html">Work Options</a></li>
+<li><a href="{p["content"]}extra-income.html">Extra Income</a></li>
 </ul></div>
 <div><h2>About</h2><ul>
-<li><a href="privacy.html">Privacy Policy</a></li>
+<li><a href="{p["privacy"]}">Privacy Policy</a></li>
 <li><a href="#top">Back to top</a></li>
 </ul></div>
 <div><h2>Data and resources</h2><ul>
@@ -76,10 +162,18 @@ def footer():
 <div class="wrap legal"><p>Pay, job requirements, and work arrangements vary by employer and location. Check the date and geography of wage figures and confirm the details of a role with the employer. {BRAND} provides general information only; it does not list jobs, screen employers, or give legal, tax, or financial advice.</p>
 <p>&copy; 2026 {BRAND} &middot; United States</p></div>
 </footer>
-<script src="js/main.js"></script>'''
+<script src="{p["asset"]}safer-script.js"></script>'''
 
 
-def page(filename, title, description, body, current, landing=False):
+def page(filename, title, description, body, current, landing=False, kind="content"):
+    p = prefixes(kind)
+    body = rewrite_links(body, kind)
+    if kind == "home":
+        relpath = filename
+    elif kind == "special":
+        relpath = filename
+    else:
+        relpath = f"content/{filename}"
     body_class = ' class="landing"' if landing else ""
     html = f'''<!doctype html>
 <html lang="en-US">
@@ -89,24 +183,26 @@ def page(filename, title, description, body, current, landing=False):
 <title>{title}</title>
 <meta name="description" content="{description}">
 <meta name="theme-color" content="{THEME}">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{p["favicon"]}" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="{FONT}" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="{p["asset"]}safer-style.css">
 </head>
 <body id="top"{body_class}>
-{header(current, landing=landing)}
+{header(current, kind=kind, landing=landing)}
 <main id="main">
 {body}
 </main>
-{footer()}
+{footer(kind)}
 <noscript><style>.reveal{{opacity:1;transform:none}}</style></noscript>
 </body>
 </html>
 '''
-    (ROOT / filename).write_text(html, encoding="utf-8")
-    WRITTEN.add(filename)
+    dest = ROOT / relpath
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(html, encoding="utf-8")
+    WRITTEN.add(relpath.replace("\\", "/"))
 
 
 def essay(filename, kicker, h1, description, lede, inner, current, section="Record"):
@@ -117,7 +213,7 @@ def essay(filename, kicker, h1, description, lede, inner, current, section="Reco
 {inner}
 <p class="back"><a href="notes.html">All notes</a></p>
 </div></section>'''
-    page(filename, f"{h1} · {BRAND}", description, body, current)
+    page(filename, f"{h1} · {BRAND}", description, body, current, kind="content")
 
 
 def build():
@@ -315,7 +411,7 @@ def build():
 <h2>What would you like us to cover next?</h2>
 <p>Have a question about a career path, a training program, or a type of work? Tell us what you’re trying to figure out — your suggestions help shape future guides.</p>
 </div>
-<form class="contact-form contact-form-center" id="home-contact-form">
+<form class="contact-form contact-form-center" id="home-contact-form" data-thanks="thank-you/">
 <div class="form-row">
 <div><label for="hc-name">Name</label><input id="hc-name" name="name" type="text" autocomplete="name" required></div>
 <div><label for="hc-phone">Phone number</label><input id="hc-phone" name="phone" type="tel" autocomplete="tel" placeholder="Optional"></div>
@@ -329,6 +425,7 @@ def build():
 ''',
         "index.html",
         True,
+        "home",
     )
 
     essay(
@@ -723,24 +820,41 @@ def build():
     )
 
     page(
-        "privacy.html",
+        "privacy-policy/index.html",
         f"Privacy · {BRAND}",
         "What the Weekline site does and does not collect.",
         f'''<div class="page-head"><div class="wrap"><p class="kicker">Privacy</p><h1>Privacy</h1>
-<p class="lede">How a visit to this record is handled. Updated {REVIEWED}.</p></div></div>
+<p class="lede">How a visit to this site is handled. Updated {REVIEWED}.</p></div></div>
 <section><div class="wrap article">
 <h2>What the site is for</h2>
-<p>Weekline publishes a public record. It does not ask readers to create an account, upload a résumé, or submit an application.</p>
+<p>Weekline publishes general information about U.S. careers, pay, training, and flexible or extra-income work. It does not ask readers to create an account, upload a résumé, or submit a job application.</p>
+<h2>What a visitor may send</h2>
+<p>The contact form on the homepage and the Contact page lets you send a topic suggestion. That form asks for your name, email address, an optional phone number, and your message. Submitting it opens a message in your own email app, addressed to Weekline. Weekline uses those details only to reply to the suggestion. It does not use the form to take job applications, and it does not add visitors to a mailing list.</p>
 <h2>What the site does not collect</h2>
-<p>There is no application form and no mailing list. Pages do not ask for a Social Security number, a date of birth, or payment details.</p>
+<p>Pages do not ask for a Social Security number, a date of birth, bank details, or payment information.</p>
 <h2>Fonts</h2>
-<p>Pages load Newsreader and Public Sans from Google Fonts. A visit can send the usual technical request, including an IP address, to that service. A browser setting that blocks third-party fonts leaves the words of the record in the fallback typefaces.</p>
+<p>Pages load Inter from Google Fonts. A visit can send the usual technical request, including an IP address, to that service. A browser setting that blocks third-party fonts leaves the words of the site in the fallback typefaces.</p>
 <h2>Local features</h2>
 <p>The note filter, the term search, and the mobile menu run in the browser. They do not send what a reader types to Weekline.</p>
 <h2>Links</h2>
 <p>Notes link to public agencies and to reporting on those figures. Those sites have their own practices. A link is a citation.</p>
 </div></section>''',
-        "about.html",
+        "",
+        kind="special",
+    )
+
+    page(
+        "thank-you/index.html",
+        f"Thank you · {BRAND}",
+        "Thanks for sending a topic suggestion to Weekline.",
+        f'''<div class="page-head"><div class="wrap"><p class="kicker">Thank you</p><h1>Thanks for sending your suggestion.</h1>
+<p class="lede">We read topic suggestions as we plan future guides.</p></div></div>
+<section><div class="wrap article" style="max-width:48rem">
+<p>{BRAND} does not take job applications or list openings. If you have a question about a specific employer or role, contact that employer directly.</p>
+<p><a class="btn btn-primary" href="index.html">Back to the homepage</a></p>
+</div></section>''',
+        "",
+        kind="special",
     )
 
     page(
@@ -880,7 +994,7 @@ def build():
         f'''<div class="page-head"><div class="wrap"><p class="kicker">Contact</p><h1>What would you like us to cover next?</h1>
 <p class="lede">Have a question about a career path, a training program, or a type of work? Tell us what you're trying to figure out. Your suggestions help shape future guides.</p></div></div>
 <section><div class="wrap article" style="max-width:48rem">
-<form class="contact-form" id="contact-form">
+<form class="contact-form" id="contact-form" data-thanks="../thank-you/">
 <div class="form-row">
 <div><label for="c-name">Name</label><input id="c-name" name="name" type="text" autocomplete="name" required></div>
 <div><label for="c-phone">Phone number</label><input id="c-phone" name="phone" type="tel" autocomplete="tel" placeholder="Optional"></div>
@@ -896,9 +1010,12 @@ def build():
         "contact.html",
     )
 
-    stale = [p for p in ROOT.glob("*.html") if p.name not in WRITTEN]
+    stale = [p for p in ROOT.rglob("*.html") if p.relative_to(ROOT).as_posix() not in WRITTEN]
     for path in stale:
         path.unlink()
+    for leftover in (ROOT / "css", ROOT / "js"):
+        if leftover.exists():
+            shutil.rmtree(leftover)
     print("rendered", len(WRITTEN), "pages; removed", len(stale))
 
 
