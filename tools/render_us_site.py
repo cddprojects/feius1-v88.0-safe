@@ -148,10 +148,6 @@ def footer(kind="content"):
 <li><a href="{p["content"]}work-options.html">Work Options</a></li>
 <li><a href="{p["content"]}extra-income.html">Extra Income</a></li>
 </ul></div>
-<div><h2>About</h2><ul>
-<li><a href="{p["privacy"]}">Privacy Policy</a></li>
-<li><a href="#top">Back to top</a></li>
-</ul></div>
 <div><h2>Data and resources</h2><ul>
 <li><a href="https://www.bls.gov/" rel="noopener">Bureau of Labor Statistics</a></li>
 <li><a href="https://www.careeronestop.org/Toolkit/Wages/find-salary.aspx" rel="noopener">CareerOneStop wage tools</a></li>
@@ -160,7 +156,10 @@ def footer(kind="content"):
 </ul></div>
 </div>
 <div class="wrap legal"><p>Pay, job requirements, and work arrangements vary by employer and location. Check the date and geography of wage figures and confirm the details of a role with the employer. {BRAND} provides general information only; it does not list jobs, screen employers, or give legal, tax, or financial advice.</p>
-<p>&copy; 2026 {BRAND} &middot; United States</p></div>
+<div class="legal-row">
+<p>&copy; 2026 {BRAND} &middot; United States</p>
+<p class="legal-links"><a href="{p["privacy"]}">Privacy Policy</a><a href="#top">Back to top</a></p>
+</div></div>
 </footer>
 <script src="{p["asset"]}safer-script.js"></script>'''
 
