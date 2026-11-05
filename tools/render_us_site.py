@@ -63,10 +63,8 @@ def footer():
 <li><a href="extra-income.html">Extra Income</a></li>
 </ul></div>
 <div><h2>About</h2><ul>
-<li><a href="about.html">About Us</a></li>
-<li><a href="contact.html">Contact</a></li>
 <li><a href="privacy.html">Privacy Policy</a></li>
-<li><a href="corrections.html">Editorial Standards</a></li>
+<li><a href="#top">Back to top</a></li>
 </ul></div>
 <div><h2>Data and resources</h2><ul>
 <li><a href="https://www.bls.gov/" rel="noopener">Bureau of Labor Statistics</a></li>
@@ -97,7 +95,7 @@ def page(filename, title, description, body, current, landing=False):
 <link href="{FONT}" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
-<body{body_class}>
+<body id="top"{body_class}>
 {header(current, landing=landing)}
 <main id="main">
 {body}
