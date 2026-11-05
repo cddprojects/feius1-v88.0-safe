@@ -319,31 +319,72 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .guide-card.static:hover { transform: none; box-shadow: var(--shadow-sm); border-color: var(--border); }
 .guides-more { margin-top: 1.2rem; text-align: center; }
 
-/* Practical guides — numbered steps, not another card grid */
+/* Practical guides — editorial bento, not a numbered stepper */
 .practical { padding: clamp(1.6rem, 4vw, 2.6rem) 0; }
-.prac-steps {
-  list-style: none; margin: 1.6rem 0 0; padding: 0;
-  display: grid; gap: 1.5rem;
+.prac-bento {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.6rem;
 }
-@media (min-width: 860px) {
-  .prac-steps { grid-template-columns: repeat(3, 1fr); gap: 2.2rem; }
+@media (min-width: 800px) {
+  .prac-bento { grid-template-columns: 1fr 1fr; }
+  .prac-lead { grid-column: 1 / -1; }
 }
-.prac-steps li { position: relative; }
-.prac-num {
-  display: inline-flex; align-items: center; justify-content: center;
-  width: 2.4rem; height: 2.4rem; margin-bottom: 0.85rem;
-  border-radius: 999px; background: var(--primary); color: #fff;
-  font: 800 0.82rem/1 var(--sans); letter-spacing: 0.02em;
+.prac-tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  padding: 1.45rem 1.5rem 1.4rem;
+  border: 1px solid transparent;
 }
-@media (min-width: 860px) {
-  .prac-steps li:not(:last-child)::after {
-    content: "";
-    position: absolute; top: 1.15rem; left: 2.6rem; right: -2.2rem;
-    height: 2px; background: var(--border);
+.prac-tile h3, .prac-tile p, .prac-tag { position: relative; z-index: 1; }
+.prac-tile h3 { font-size: 1.12rem; margin: 0 0 0.4rem; }
+.prac-tile p { color: var(--muted); font-size: 0.95rem; margin: 0; }
+.prac-tag {
+  display: inline-flex;
+  width: max-content;
+  margin: 0 0 0.7rem;
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  font: 700 0.64rem/1.2 var(--sans);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+.prac-lead {
+  background: linear-gradient(125deg, var(--primary-soft) 0%, #fff 62%);
+  border-color: #d4defc;
+}
+.prac-lead::after {
+  content: "";
+  position: absolute; right: -3rem; top: -3.5rem;
+  width: 11rem; height: 11rem; border-radius: 50%;
+  background: rgba(45, 91, 255, 0.1);
+  pointer-events: none;
+}
+@media (min-width: 800px) {
+  .prac-lead {
+    display: grid;
+    grid-template-columns: minmax(16rem, 0.9fr) minmax(18rem, 1.1fr);
+    column-gap: 2.6rem;
+    align-items: start;
+    padding: 1.7rem 2rem 1.65rem;
   }
+  .prac-lead .prac-tag { grid-column: 1; justify-self: start; }
+  .prac-lead h3 { grid-column: 1; font-size: 1.5rem; margin-bottom: 0; }
+  .prac-lead p { grid-column: 2; grid-row: 2; padding-top: 0.2rem; }
 }
-.prac-steps h3 { font-size: 1.08rem; margin-bottom: 0.4rem; }
-.prac-steps p { color: var(--muted); font-size: 0.95rem; margin: 0; }
+.prac-lead .prac-tag { background: #fff; color: var(--primary-dark); box-shadow: var(--shadow-sm); }
+.prac-mid, .prac-end { min-height: 12.5rem; }
+.prac-mid {
+  background: linear-gradient(165deg, var(--accent-soft), #fff 70%);
+  border-color: #c5eae8;
+}
+.prac-mid .prac-tag { background: #fff; color: #0a7d7b; box-shadow: var(--shadow-sm); }
+.prac-end {
+  background: linear-gradient(165deg, var(--violet-soft), #fff 70%);
+  border-color: #ddd6fb;
+}
+.prac-end .prac-tag { background: #fff; color: #5b3fd6; box-shadow: var(--shadow-sm); }
 
 /* Extra income & contact teasers */
 .extra-teaser, .contact-teaser { padding: clamp(1.6rem, 4vw, 2.6rem) 0; }

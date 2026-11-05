@@ -385,25 +385,27 @@ def build():
 </div></section>
 
 <section class="practical"><div class="wrap">
+<div class="section-head-center">
 <p class="section-label">Practical guides</p>
 <h2>What to ask before you apply or accept an offer.</h2>
-<ol class="prac-steps">
-<li>
-<span class="prac-num">01</span>
+</div>
+<div class="prac-bento">
+<article class="prac-tile prac-lead">
+<span class="prac-tag">Schedule</span>
 <h3>How to ask for a flexible schedule</h3>
 <p>Put together a proposal that explains the schedule you want, how you’ll cover your responsibilities, and when you and your manager can review how it’s working.</p>
-</li>
-<li>
-<span class="prac-num">02</span>
+</article>
+<article class="prac-tile prac-mid">
+<span class="prac-tag">Pay setup</span>
 <h3>Employee or independent contractor?</h3>
 <p>Ask how you’ll be paid, who covers equipment and expenses, and which benefits, if any, come with the arrangement.</p>
-</li>
-<li>
-<span class="prac-num">03</span>
+</article>
+<article class="prac-tile prac-end">
+<span class="prac-tag">Remote résumé</span>
 <h3>How to write a résumé for a remote role</h3>
 <p>Show how you’ve handled deadlines, shared updates, and worked with people in different locations, using specific examples of what you delivered.</p>
-</li>
-</ol>
+</article>
+</div>
 <p class="guides-more"><a class="btn btn-ghost" href="work-options.html#practical">Read more practical guides &rarr;</a></p>
 </div></section>
 
