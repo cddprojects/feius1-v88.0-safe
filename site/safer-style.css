@@ -318,8 +318,7 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 /* Guide-card static variant (no link wrapper) */
 .guide-card.static { cursor: default; }
 .guide-card.static:hover { transform: none; box-shadow: var(--shadow-sm); border-color: var(--border); }
-.guides-more { margin-top: 1.2rem; }
-.opts > .wrap > .guides-more { text-align: center; }
+.guides-more { margin-top: 1.2rem; text-align: center; }
 
 /* Extra income & contact teasers */
 .extra-teaser, .contact-teaser { padding: clamp(1.6rem, 4vw, 2.6rem) 0; }
