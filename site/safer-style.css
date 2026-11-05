@@ -604,6 +604,8 @@ details p { margin: 0.6rem 0 0.1rem; color: var(--muted); }
 }
 .legal-row > p { margin: 0; }
 .legal-links { display: flex; gap: 1.2rem; margin: 0; }
+.legal-links a { color: inherit; font-size: inherit; font-weight: 400; text-decoration: none; }
+.legal-links a:hover { color: inherit; text-decoration: underline; }
 
 .reveal { opacity: 0; transform: translateY(10px); }
 .reveal.in { opacity: 1; transform: none; transition: opacity 0.45s ease, transform 0.45s ease; }
