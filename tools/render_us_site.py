@@ -998,10 +998,8 @@ def build():
 <div><label for="c-email">Email address</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
 <div><label for="c-topic">Your question or topic suggestion</label><textarea id="c-topic" name="topic" required></textarea></div>
 <button class="btn btn-primary" type="submit">Send a suggestion</button>
-<p class="form-note">This opens a message in your own email app, addressed to {BRAND} — nothing is sent from this page directly.</p>
 <p class="contact-confirm" role="status">Thanks for sending your suggestion.</p>
 </form>
-<p>{BRAND} does not take job applications or list openings through this form. For a question about a specific employer or role, contact that employer directly.</p>
 </div></section>''',
         "contact.html",
     )
