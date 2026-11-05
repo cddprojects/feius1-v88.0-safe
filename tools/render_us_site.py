@@ -848,7 +848,7 @@ def build():
         "Thanks for sending a topic suggestion to Weekline.",
         f'''<div class="page-head"><div class="wrap"><p class="kicker">Thank you</p><h1>Thanks for sending your suggestion.</h1>
 <p class="lede">We read topic suggestions as we plan future guides.</p></div></div>
-<section><div class="wrap article" style="max-width:48rem">
+<section><div class="wrap article">
 <p>{BRAND} does not take job applications or list openings. If you have a question about a specific employer or role, contact that employer directly.</p>
 <p><a class="btn btn-primary" href="index.html">Back to the homepage</a></p>
 </div></section>''',
@@ -886,7 +886,7 @@ def build():
         '''<div class="page-head"><div class="wrap"><p class="kicker">Career Guides</p><h1>Find out what jobs pay and what it takes to qualify.</h1>
 <p class="lede">Explore selected roles with strong projected growth, compare entry requirements, and learn how to check demand and pay where you live.</p></div></div>
 
-<section><div class="wrap article" style="max-width:72ch">
+<section><div class="wrap article">
 <h2 id="job-outlook">Job outlook: where U.S. jobs are projected to grow</h2>
 <p>The U.S. Bureau of Labor Statistics projects the economy will add 5.9 million jobs from 2025 to 2035, growing total employment from about 170.3 million to 176.2 million (3.5%). Growth is not even across fields. Healthcare support is projected to grow fastest among major occupational groups (+13.3%), followed by healthcare practitioners and technical occupations (+8.0%); together these two groups account for close to a third of all new jobs through 2035. Computer and mathematical occupations rank fifth (+7.3%), driven largely by AI-related roles. Among individual occupations, nurse practitioners (+41%) and data scientists (+34.6%) are projected to grow fastest.</p>
 <p>These are national projections, not a guarantee for any specific job or location. Once a role catches your interest, check current pay and openings in your own area using a wage-lookup tool, since both can differ a great deal by region.</p>
@@ -922,7 +922,7 @@ def build():
         '''<div class="page-head"><div class="wrap"><p class="kicker">Skills &amp; Training</p><h1>Apprenticeship, certificate, or degree?</h1>
 <p class="lede">Start with the job you want, then compare how long each path to it takes, what it costs, and what credential you end up with.</p></div></div>
 
-<section><div class="wrap article" style="max-width:72ch">
+<section><div class="wrap article">
 <div class="ready-box"><div class="ready-grid">
 <div><h4>Registered Apprenticeship</h4><ul><li>Paid, on-the-job training combined with classroom instruction</li><li>Typically 1–4 years depending on the occupation</li><li>Ends in a nationally recognized credential</li></ul></div>
 <div><h4>Certificate or license</h4><ul><li>Weeks to about a year, often at a community college or trade school</li><li>Usually the fastest, lowest-cost path to an entry-level role in a specific field</li><li>May need renewal or continuing education</li></ul></div>
@@ -943,7 +943,7 @@ def build():
         '''<div class="page-head"><div class="wrap"><p class="kicker">Work Options</p><h1>Remote, hybrid, or flexible hours?</h1>
 <p class="lede">A job can offer flexibility in where you work, when you work, or both. Here is what each common arrangement usually means, and what to ask before you accept one.</p></div></div>
 
-<section><div class="wrap article" style="max-width:72ch">
+<section><div class="wrap article">
 <p>In 2025, 35% of employed people did some or all of their work at home on days they worked, while 70% did some or all of their work at their workplace; these overlap because many people split time between the two. "Flexible" does not describe one single arrangement — it can mean where you work, when you work, or both, and the specifics are worth confirming before you accept an offer.</p>
 <div class="opts-table-wrap"><table class="opts-table">
 <thead><tr><th>Work option</th><th>What to check</th></tr></thead>
@@ -976,7 +976,7 @@ def build():
         '''<div class="page-head"><div class="wrap"><p class="kicker">Extra Income</p><h1>What could a second job or side gig add to your budget?</h1>
 <p class="lede">A weekend shift, a freelance project, and app-based gig work can each bring in extra income. They also make very different demands on your time.</p></div></div>
 
-<section><div class="wrap article" style="max-width:72ch">
+<section><div class="wrap article">
 <p>A part-time shift usually comes with set hours and a predictable hourly rate. A freelance project can pay more per hour of actual work, but also involves unpaid time finding clients, scoping work, and sending invoices. A delivery or rideshare gig offers flexible timing, but involves driving and vehicle expenses that reduce what you actually keep.</p>
 <p>In September 2026, 9.0 million people (5.5% of employed people) held more than one job, most often a full-time main job plus a part-time second one. Separately, in a 2024 Federal Reserve survey of household finances, some gig workers said they'd struggle to make ends meet without that income, and many said they wanted more predictable pay — a reminder that "extra income" ranges from a planned supplement to a necessary part of covering expenses.</p>
 <p>Before committing time to any option, it's worth comparing: how often you'll actually get paid, what the work costs you in gas, mileage, supplies, or your own tools, and how consistent the hours or assignments tend to be. If you need a predictable amount each month, ask directly about consistency before you commit rather than assuming it.</p>
@@ -992,7 +992,7 @@ def build():
         "Suggest a career, training, or work-arrangement topic for Weekline to cover.",
         f'''<div class="page-head"><div class="wrap"><p class="kicker">Contact</p><h1>What would you like us to cover next?</h1>
 <p class="lede">Have a question about a career path, a training program, or a type of work? Tell us what you're trying to figure out. Your suggestions help shape future guides.</p></div></div>
-<section><div class="wrap article" style="max-width:48rem">
+<section><div class="wrap article">
 <form class="contact-form" id="contact-form" data-thanks="../thank-you/">
 <div class="form-row">
 <div><label for="c-name">Name</label><input id="c-name" name="name" type="text" autocomplete="name" required></div>
