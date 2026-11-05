@@ -344,7 +344,7 @@ def build():
 <span class="guide-link">Read the guide &rarr;</span>
 </a>
 </div>
-<p class="guides-more"><a class="btn btn-ghost" href="career-guides.html">Browse all career guides &rarr;</a></p>
+<p class="guides-more"><a class="btn btn-ghost btn-lg" href="career-guides.html">Browse all career guides &rarr;</a></p>
 </div></section>
 
 <section class="extra-teaser"><div class="wrap extra-grid">
@@ -381,7 +381,7 @@ def build():
 <tr><td>App-based gigs</td><td>Pay per task, unpaid waiting time, and expenses such as mileage or supplies.</td></tr>
 </tbody>
 </table></div>
-<p class="guides-more"><a class="btn btn-ghost" href="work-options.html">Explore all work options &rarr;</a></p>
+<p class="guides-more"><a class="btn btn-ghost btn-lg" href="work-options.html">Explore all work options &rarr;</a></p>
 </div></section>
 
 <section class="practical"><div class="wrap">
@@ -406,7 +406,7 @@ def build():
 <p>Show how you’ve handled deadlines, shared updates, and worked with people in different locations, using specific examples of what you delivered.</p>
 </article>
 </div>
-<p class="guides-more"><a class="btn btn-ghost" href="work-options.html#practical">Read more practical guides &rarr;</a></p>
+<p class="guides-more"><a class="btn btn-ghost btn-lg" href="work-options.html#practical">Read more practical guides &rarr;</a></p>
 </div></section>
 
 <section class="contact-teaser"><div class="wrap">

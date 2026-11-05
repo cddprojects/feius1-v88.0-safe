@@ -243,6 +243,12 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .guide-card h3 { margin-bottom: 0.4rem; }
 .guide-card p { color: var(--muted); font-size: 0.97rem; margin-bottom: 1rem; flex: 1; }
 .guide-link { font-weight: 700; color: var(--primary); }
+a.guide-link {
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 1.5px;
+}
+a.guide-link:hover { color: var(--primary-dark); text-decoration-thickness: 2px; }
 @media (min-width: 860px) { .guide-grid { grid-template-columns: repeat(3, 1fr); } }
 
 /* Featured story */
@@ -263,6 +269,7 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .chart-bar-end { background: linear-gradient(180deg, var(--accent-soft), var(--accent)); box-shadow: 0 6px 14px -4px rgba(14, 165, 163, 0.55); }
 .chart-caption { margin: 0; text-align: center; font: 700 0.82rem/1.3 var(--sans); color: var(--ink); opacity: 0.8; }
 .mini-src { color: var(--muted); font-size: 0.82rem; margin: 0.5rem 0 0; }
+.featured-copy .mini-src { margin-bottom: 1.25rem; }
 .extra-copy .mini-src { font-size: 0.76rem; margin-top: 0.8rem; }
 
 /* Four-pillar grid */
@@ -318,6 +325,7 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .guide-card.static { cursor: default; }
 .guide-card.static:hover { transform: none; box-shadow: var(--shadow-sm); border-color: var(--border); }
 .guides-more { margin-top: 1.2rem; text-align: center; }
+.guides-more .btn { padding: 0.85rem 1.4rem; font-size: 1rem; }
 
 /* Practical guides — editorial bento, not a numbered stepper */
 .practical { padding: clamp(1.6rem, 4vw, 2.6rem) 0; }
@@ -424,6 +432,7 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 
 /* Contact form */
 .contact-form { display: grid; gap: 1rem; margin-top: 1.4rem; }
+.contact-form .btn { width: max-content; justify-self: start; }
 .contact-form-center { width: 100%; text-align: left; }
 .contact-form label { display: block; font: 700 0.85rem/1.3 var(--sans); margin-bottom: 0.35rem; }
 .contact-form input, .contact-form textarea {
