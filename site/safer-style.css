@@ -319,6 +319,32 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .guide-card.static:hover { transform: none; box-shadow: var(--shadow-sm); border-color: var(--border); }
 .guides-more { margin-top: 1.2rem; text-align: center; }
 
+/* Practical guides — numbered steps, not another card grid */
+.practical { padding: clamp(1.6rem, 4vw, 2.6rem) 0; }
+.prac-steps {
+  list-style: none; margin: 1.6rem 0 0; padding: 0;
+  display: grid; gap: 1.5rem;
+}
+@media (min-width: 860px) {
+  .prac-steps { grid-template-columns: repeat(3, 1fr); gap: 2.2rem; }
+}
+.prac-steps li { position: relative; }
+.prac-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2.4rem; height: 2.4rem; margin-bottom: 0.85rem;
+  border-radius: 999px; background: var(--primary); color: #fff;
+  font: 800 0.82rem/1 var(--sans); letter-spacing: 0.02em;
+}
+@media (min-width: 860px) {
+  .prac-steps li:not(:last-child)::after {
+    content: "";
+    position: absolute; top: 1.15rem; left: 2.6rem; right: -2.2rem;
+    height: 2px; background: var(--border);
+  }
+}
+.prac-steps h3 { font-size: 1.08rem; margin-bottom: 0.4rem; }
+.prac-steps p { color: var(--muted); font-size: 0.95rem; margin: 0; }
+
 /* Extra income & contact teasers */
 .extra-teaser, .contact-teaser { padding: clamp(1.6rem, 4vw, 2.6rem) 0; }
 .extra-copy > p:not(.mini-src), .contact-teaser .section-head-center p:not(.section-label) { color: var(--muted); }
