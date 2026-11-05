@@ -312,10 +312,7 @@ p { margin: 0 0 1em; text-wrap: pretty; }
 .extra-teaser, .contact-teaser { padding: clamp(1.6rem, 4vw, 2.6rem) 0; }
 .extra-teaser p, .contact-teaser p { color: var(--muted); max-width: 64ch; }
 .extra-grid { display: grid; gap: 1.6rem; align-items: center; }
-@media (min-width: 820px) {
-  .extra-grid { grid-template-columns: 1fr 1.3fr; }
-  .extra-art { order: -1; }
-}
+@media (min-width: 820px) { .extra-grid { grid-template-columns: 1.3fr 1fr; } }
 .extra-art {
   background: linear-gradient(165deg, var(--accent-soft), #fff);
   border: 1px solid var(--border); border-radius: var(--radius);
